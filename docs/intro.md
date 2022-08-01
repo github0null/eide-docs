@@ -2,46 +2,48 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# What's This
 
-Let's discover **Docusaurus in less than 5 minutes**.
+[EIDE](https://marketplace.visualstudio.com/items?itemName=CL.eide) is a **VSCode plug-in**, used to development `single-chip microcomputer projects`, like: `8051`, `stm8`, `stm32`, `other cortex-m mcus` ...
 
-## Getting Started
+![](https://docs.em-ide.com/preview.png)
 
-Get started by **creating a new site**.
+:::caution
+Platform Support: 
+  - `Windows 10 or later`
+  - `Linux X64`
+:::
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Question ?
 
-### What you'll need
+**Q:** Why use it ?
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+**A:** On VSCode, we can get a much better coding experience. This helps improve efficiency and reduces coding errors. Combined with the built-in git of VSCode, we can better manage the project version.
 
-## Generate a new site
+---
 
-Generate a new Docusaurus site using the **classic template**.
+**Q:** How is it different from Keil/IAR ?
 
-The classic template will automatically be added to your project after you run the command:
+**A:** There's **not** a lot of difference. It is based on VSCode, this is the main difference.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+---
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+**Q:** How many functions ?
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+**A:** `Create/Import/Export Project`, `Manage Project`, `Build Project`, `Program Chip`
 
-## Start your site
+:::note
+This plug-in is **not** include `Debug Project`. <br/>
+But you can use [Cortex-Debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug) to debug your `cortex-m` projects.
+:::
 
-Run the development server:
+---
 
-```bash
-cd my-website
-npm run start
-```
+**Q:** How many chips does it support ?
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+**A:** A lot. We support 6 kinds of compilers that can be used to compile `8051/stm8/cortex-m[0/0+/3/23/33/35p/4/7]/riscv/...` mcu projects
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+![](/img/toolchains.png)
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+---
+
