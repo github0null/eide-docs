@@ -18,7 +18,7 @@ Now we support to import `Keil` and `Eclipse` project.
 
 :::danger Keil project limit
 This import function is not 100% suitable for any Keil project.<br/>
-Please view the limitations of this feature at [keil project limit](../notice/keil_project_limit#keil-projects)
+Please view the limitations of this feature at [**keil project limit**](../notice/keil_project_limit#keil-projects)
 :::
 
 :::caution Setup keil location
