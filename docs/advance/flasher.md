@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 20
 ---
 
 # Flasher Configurations
@@ -42,6 +42,10 @@ You can also set your flasher executable file path to `System Environment Variab
 :::
 
 ## Base Configurations
+
+:::danger Install your flasher at first
+You must install corresponding flasher software before modify your flasher configurations.
+:::
 
 Before start to program flash, you need to check your flasher config.
 
@@ -88,7 +92,9 @@ You must install corresponding flasher software before modify your flasher confi
 
 ![](/img/flasher_jlink_cfg.png)
 
-- `CPU Name`: JLink device name. We will extract all available cpus from `JLink` for you to choose.
+- `CPU Name`: JLink device name. 
+
+  We will extract all available cpus from `JLink` for you to choose.
 
   click `modify` button, a list will popup.
 
@@ -155,7 +161,9 @@ https://pyocd.io/docs/installing.html
 
 ![](/img/flasher_pyocd_cfg.png)
 
-- `Target Name`: Target mcu name. We will extract all available cpus from `pyOCD` for you to choose.
+- `Target Name`: Target mcu name. 
+  
+  We will extract all available cpus from `pyOCD` for you to choose.
 
   For more target, please reference: [target support](https://pyocd.io/docs/target_support.html)
 
