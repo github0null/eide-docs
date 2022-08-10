@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Project Resource
@@ -103,7 +103,7 @@ This function will override `source tree`, `include paths`, `macros` to current 
 
 :::caution Notice
 This feature is only used to append **specific** compiler args for some single source files.<br/>
-If you want to add global compiler args for your project, please reference [**Builder Options**](../advance/builder#advance-configurations)
+If you want to add global compiler args for your project, please reference [**Builder Options**](../modules/builder#advance-configurations)
 :::
 
 Sometimes you want to add some **specific compiler args** for some source files. This feature can help you do that.
@@ -114,9 +114,9 @@ Click `Append separate compiler params for source files`, eide will create and o
 
 ![](/img/prj_res_add_src_file_args_preview.png)
 
-Now you can use [Glob matching](https://www.npmjs.com/package/micromatch) to match specific source files and append some args.
+Now you can use [glob patterns](https://github.com/micromatch/micromatch#matching-features) to match specific source files and append some args.
 
-Because of eide has 2 folder types ([Source Folders](#add-source-folders)), so we provide **2** categorys for `Glob matching`.
+Because of eide has 2 folder types ([Source Folders](#add-source-folders)), so we provide **2** categorys for `glob patterns`.
 
 - `files`: match files by using **real filesystem path**.
 

@@ -67,9 +67,7 @@ Now we'll walk you through the functional areas of the plug-in.
 
 ## Configure Toolchains
 
-EIDE support many toolchains, but we **not built-in** them in plug-in, so we need to install manualy. 
-
-Because these package is so big, so we cannot merge them with plug-in.
+EIDE support many toolchains, but these package is so big, so we **not built-in** them in plug-in, you need to install manualy.
 
 - Click `Configure Toolchain` item in `OPERATIONS` view.
 

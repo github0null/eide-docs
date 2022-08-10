@@ -65,7 +65,7 @@ Default compiler is `gcc`, you can switch compiler for cortex-m project, we supp
 
 At least we need configure `CPU Type` and `Linker Script File Path`.
 
-More [builder configurations](../advance/builder)
+More [builder configurations](../modules/builder)
 
 ### Add Source Files
 
