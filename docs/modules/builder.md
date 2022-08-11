@@ -120,6 +120,36 @@ mkdir .\dist & copy /B "${OutDir}\${targetName}.a" .\dist\lib${targetName}.a
 "${BuilderFolder}/utils/hex2bin" -b -c "${outDir}/${targetName}.hex"
 ```
 
+#### User Task Variables
+
+Variables for project:
+
+|Variable Name|Description|
+|:----|:----|
+|`${targetName}`|Project name
+|`${ConfigName}`|Project Target Name, like: 'Debug', 'Release'
+|`${ProjectRoot}`|Project root directory path|
+|`${OutDir}`|Build output directory path|
+|`${re:ProjectRoot}`|Relative path of project root, Fixed value: '.'|
+|`${re:BuilderFolder}`|Relative path of builder tools root folder |
+|`${re:OutDir}`|Relative path of output folder, like: 'build/Debug'|
+
+Variables for compiler:
+
+|Variable Name|Description|
+|:----|:----|
+|`${BuilderFolder}`|Builder tools root folder path|
+|`${ToolchainRoot}`|Compiler root folder|
+|`${CompilerPrefix}`|GCC compiler prefix, like: arm-none-eabi-|
+|`${CompilerFolder}`|Compiler bin folder|
+|`${CompilerId}`|Compiler ID, like: 'gcc', 'sdcc', 'ac5'|
+|`${CompilerName}`|Compiler Short Name, like: 'GNU Tools for Arm Embedded Processors 8-2019-q3-update'|
+|`${CompilerFullName}`|Compiler Full Name, like: 'arm-none-eabi-gcc.exe (GNU Tools for Arm Embedded Processors 8-2019-q3-update) 8.3.1 20190703 ...'|
+|`${CompilerVersion}`|Compiler Version, like: '8.3.1'|
+|`${re:ToolchainRoot}`|Relative path of compiler root folder|
+|`${re:CompilerFolder}`|Relative path of compiler bin folder|
+
+
 #### Built-in Linux Shell For Windows
 
 For Win32, the plugin built-in a MSYS environment (location: C:\Users\USER_NAME\.eide\bin\builder\msys\bin).
