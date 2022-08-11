@@ -16,13 +16,13 @@ The project name.
 
 - **In Builder**
 
-  It's used to determines the file name when generating build output files (like: `.elf`, `.hex`, `.bin` ...).
+  It's used to determine the file name when generating build output files (like: `.elf`, `.hex`, `.bin` ...).
 
   It's the value of env variable `${TargetName}`
 
 - **In UI**
   
-  It's used to determines the contents that some UI displays.
+  It's used to determine the contents that some UI displays.
 
 ### Output Folder Name
 
@@ -65,3 +65,7 @@ These variables can be used in:
   This variable is used to print memory usage.
 
   *Must be used both with `MCU_RAM_SIZE`*
+
+- `EIDE_BUILD_ORDER`: value type: `number`
+
+  It's used to determine the project build priority in [multi-project workspace](../advance/multi_prj_workspace).

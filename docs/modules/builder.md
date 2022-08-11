@@ -68,21 +68,40 @@ Please click `Save` button or press `ctrl+s` to save your configurations.<br/>
 We **not support** auto-save.
 :::
 
+### Specific Variables
+
+We support some specific variable for builder options:
+
+|Variable Name|Description|Note|
+|:----|:----|:----|
+|`${OutName}`|`.o` file name|relative path, No suffix| 
+|`${OutDir}`|`.o` directory path|relative path| 
+|`${FileName}`|source file name|relative path, No suffix| 
+|`${FileDir}`|source file directory path|relative path|
+
+Example:
+
+- **Output `asm` file when compile `.c` file for `Armcc` compiler :**
+
+  Add `--asm --asm_dir="${OutDir}"` params in `Builder Options` -> `C/C++ Compiler` -> `Other C Compiler Options`
+
+  ![](/img/example_gen_asm_for_armcc.png)
+
 ### User Task Commands
 
 There are some utility commands for references.
 
 ```shell
-# [Windows10] execute windows bat script
+# [For Windows10] execute windows bat script
 .\xxx\xxx\xxx.bat [script arguments...]
 
-# [Windows10] show internal envs
+# [For Windows10] show internal envs
 powershell -Command ls env:
 
-# [Windows10] copy .hex .bin file to dist dir
+# [For Windows10] copy .hex .bin file to dist dir
 mkdir .\dist & copy /B "${OutDir}\${targetName}.hex" .\dist\ & copy /B "${OutDir}\${targetName}.bin" .\dist\
 
-# [Windows10] copy .a file to dist dir
+# [For Windows10] copy .a file to dist dir
 mkdir .\dist & copy /B "${OutDir}\${targetName}.a" .\dist\lib${targetName}.a
 
 # print compiler version for arm gcc project
