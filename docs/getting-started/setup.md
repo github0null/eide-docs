@@ -39,15 +39,13 @@ We need download some packages from network, make sure your network is ok !<br/>
 If you need to install **offline**, please goto [**Github Release**](https://github.com/github0null/eide/releases) to download installation package.
 :::
 
-1. **Install plug-in**
+- **Install plug-in**
 
   Open vscode extension market, search `eide`, select `Embedded IDE` and install it.
 
   ![](/img/install_from_market.png)
 
-2. **Restart VsCode To Init Plug-in**
-
-  When the plug-in has been installed, restart vscode, the plug-in will start to init.
+  When the plug-in has been installed, it will launch and start to init.
 
   The plug-in will **auto download and install** [eide-binaries](https://github.com/github0null/eide-resource/tree/master/binaries) and [.NET6 X64 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) package, please wait !
 
@@ -110,5 +108,5 @@ EIDE support many toolchains, but these package is so big, so we **not built-in*
 
   :::tip Install Toolchain by EIDE
   For Windows platform, EIDE provide some online installation package for `Open Source Toolchains`.<br/>
-  So you can choose to download and install it to the default location or select an existing installation location.
+  So you can use [Install Utility Tools](../advance/install_tools) function or select an existing installation location.
   :::

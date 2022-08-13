@@ -1,0 +1,38 @@
+{
+  "link.title.Docs": {
+    "message": "Docs",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Community": {
+    "message": "Community",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "More",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.Tutorial": {
+    "message": "Tutorial",
+    "description": "The label of footer link with label=Tutorial linking to /docs/intro"
+  },
+  "link.item.label.Github Discussions": {
+    "message": "Github Discussions",
+    "description": "The label of footer link with label=Github Discussions linking to https://github.com/github0null/eide/discussions"
+  },
+  "link.item.label.EIDE Forum": {
+    "message": "EIDE Forum",
+    "description": "The label of footer link with label=EIDE Forum linking to https://discuss.em-ide.com"
+  },
+  "link.item.label.Embedded IDE": {
+    "message": "Embedded IDE",
+    "description": "The label of footer link with label=Embedded IDE linking to https://github.com/github0null/eide"
+  },
+  "link.item.label.Obsolete Docs": {
+    "message": "Obsolete Docs",
+    "description": "The label of footer link with label=Obsolete Docs linking to https://em-ide.com/docs/eide-manual"
+  },
+  "copyright": {
+    "message": "Copyright © 2022 github0null.io",
+    "description": "The footer copyright"
+  }
+}

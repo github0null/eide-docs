@@ -11,23 +11,28 @@ const SITE_TITLE = 'EIDE DOCS';
 const config = {
   title: SITE_TITLE,
   tagline: 'document for embedded ide',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://github.com/github0null/eide-docs',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'https://em-ide.com/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'github0null', // Usually your GitHub org/user name.
+  projectName: 'eide-docs', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'zh-cn'],
+    localeConfigs: {
+      'zh-cn': {
+        htmlLang: 'zh',
+      }
+    }
   },
 
   presets: [
@@ -40,20 +45,20 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/github0null/eide-docs/tree/master',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/github0null/eide-docs/tree/master',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
-    ],
+    ]
   ],
 
   themeConfig:
@@ -63,16 +68,20 @@ const config = {
         title: EIDE_NAME,
         items: [
           {
+            type: 'localeDropdown',
+            position: 'left',
+          },
+          {
             type: 'doc',
             docId: 'intro',
             position: 'left',
             label: 'Docs',
           },
+          /* {
+            to: '/blog', label: 'Blog', position: 'left'
+          }, */
           {
-            to: 'https://discuss.em-ide.com/blog', label: 'Blog', position: 'left'
-          },
-          {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/github0null/eide-docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -99,7 +108,7 @@ const config = {
               },
               {
                 label: 'EIDE Forum',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discuss.em-ide.com',
               }
             ],
           },
@@ -107,8 +116,12 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'GitHub',
+                label: 'Embedded IDE',
                 href: 'https://github.com/github0null/eide',
+              },
+              {
+                label: 'Obsolete Docs',
+                href: 'https://em-ide.com/docs/eide-manual',
               },
             ],
           },

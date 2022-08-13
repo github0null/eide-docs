@@ -39,7 +39,7 @@ Click `modify` button, will open `BUILDER OPTIONS VIEW`, like this:
 
 ![](/img/builder_opt_view.png)
 
-We divided the configuration into `4` tabs, there are `User Task`, `Global Options`, `C/C++ Compiler`, `Assembler`, `Linker`.
+We divided the configuration into `5` tabs, there are `User Task`, `Global Options`, `C/C++ Compiler`, `Assembler`, `Linker`.
 
 - `User Task`: You can set some shell command which will be execute in different stages of a build. 
 
@@ -131,7 +131,6 @@ Variables for project:
 |`${ProjectRoot}`|Project root directory path|
 |`${OutDir}`|Build output directory path|
 |`${re:ProjectRoot}`|Relative path of project root, Fixed value: '.'|
-|`${re:BuilderFolder}`|Relative path of builder tools root folder |
 |`${re:OutDir}`|Relative path of output folder, like: 'build/Debug'|
 
 Variables for compiler:
@@ -146,6 +145,7 @@ Variables for compiler:
 |`${CompilerName}`|Compiler Short Name, like: 'GNU Tools for Arm Embedded Processors 8-2019-q3-update'|
 |`${CompilerFullName}`|Compiler Full Name, like: 'arm-none-eabi-gcc.exe (GNU Tools for Arm Embedded Processors 8-2019-q3-update) 8.3.1 20190703 ...'|
 |`${CompilerVersion}`|Compiler Version, like: '8.3.1'|
+|`${re:BuilderFolder}`|Relative path of builder tools root folder |
 |`${re:ToolchainRoot}`|Relative path of compiler root folder|
 |`${re:CompilerFolder}`|Relative path of compiler bin folder|
 

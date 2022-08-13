@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 20
 ---
 
 # Create Project
@@ -80,6 +80,8 @@ Now we can add some source file to project.
   For this demo: we copied 2 files from other projects
 
 Ok, all sources files have been added to project, like this.
+
+If there are some c header files, we need to add [IncludePath](../modules/project_attr)
 
 ![](/img/new_prj_add_src_preview.png)
 

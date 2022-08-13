@@ -1,0 +1,38 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Getting Started": {
+    "message": "开始上手",
+    "description": "The label for category Getting Started in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Getting Started.link.generated-index.description": {
+    "message": "在 VSCode 上开始你的第一个单片机项目",
+    "description": "The generated-index page description for category Getting Started in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Function Modules": {
+    "message": "功能模块",
+    "description": "The label for category Function Modules in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Function Modules.link.generated-index.description": {
+    "message": "EIDE 的功能组件",
+    "description": "The generated-index page description for category Function Modules in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Advance": {
+    "message": "进阶",
+    "description": "The label for category Advance in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Advance.link.generated-index.description": {
+    "message": "更多实用功能",
+    "description": "The generated-index page description for category Advance in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Notices": {
+    "message": "注意事项",
+    "description": "The label for category Notices in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Notices.link.generated-index.description": {
+    "message": "一些注意事项",
+    "description": "The generated-index page description for category Notices in sidebar tutorialSidebar"
+  }
+}
