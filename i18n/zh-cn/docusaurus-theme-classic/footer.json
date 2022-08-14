@@ -27,7 +27,7 @@
     "message": "Embedded IDE",
     "description": "The label of footer link with label=Embedded IDE linking to https://github.com/github0null/eide"
   },
-  "link.item.label.Obsolete Docs": {
+  "link.item.label.Legacy Docs": {
     "message": "旧版文档",
     "description": "The label of footer link with label=Obsolete Docs linking to https://em-ide.com/docs/eide-manual"
   },
