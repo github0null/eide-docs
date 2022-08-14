@@ -2,19 +2,19 @@
 sidebar_position: 30
 ---
 
-# Multi-Project Workspace
+# 多项目工作区
 
-You can make a vscode workspace to contains some projects who is interrelated with each other.
+你可以创建一个 VSCode 工作区来包含一些相互关联的项目
 
-## Create A Workspace
+## 新建工作区
 
-- Create a folder on disk, and create some eide projects in the folder, as follows.
+- 在磁盘上创建一个文件夹，并在该文件夹中创建一些 eide 项目，如下所示
 
   ![](/img/prj_multi_prj_ws_dir.png)
 
-- Next, create a `.code-workspace` file in the folder (at this demo, this file is: `ewp.code-workspace`).
+- 接下来，在目录中新建一个 `.code-workspace` 文件（本例中，这个文件为：`ewp.code-workspace`）
 
-  Then, Fill in workspce file with the following contents:
+  然后，用以下内容填写 `.code-workspace` 文件：
 
   ```json
   {
@@ -39,23 +39,23 @@ You can make a vscode workspace to contains some projects who is interrelated wi
   }
   ```
 
-- Then, you can double-click this workspace file to open vscode workspace.
+- 然后，你可以双击这个工作空间文件打开 vscode 工作空间
 
   ![](/img/prj_multi_prj_preview.png)
 
-## Project Order
+## 项目次序
 
-Each project has a order that can be used to determine the build priority.
+每个项目都有一个顺序，可以用来确定构建优先级
 
-You can add a [Project Environment Variable](../modules/project_settings#environment-variables) `EIDE_BUILD_ORDER` to project to change the project order.
+你可以添加一个 [项目环境变量](../modules/project_settings#环境变量) `EIDE_BUILD_ORDER` 来更改优先级
 
 ```ini
 # workspace build order
 EIDE_BUILD_ORDER = 0
 ```
 
-Default order value is `100`;
+默认的优先级为：`100`
 
 :::tip
-The smaller the value, the higher the priority.
+值越小，优先级越高
 :::

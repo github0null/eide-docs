@@ -2,38 +2,38 @@
 sidebar_position: 10
 ---
 
-# Debug Project
+# 调试项目
 
-Debug your **Cortex-M**, **STM8** project.
+调试你的 **Cortex-M**, **STM8** 项目
 
-## Prepare
+## 准备工作
 
-- **For Cortex-M Project**
+- **对于 Cortex-M 项目**
 
-  You need to install [cortex-debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug)
+  你需要安装 [cortex-debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug)
 
   [cortex-debug docs](https://github.com/Marus/cortex-debug/wiki)
 
-- **For STM8 Project**
+- **对于 STM8 项目**
 
-  You need to install [stm8-debugger](https://marketplace.visualstudio.com/items?itemName=CL.stm8-debug)
+  你需要安装 [stm8-debugger](https://marketplace.visualstudio.com/items?itemName=CL.stm8-debug)
 
-## Launch Debugger
+## 启动调试器
 
 > For Cortex-M Project
 
-1. Open the flasher configuration and set the relevant options (**eide will automatically generate the corresponding debugging configuration according to the different flasher config**)
+1. 打开烧录器配置并设置相关选项 (**EIDE 会根据不同的烧录器配置自动生成相应的调试配置**)
 
-2. Open `launch.json`, check cortex-debug debug configurations.
+2. 打开 `launch.json`，检查 cortex-debug 调试配置
 
-3. Connect your board with debug probe.
+3. 用调试探针连接单板
 
-4. Select debug config name in **VSCode Debug View**.
+4. 在 **VSCode调试视图** 中选择调试配置名称
 
-5. Press `F5` launch debugger.
+5. 按下 `F5` 启动调试器
 
   ![](/img/debug_cortex-m_prj.png)
 
-:::tip More Usage
-Please reference: https://github.com/Marus/cortex-debug/wiki
+:::tip 更多用法
+参考 https://github.com/Marus/cortex-debug/wiki
 :::

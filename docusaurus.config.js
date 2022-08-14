@@ -4,14 +4,11 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const EIDE_NAME = 'Embedded IDE';
-const SITE_TITLE = 'EIDE DOCS';
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: SITE_TITLE,
-  tagline: 'document for embedded ide',
-  url: 'https://github.com/github0null/eide-docs',
+  title: 'Embedded IDE For VSCode',
+  tagline: 'A development environment for mcs51/stm8/cortex-m/riscv microcontrollers',
+  url: 'https://docs.em-ide.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -20,7 +17,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'github0null', // Usually your GitHub org/user name.
-  projectName: 'eide-docs', // Usually your repo name.
+  projectName: 'eide', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -65,7 +62,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: EIDE_NAME,
+        title: `Embedded IDE`,
         items: [
           {
             type: 'localeDropdown',
@@ -81,7 +78,7 @@ const config = {
             to: '/blog', label: 'Blog', position: 'left'
           }, */
           {
-            href: 'https://github.com/github0null/eide-docs',
+            href: 'https://github.com/github0null/eide',
             label: 'GitHub',
             position: 'right',
           },

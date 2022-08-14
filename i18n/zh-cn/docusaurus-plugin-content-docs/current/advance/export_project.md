@@ -2,21 +2,21 @@
 sidebar_position: 40
 ---
 
-# Export Project
+# 导出项目
 
-You can export your eide project.
+你可以导出你的 eide 项目
 
 ![](/img/prj_export_btns.png)
 
-## Export To Project Template
+## 导出项目模板
 
-Click `Export EIDE Project Template`, eide will compress your vscode workspace by `7z`.
+点击 `导出 EIDE 项目模板`，eide 将使用 7z 压缩你的 VSCode 工作区并保存为一个 `.ept` 文件
 
-Then a `.ept` template file will be generated in your project workspace. Now you can [create new project](../getting-started/new_prj) by this template file.
+现在你可以通过这个模板文件 [新建项目](../getting-started/new_prj)
 
-### Ignore Some Files
+### 忽略一些文件
 
-When compress the project workspace, eide will ignore some files, as follows:
+当压缩项目工作空间时，eide 将忽略一些文件，如下所示：
 
 ```ini
 .git
@@ -27,18 +27,18 @@ When compress the project workspace, eide will ignore some files, as follows:
 *.log
 ```
 
-You can also create a `.eideignore` file in your project workspace folder, and put your file ignore list in it.
+你也可以创建一个 `.eideignore` 文件在您的项目工作空间文件夹中，并将文件忽略列表放在其中
 
 ![](/img/export_ignore_file.png)
 
-## Export To Keil Project
+## 导出 Keil 项目
 
-Click `Export Keil Project`, eide will export your eide project to a keil project.
+点击 `导出 Keil 项目`，eide 将以 Keil 项目格式（uvprojx）导出你的 eide 项目
 
-When export operation done, a `uvproj/uvprojx` file will be generated to your worksapce folder.
+当操作完成后，一个 `uvproj/uvprojx` 文件将被生成到你的工作区
 
 ![](/img/export_keil_prj_file.png)
 
-:::caution Keil v5 only
-We only support to export Keil **v5** project.
+:::caution 仅 Keil v5
+我们仅支持导出 Keil v5 项目
 :::

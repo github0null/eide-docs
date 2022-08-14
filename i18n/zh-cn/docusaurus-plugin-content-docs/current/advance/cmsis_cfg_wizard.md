@@ -2,48 +2,48 @@
 sidebar_position: 50
 ---
 
-# CMSIS Header Wizard
+# CMSIS 头文件配置向导
 
-We support to open [cmsis config wizard](https://open-cmsis-pack.github.io/Open-CMSIS-Pack-Spec/main/html/configWizard.html) for header files.
+我们支持 [cmsis config wizard](https://open-cmsis-pack.github.io/Open-CMSIS-Pack-Spec/main/html/configWizard.html)
 
 ## Introduce
 
-[CMSIS Configuration Annotations](https://open-cmsis-pack.github.io/Open-CMSIS-Pack-Spec/main/html/configWizard.html) is an annotation format for describing macro definitions structurally in c headers.
+[CMSIS Configuration Annotations](https://open-cmsis-pack.github.io/Open-CMSIS-Pack-Spec/main/html/configWizard.html) 是一种注释格式，用于在 c 头文件中结构化地描述宏定义
 
-After parsed by specific tools, the GUI configuration wizard can be generated to guide users to view and modify the configuration in the header file
+经过特定工具的解析后，可以生成 GUI 配置向导，指导用户查看和修改头文件中的配置
 
 ![](/img/cmsis_wizard_keil.png)
 
-## Open Wizard View
+## 打开配置向导
 
-Open a `c header` file which with a correct `CMSIS Configuration Annotations` format.
+打开一个带有正确 `CMSIS Configuration 注释` 格式的 c 头文件
 
 ![](/img/cmsis_cfg_wizard_btn.png)
 
-Then a webview will be opened at a new tab.
+然后一个 webview 将在一个新标签打开
 
 ![](/img/cmsis_cfg_wizard_preview.png)
 
-Now you can start to modify header file configurations.
+现在可以开始修改头文件配置了
 
-:::caution Notice
-This function will not work and not popup any notifications if your header has an incorrect `CMSIS Configuration Annotations` format.
+:::caution 注意
+如果你的头文件没有正确格式的 `CMSIS Configuration 注释`，这个功能将没有任何效果，也不会有任何提示
 :::
 
-## Syntax Implement
+## 语法实现
 
-We refer to the implementation in Keil, so we are not full support all syntax.
+我们参考了 keil 中的实现，所以我们不完全支持所有语法
 
-**There are unsupported syntaxs:**
+**不支持的语法有：**
 
-1. Array Type:
+1. 数组类型
    
    ![](/img/no_imp_cmsis_syntaxs/array.png)
 
-2. The modifiers with `..` 
+2. 带有 `..` 修饰符的项
 
    ![](/img/no_imp_cmsis_syntaxs/modifier.png)
 
-3. Digital formatting display function
+3. 数字格式化显示
 
    ![](/img/no_imp_cmsis_syntaxs/format.png)

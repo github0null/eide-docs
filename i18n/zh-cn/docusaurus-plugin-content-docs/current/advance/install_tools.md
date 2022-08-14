@@ -2,21 +2,21 @@
 sidebar_position: 80
 ---
 
-# Install Utility Tools
+# 安装实用工具
 
-Install external tools, programs
+安装外部的实用工具，程序
 
-## Utility Tools
+## 实用工具
 
-We provide some external utility tools on [github repository](https://github.com/github0null/eide_default_external_tools_index).
+我们提供一些外部实用程序 [github repository](https://github.com/github0null/eide_default_external_tools_index).
 
-You can install these tools by eide, as follows:
+您可以通过 eide 安装这些工具，如下所示：
 
 ![](/img/install_ext_tools.png)
 
-These tools will be installed to `<user_home>/.eide/tools` folder, and eide will export `bin` path to extension system environment variables.
+这些工具将被安装到 `<user_home>/.eide/tools` 目录，然后 eide 将导出 `bin` 路径到系统环境变量
 
-:::tip Not Found Tools For Linux
-`Linux` software mostly has dependencies. So most of the tools we provide are for `Windows`.<br/>
-Please use system package manager to install linux softwares.
+:::tip 没有找到适用于 Linux 的工具
+`Linux` 软件大多有依赖关系，所以我们提供的大多数工具都是针对 Windows 的<br/>
+请使用系统包管理器安装 linux 软件
 :::

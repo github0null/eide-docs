@@ -2,20 +2,20 @@
 sidebar_position: 31
 ---
 
-# File Path Env
+# 文件路径变量
 
-You can use [`Project Environment Variables`](../modules/project_settings#environment-variables) in `source` file path.
+你可以在 源文件 路径中使用 [`项目环境变量`](../modules/project_settings#环境变量)
 
-## Fixed Variables For Path
+## 路径中固定的变量
 
-There are some fixed variables only for `source` file path.
+对于源文件路径有一些固定的变量可用：
 
-- `${workspaceFolder}`: vscode workspace folder path
-- `${workspaceFolderBasename}`: vscode workspace folder base name
+- `${workspaceFolder}`: VSCode 工作区目录
+- `${workspaceFolderBasename}`: VSCode 工作区目录名称
 
-- `${OutDir}`: output folder path
-- `${OutDirBase}`: output folder base name
-- `${ProjectName}`: eide project name
-- `${ExecutableName}`: output file absolute path
-- `${ProjectRoot}`: project root path, like: `${workspaceFolder}`
+- `${OutDir}`: 输出目录路径
+- `${OutDirBase}`: 输出目录名称
+- `${ProjectName}`: 项目名
+- `${ExecutableName}`: 输出二进制文件路径名，不包含文件后缀
+- `${ProjectRoot}`: 项目根目录路径，与 `${workspaceFolder}` 相等
 

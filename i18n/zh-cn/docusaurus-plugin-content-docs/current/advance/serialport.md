@@ -2,29 +2,29 @@
 sidebar_position: 70
 ---
 
-# Serial Port
+# 串口监视器
 
-Send and receive text from serial ports.
+从串口发送和接收文本
 
-## Open Serial Port
+## 打开串口
 
-There are some buttons in status bar for `Serialport` function.
+状态栏有一些按钮用于 `串口功能`
 
-You can `Open Serial Port`, `Select Serial Port Name`, `Select Baud Rate`
+你可以 `打开串口`，`选择串口名称`，`选择波特率`
 
 ![](/img/serialport_btns.png)
 
-Click `Open Serial` button, eide will post a shell command to open an **interactive** serial port program.
+点击 `打开串口` 按钮，eide 将执行一个终端命令来打开一个交互式串行端口程序
 
 ![](/img/serialport_opened.png)
 
-Now the program will start to receive text from port, and you can `send` text in terminal. 
+现在程序将开始从端口接收文本，你可以在终端发送文本
 
-## Configure Serial Port
+## 配置串口监视器
 
-There are some VSCode settings for `Serial Port` functions:
+对于 `串口监视器` 有一些 VSCode 设置项：
 
-- **Port Settings**
+- **端口设置**
 
   - `EIDE.SerialPortMonitor.DefaultPort`
   - `EIDE.SerialPortMonitor.BaudRate`
@@ -33,8 +33,8 @@ There are some VSCode settings for `Serial Port` functions:
   - `EIDE.SerialPortMonitor.StopBits`
   - `EIDE.SerialPortMonitor.useUnixLF`
 
-- **Display Settings**
+- **显示设置**
 
   - `EIDE.SerialPortMonitor.ShowStatusBar`
 
-You can modify these settings in `.code-workspace` file.
+你可以在 `.code-workspace` 中修改这些设置
