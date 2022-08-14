@@ -2,59 +2,59 @@
 sidebar_position: 5
 ---
 
-# Chip Support Packages
+# 芯片支持包
 
-Install chip package for your **Cortex-M** mcu ...
+为您的 **Cortex-M** mcu 安装芯片包
 
 :::danger For Arm
-This function is only for **Cortex-M** project.
+这个功能仅支持 **Cortex-M** 项目类型
 :::
 
-## What's This
+## 这是什么
 
 > CMSIS-Pack defines a standardized way to deliver software components, device parameters  and board support information and code. Adopted by leading semiconductor companies,  embedded software and tools vendors across the Arm architecture, CMSIS-Packs  increase productivity across the industry by encouraging code reuse and enabling proactive  software component deployment with online updates and dependencies checking.
 
-We support install [cmsis-pack](https://developer.arm.com/tools-and-software/embedded/cmsis/cmsis-packs) to project.
+我们支持安装 [cmsis-pack](https://developer.arm.com/tools-and-software/embedded/cmsis/cmsis-packs) 到 eide 项目
 
-When you install a chip support cmsis-pack and select mcu name for your project, eide will be able to better generate `debug/flasher` configurations for the mcu of your choice.
+当您安装了 cmsis-pack 并为您的项目选择了 mcu 具体型号后，eide 将能够更好地为您选择的 mcu 生成 `调试/烧录` 配置
 
-:::tip Not necessary
-This function is not necessary, eide will work well even if you don't install any chip support package.
+:::tip 不是必要的
+这个功能不是必需的，即使您没有安装任何芯片支持包，eide 也会很好地工作
 :::
 
-## Install Chip Packages
+## 安装芯片支持包
 
-We support 2 ways to install a chip support package for your project.
+我们支持两种方式为您的项目安装芯片支持包
 
 ![](/img/prj_install_chip_pack_typ.png)
 
-### From Repo
+### 从仓库安装
 
-We cached some [trimmed cmsis packages](https://github.com/github0null/eide-cmsis-pack/tree/master/packages) for eide.
+我们为 eide 缓存了一些 [修剪过的 cmsis 包](https://github.com/github0null/eide-cmsis-pack/tree/master/packages)
 
-If you use this way, eide will pull all available packages from above repository and provide a list for you to choose.
+如果您使用这种方式，eide 将从上面的存储库中提取所有可用的包，并提供一个列表供您选择
 
-:::tip Why trim package
-Some cmsis package are very large in size, this will affect the size of project.<br/>
-So we have to trim them and remove unused contents to reduce disk usage.<br/>
+:::tip 为什么修剪这些包
+有些 cmsis 包的尺寸非常大，这会影响项目的大小<br/>
+因此，我们必须修剪它们并删除不使用的内容，以减少磁盘使用量<br/>
 :::
 
-### From Disk
+### 从磁盘安装
 
-You need download a `.pack` file from package site and select it in file dialog that eide popup.
+你需要从网站上下载这些包（`.pack`），并在 eide 弹出的窗口中选择你要安装的包
 
-There are some sites:
+这里有些官方的下载站点：
 
 - `MDK5 Software Packs`: https://www.keil.com/dd2/Pack/
 
 - `Arm Official Site`: https://developer.arm.com/tools-and-software/embedded/cmsis/cmsis-packs
 
-## Peripheral Components
+## 外设组件
 
-`Peripheral Components` is a collection of peripheral driver source files.
+`外设组件` 是外设驱动源文件的集合
 
-You can install `Peripheral Components` to project from chip support package.
+你可以将芯片包里的 `外设组件` 安装到项目中
 
 ![](/img/prj_chip_pkg_ins_comp.png)
 
-Then these files will be compiled with your project.
+这些文件将和你的项目一起被编译

@@ -20,10 +20,6 @@ The project name.
 
   It's the value of env variable `${TargetName}`
 
-- **In UI**
-  
-  It's used to determine the contents that some UI displays.
-
 ### Output Folder Name
 
 It's the builder output folder name. 

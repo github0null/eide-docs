@@ -2,70 +2,66 @@
 sidebar_position: 30
 ---
 
-# Project Settings
+# 项目设置
 
-Other project settings
+其他的项目设置
 
-## Available Settings
+## 可用的设置项
 
 ![](/img/prj_settings_preview.png)
 
-### Project Name
+### 项目名
 
-The project name.
+项目名称
 
-- **In Builder**
+- **在构建器中**
 
-  It's used to determine the file name when generating build output files (like: `.elf`, `.hex`, `.bin` ...).
+  它用于在生成输出文件时确定文件名 (比如：`.elf`, `.hex`, `.bin` ...).
 
-  It's the value of env variable `${TargetName}`
+  它是变量 `${TargetName}` 的值
 
-- **In UI**
-  
-  It's used to determine the contents that some UI displays.
+### 输出文件夹名
 
-### Output Folder Name
+它是构建器输出文件夹的名称
 
-It's the builder output folder name. 
+这意味着构建过程中的所有中间文件都将在此文件夹中生成
 
-This means that all intermediate files in the build process will be generate in this folder.
+默认值为 `build`
 
-The default value is `build`
+### 环境变量
 
-### Environment Variables
+我们支持在项目中添加一些环境变量
 
-We support add some environment variables to project.
+这些变量可用于：
 
-These variables can be used in:
+- 源文件路径
 
-- Source File Path
+- 编译器参数
 
-- Compiler Options
+- 构建流程（进程的环境变量）
 
-- Build Process (process environment variables)
+- 烧录器命令
 
-- Flasher Shell Command
+#### 特殊的 EIDE 变量
 
-#### Specific Eide Variables
+- `COMPILER_CMD_PREFIX`: 值类型 `string`
 
-- `COMPILER_CMD_PREFIX`: value type: `string`
+  此变量用于向编译器传递一些固定参数
 
-  This variable is used to pass some fixed args to compiler.
+  因为有一些编译器需要 `许可证参数` 和 `激活码参数`
 
-  Because some compiler need `License Args` and `Activation Keys Args`.
+- `MCU_RAM_SIZE`: 值类型 `number, hex number`
 
-- `MCU_RAM_SIZE`: value type: `number, hex number`
+  此变量用于打印内存使用情况，计算百分比
 
-  This variable is used to print memory usage.
+  *必须和 `MCU_ROM_SIZE` 同时使用*
 
-  *Must be used both with `MCU_ROM_SIZE`*
+- `MCU_ROM_SIZE`: 值类型 `number, hex number`
 
-- `MCU_ROM_SIZE`: value type: `number, hex number`
+  此变量用于打印内存使用情况，计算百分比
 
-  This variable is used to print memory usage.
+  *必须和 `MCU_RAM_SIZE` 同时使用*
 
-  *Must be used both with `MCU_RAM_SIZE`*
+- `EIDE_BUILD_ORDER`: 值类型 `number`
 
-- `EIDE_BUILD_ORDER`: value type: `number`
-
-  It's used to determine the project build priority in [multi-project workspace](../advance/multi_prj_workspace).
+  中用于在 [多项目工作区](../advance/multi_prj_workspace) 中确定项目构建优先级

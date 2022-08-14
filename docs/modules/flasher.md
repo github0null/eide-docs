@@ -188,7 +188,7 @@ For Win32: https://freddiechopin.info/en/download/category/4-openocd
 Official site: https://openocd.org/pages/getting-openocd.html
 
 :::tip Recommended version
-We recommend to install `v0.10.0`. The latest version doesn't seem very stable.
+We recommend to install `v0.10.0`.
 :::
 
 #### Config
@@ -286,7 +286,7 @@ stcgal -h
 
 ![](/img/flasher_stcgal_cfg.png)
 
-- `eeprom Data File Path`: eeprom data file path for stm8 `eeprom` region.
+- `eeprom Data File Path`: eeprom data file path for `eeprom` region.
 
   The path must contain only `numbers`, `letters`, `-` or `_`.
 

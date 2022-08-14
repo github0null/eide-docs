@@ -2,52 +2,42 @@
 sidebar_position: 25
 ---
 
-# Project Attributes
+# 项目属性
 
-Include Paths, Preprocessor Defines, Library Search Directories ....
+全局的 包含目录，宏定义 等设置....
 
-## Available Attributes
+## 可用的属性
 
 ![](/img/prj_attr_preview.png)
 
-### Include Directories
+### 包含目录
 
-Include Directories (IncludePath) is the search path for the c header files (`.h`).
+包含目录（IncludePath）是指 c 头文件（`.h`）的搜索路径
 
-This config contains the **global** IncludePath for your project.
+这个配置包含了项目的**全局的**包含目录
 
-If compiler throw a error when in buiding and tell you that not found `xx.h` file, you may need to check this config.
+如果编译器在构建时抛出一个错误，并告诉您没有找到 `xx.h` 文件，您可能需要检查此配置
 
-*In fact, this config use **-I** option similar to GCC.*
+### 库目录
 
-### Library Directories
+当你使用 `-l` 命令行选项添加了一些库时（`.lib`, `.a`），该配置将告诉链接器这些库文件的搜索路径
 
-It's the search path for the library files (`.lib`, `.a`).
-
-When you pass some library options for linker, like: `-ltest`, `-lhello` ...
-
-Now you need yo add the directorties of these library files to this config, then the linker will find these library files (`libtest.a`, `libhello.a`).
-
-*In fact, this config use **-L** option similar to GCC.*
-
-:::caution Notice
-This config is only support **GCC Family** compilers, for other compilers, you need use [**Add Source File**](project_resource#add-source-files) function to add your `.lib, .obj` files directly.
+:::caution 注意
+这个配置仅适用于 `GCC` 系列编译器，对于其他类型编译器，
+你可以使用 [**添加源文件**](project_resource#添加源文件) 功能直接添加 `.lib, .obj` 文件到项目，这将获得同样的效果
 :::
 
-### Preprocessor Definitions
+### 预处理器定义
 
-This config contains the global preprocessor macros for **c source** files.
+这个配置包含了**全局的**宏定义
 
-*In fact, this config use **-D** option similar to GCC.*
-
-:::caution Only For C Source File
-This config is only for all **C Source Files**, if you want to assign some macros for asm sources, you need to goto
-[**Builder Options**](builder#advance-configurations), open `Assembler` tab and add your macros to `Preprocessor Definitions`;
+:::caution 仅适用于 C/C++ 源文件
+这个配置仅为 **C/C++ 源文件** 指定宏定义，如果你要为 asm 文件指定宏定义，请前往 [**构建器配置**](builder#高级配置)
 :::
 
-Preprocessor Definitions Format For Assembler:
+这里列出了适用于 asm 文件的宏定义格式：
 
-| Assembler Type | Format (`<key>` is macro's name，`<value>` is macro's value) |
+| 汇编器类型 | 格式（`<key>` 宏名称，`<value>` 宏的值）|
 |:--|:--|
 | ARMCC 5/6 | `"<key> SETA <value>"` |
 | ARMCC 6（asm-clang） | `<key>=<value>` |
@@ -56,15 +46,15 @@ Preprocessor Definitions Format For Assembler:
 | SDCC | `<key>=<value>` |
 | IAR STM8 | `<key>=<value>` |
 
-## Modify Attributes
+## 更改属性
 
-You can use `modify` button to change above configurations.
+你可以通过 `更改` 按钮来修改这些属性
 
 ![](/img/prj_attr_modify.png)
 
-When you're done, press `ctrl+s` to save this file, and the eide will save your config to project.
+完成修改后，按下 `ctrl+s` 保存文件，eide 将会应用配置到项目 
 
-:::caution Notice
-This config file is a temporary file, after you close this file, it will be destroyed.<br/>
-So don't try to open and modify this file separately, if you want to open and modify config, please use `modify` button !
+:::caution 注意
+此配置文件为临时文件，关闭此文件后将被销毁<br/>
+所以不要尝试单独打开和修改这个文件，如果你想打开和修改配置，请使用 `修改` 按钮!
 :::

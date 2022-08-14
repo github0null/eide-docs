@@ -2,25 +2,25 @@
 sidebar_position: 1
 ---
 
-# Importer Limitations
+# 导入限制
 
-Some limitations for project importer.
+对于项目导入功能存在一些限制
 
-## Keil Projects
+## Keil 项目
 
-Some limitations of project-import feature for **Keil Project**
+**Keil 项目** 的项目导入功能的一些限制：
 
-- **Keil Version Limit**:
+- **Keil 版本限制**：
 
-  *We only support Keil **v5** !!!*
+  *只支持 **v5** !!!*
 
-- **RTE Components**:
+- **RTE 组件**:
 
-  Because the description of the MDK's RTE component in the UVPROJX project file is more complicated, Eide does not support the introduction of these RTE components for the time being.
+  因为在 UVPROJX 项目文件中 MDK 的 RTE 组件的描述更复杂，Eide 不支持引入这些 RTE 组件
 
-  Therefore, if your project has RTE components, it is recommended not to import them (except those with CMSIS components only). 
+  因此，如果您的项目有 RTE 组件，建议不要导入它们 （只有CMSIS组件的除外）
   
-  Those with RTE components have the following green icons:
+  那些有 RTE 组件的有以下绿色图标：
 
   ![](https://discuss.em-ide.com/assets/files/2022-05-11/1652277659-209867-image.png)
 

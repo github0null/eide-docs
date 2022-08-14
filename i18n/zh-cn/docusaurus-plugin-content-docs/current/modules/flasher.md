@@ -2,33 +2,33 @@
 sidebar_position: 20
 ---
 
-# Flasher Configurations
+# 烧录器配置
 
-Program your code into flash...
+烧录你的程序到芯片
 
-We support many flasher for your embedded projects.
+我们支持多种烧录软件：
 
-| Project Type  | Flashers                                                   |
+| 项目类型  | 烧录器                                                   |
 | :------------ | :--------------------------------------------------------- |
 | 8BIT Project  | `stvp for stm8`, `stcgal`, `any shell command`             |
 | Arm Project   | `jlink`, `stlink`, `pyocd`, `openocd`, `any shell command` |
 | RISCV Project | `jlink`, `pyocd`, `openocd`, `any shell command`           |
 
-You can switch flasher for your project.
+你可以在项目中切换烧录器
 
 ![](/img/flasher_cfg_switch.png)
 
-## Install Flasher Tools
+## 安装烧录工具
 
-Flasher tools are not integrated into the EIDE installation package, so you need to install the appropriate flash tool before using the flasher feature.
+烧录工具没有集成到 EIDE 安装包中，因此在使用烧录功能之前需要安装相应的 flasher 工具
 
-Click `Upload To Device` button to start a flash program, we will check you flasher executable and if it's has not been installed, we will pop-up a notification, now you can install or set flasher.
+点击 `烧录程序` 按钮启动 flasher 程序，我们将检查你的 flasher 可执行程序，如果它还没有安装，我们将弹出一个通知，现在你可以安装或设置 flasher
 
 ![](/img/flasher_trigger_installer.png)
 
-If you want to select an existing installation location for your flashers, you need modify eide's plug-in settings.
+如果您想为 flaser 选择一个现有的安装位置，您需要修改 eide 的插件设置
 
-The following is a list of plug-in flasher settings:
+这里是插件的 flasher 设置列表：
 
 | Flasher | VSCode Settings ID            |
 | :------ | :---------------------------- |
@@ -38,71 +38,71 @@ The following is a list of plug-in flasher settings:
 | Openocd | `EIDE.OpenOCD.ExePath`        |
 
 :::tip
-You can also set your flasher executable file path to `System Environment Variables`. plug-in will found it.
+你可以将 flasher 可执行文件的路径设置到`系统环境变量`，eide 会找到它
 :::
 
-## Base Configurations
+## 基础配置
 
-:::danger Install your flasher at first
-You must install corresponding flasher software before modify your flasher configurations.
+:::danger 安装你的烧录器软件
+在开始配置之前，必须先安装好你的烧录软件
 :::
 
-Before start to program flash, you need to check your flasher config.
+在开始烧录程序之前，您需要检查 flasher 配置
 
 ![](/img/flasher_cfg_preview.png)
 
-Each flasher configuration has some base fields, as follows:
+每个 flasher 配置都有一些基本字段，如下所示：
 
-- `Program File`: program file path, like: `xxx.hex, xxx.bin, xxx.s19`
+- `Program File`：程序文件路径（`xxx.hex, xxx.bin, xxx.s19`）
 
-  Format: `<filepath_1>[,addr_1][;<filepath_2>[,addr_2];...;<filepath_n>]`
+  格式：`<filepath_1>[,addr_1][;<filepath_2>[,addr_2];...;<filepath_n>]`
 
-  For this field, we support some variables:
+  对于这个字段，我们支持一些变量：
   ```
-  ${OutDir}: Output Directory
-  ${ProjectName}: Project Name
-  ${ExecutableName}: Executable file output path, without suffix
-  ${ProjectRoot}: Project root directory
-  ${<EnvVarName>}: Variables in `Project Settings` -> `Env Variables`
+  ${OutDir}: 输出目录
+  ${ProjectName}: 项目名称
+  ${ExecutableName}: 可执行文件输出路径，不含后缀
+  ${ProjectRoot}: 项目根目录
+  ${<EnvVarName>}: `Project Settings` -> `Env Variables` 中的变量
   ```
 
-  Examples:
+  示例：
 
-  - `${ExecutableName}.hex`: use '${ExecutableName}.hex' file to program flash.
+  - `${ExecutableName}.hex`：使用 '${ExecutableName}.hex' 文件进行烧录
 
-  - `./bootloader.hex;${ExecutableName}.hex`: at first, use './bootloader.hex' to program flash, and then use '${ExecutableName}.hex' to program flash.
+  - `./bootloader.hex;${ExecutableName}.hex`：首先，烧录 './bootloader.hex' 文件，然后烧录 '${ExecutableName}.hex' 文件
   
-  - `./bootloader.bin,0x08000000;${ExecutableName}.hex`：at first, use './bootloader.bin' to program flash at '0x08000000', and then use '${ExecutableName}.hex' to program flash.
+  - `./bootloader.bin,0x08000000;${ExecutableName}.hex`：首先，烧录 './bootloader.bin' 文件到地址 '0x08000000'，然后烧录 '${ExecutableName}.hex' 文件
   
-  - `./bootloader.bin,0x08000000;${ExecutableName}.bin,0x08100000`：at first, use './bootloader.bin' to program flash at '0x08000000', and then use '${ExecutableName}.bin' to program flash at '0x08100000'.
+  - `./bootloader.bin,0x08000000;${ExecutableName}.bin,0x08100000`：首先，烧录 './bootloader.bin' 文件到地址 '0x08000000'，然后烧录 '${ExecutableName}.bin' 文件到地址 '0x08100000'
 
-  :::tip default value
-  If the value of this field is **blank**, the `${ExecutableName}.hex` will be used.
+  :::tip 默认值
+  如果这个字段值为 **空白**，则 `${ExecutableName}.hex` 作为该字段的值
   :::
 
-## Specific Configurations
+## 特定的配置
 
-Each flasher has their specific configurations.
+每个 flasher 都有其特定的配置
 
-:::danger Install your flasher at first
-You must install corresponding flasher software before modify your flasher configurations.
+:::danger 安装你的烧录器软件
+在开始配置之前，必须先安装好你的烧录软件
 :::
 
 ### JLink
 
 ![](/img/flasher_jlink_cfg.png)
 
-- `CPU Name`: JLink device name. 
+- `CPU Name`：JLink 芯片名
 
-  We will extract all available cpus from `JLink` for you to choose.
+  我们将从 `JLink` 中提取所有可用的 cpu 供您选择
 
-  click `modify` button, a list will popup.
+  点击 `更改` 按钮，将弹出一个列表
 
   ![](/img/flasher_jlink_sel_cpu.png)
 
-- `Interface Type`: Interface for your debug probe.
+- `Interface Type`：仿真器接口
 
-  Available values:
+  可用值：
 
   ```
   SWD
@@ -111,130 +111,130 @@ You must install corresponding flasher software before modify your flasher confi
   FINE
   ```
 
-- `Download Speed`: Frequency of communication for debug probe. Unit: `KHz`
+- `Download Speed`：烧录器速率，单位：`KHz`
 
-- `Extra CommandLine`: Other commandline options whitch will be passed to JLink.
+- `Extra CommandLine`：传递给 JLink 的其他命令行选项
 
-  example options:
+  示例选项：
 
     - `-SelectEmuBySN <SN-Code>`: It is possible to have multiple J-Links connected to the PC at the same time.
     Provide the `JLink S/N Code` for J-Link Commander to connect to a specific J-Link in an automated way (no user interaction required).
 
-  goto https://wiki.segger.com/J-Link_Commander#Batch_processing for more commandline options.
+  前往 https://wiki.segger.com/J-Link_Commander#Batch_processing 查看更多的选项
 
 ### STLink
 
-> For STLink, we support 2 flasher software: `ST_Cube_Programmer` and `STLink_Utility`.<br/>
-> By default, we use `ST_Cube_Programmer`
+> 对于 STLink，我们支持两种烧录软件：`ST_Cube_Programmer` 和 `STLink_Utility`<br/>
+> 默认情况下，我们使用 `ST_Cube_Programmer`
 
 ![](/img/flasher_stlink_cfg.png)
 
-- `Interface Type`: Interface for your debug probe.
+- `Interface Type`：仿真器接口
 
-  Available values: `SWD, JTAG`
+  可用值：`SWD, JTAG`
 
-- `Reset Mode`: Reset type when flash your ST mcus.
+- `Reset Mode`：烧录时的复位类型
 
-  Available values: `default`, `software`, `hardware`, `core reset`
+  可用值：`default`, `software`, `hardware`, `core reset`
 
-- `Launch App After Program`: Launch your program after flash done.
+- `Launch App After Program`：烧录结束后启动程序
   
-  Available values: `true` or `false`
+  可用值：`true` 或 `false`
 
-- `Download Speed`: Frequency of communication for debug probe. Unit: `KHz`
+- `Download Speed`：烧录器速率，单位：`KHz`
 
-- `External Loader File`: Programming algorithm file (`xxx.stldr`).
+- `External Loader File`：烧录算法文件（`xxx.stldr`）
 
-- `Option Bytes Config`: Options bytes for mcus. It's a txt file with `ini` format.
+- `Option Bytes Config`：选项字节设置
 
-- `Extra CommandLine`: Other commandline options whitch will be passed to `st_cube_programmer`.
+- `Extra CommandLine`：其他命令行选项
 
 ### PyOCD
 
 [pyOCD](https://pyocd.io/): Python based tool and API for debugging, programming, and exploring Arm Cortex microcontrollers.
 
-#### Install PyOCD
+#### 安装 PyOCD
 
 https://pyocd.io/docs/installing.html
 
-#### Config
+#### 配置
 
 ![](/img/flasher_pyocd_cfg.png)
 
-- `Target Name`: Target mcu name. 
+- `Target Name`：目标 MCU 名称
   
-  We will extract all available cpus from `pyOCD` for you to choose.
+  我们将从 `PyOCD` 中提取所有可用的 cpu 供您选择
 
-  For more target, please reference: [target support](https://pyocd.io/docs/target_support.html)
+  更多信息请参考：[target support](https://pyocd.io/docs/target_support.html)
 
-- `Download Speed`: Frequency of communication for debug probe.
+- `Download Speed`：烧录器速率
 
-  Available values: please reference: [debug probes](https://pyocd.io/docs/debug_probes.html)
+  可用值：参考 [debug probes](https://pyocd.io/docs/debug_probes.html)
 
-  Default value: `4M`
+  默认值：`4M`
 
-- `Other Options`: pyOCD config file.
+- `Other Options`：pyOCD 配置文件
 
-  Please reference: [pyocd config file](https://pyocd.io/docs/configuration.html#config-file)
+  请参考 [pyocd config file](https://pyocd.io/docs/configuration.html#config-file)
 
 ### OpenOCD
 
 > [OpenOCD](https://openocd.org/pages/about.html), the Open On-Chip Debugger has been created by Dominic Rath as part of a diploma thesis at the University of Applied Sciences, FH-Augsburg. For other material presented on this site, see the respective notes of authorship.
 
-#### Install 
+#### 安装 
 
-For Win32: https://freddiechopin.info/en/download/category/4-openocd
+Windows 安装包：https://freddiechopin.info/en/download/category/4-openocd
 
-Official site: https://openocd.org/pages/getting-openocd.html
+官方站点：https://openocd.org/pages/getting-openocd.html
 
-:::tip Recommended version
-We recommend to install `v0.10.0`. The latest version doesn't seem very stable.
+:::tip 建议的版本
+我们建议使用 `v0.10.0` 版本
 :::
 
-#### Config
+#### 配置
 
 ![](/img/flasher_openocd_cfg.png)
 
-- `Chip Config`: The configuration file for mcu.
+- `Chip Config`：MCU 配置文件
 
-  We will extract all available values from `openocd` for you to choose.
+  我们将从 `openocd` 中提取所有可用值供您选择
 
-- `Interface Config`: The configuration file for debug probe.
+- `Interface Config`：调试探针配置文件
 
-  We will extract all available values from `openocd` for you to choose.
+  我们将从 `openocd` 中提取所有可用值供您选择
 
-How To Make An OpenOCD Config File: https://openocd.org/doc-release/html/Config-File-Guidelines.html#Config-File-Guidelines
+如何编写 openocd 配置文件：https://openocd.org/doc-release/html/Config-File-Guidelines.html#Config-File-Guidelines
 
-:::tip Custom config file
-If you have an openocd `xx.cfg` file, put it in one of `<projectRootFolder>`, `<projectRootFolder>/.eide` or `<projectRootFolder>/tools` folder.<br/>
-The plug-in will found them and then you can choose config file.
+:::tip 自定义配置文件
+如果你有现成的 `xx.cfg` 文件，将其放到 `<projectRootFolder>`, `<projectRootFolder>/.eide` 或 `<projectRootFolder>/tools` 文件夹内<br/>
+插件会找到它们，然后您可以重新选择配置文件
 :::
 
 ### STVP
 
 > Only available for `8Bit Project`
 
-[STVP-STM8](https://www.st.com/zh/development-tools/stvp-stm8.html) is used to program flash for **STM8** chips.
+[STVP-STM8](https://www.st.com/zh/development-tools/stvp-stm8.html) 被用来烧录 STM8
 
 ![](/img/flasher_stvp_cfg.png)
 
-- `CPU Name`: STM8 chip name. 
+- `CPU Name`：STM8 芯片名
 
-  We will extract all available stm8 chips from `stvp` for you to choose.
+  我们将从 `stvp` 中提取所有可用的 stm8 芯片供您选择
 
-- `eeprom Data File Path`: eeprom data file path for stm8 `eeprom` region.
+- `eeprom Data File Path`：eeprom 数据文件
 
-  The path must contain only `numbers`, `letters`, `-` or `_`.
+  *路径必须只包含 ASCII 码，且不能有空格*
 
-- `Option Bytes File Path`: option bytes config for stm8.
+- `Option Bytes File Path`：stm8 选项字节
 
-  The path must contain only `numbers`, `letters`, `-` or `_`.
+  *路径必须只包含 ASCII 码，且不能有空格*
 
 ### STCGAL
 
-[STCGAL](https://github.com/grigorig/stcgal) is a command line flash programming tool for [STC MCU Ltd](http://stcmcu.com/) 8051 compatible microcontrollers.
+[STCGAL](https://github.com/grigorig/stcgal) 是一个为 [STC MCU Ltd](http://stcmcu.com/) 8051 芯片而准备的命令行烧录软件
 
-**Notice**: The STCGAL supports a limited number of chip models.
+**注意**: STCGAL 支持有限数量的芯片模型
 
 ```markdown
 stcgal should fully support STC 89/90/10/11/12/15/8 series MCUs.
@@ -266,75 +266,75 @@ So far, stcgal was tested with the following MCU models:
 * STC8F2K08S2 (BSL version: 7.3.10U)
 ```
 
-#### Install
+#### 安装
 
-At first, you need a **python3** environment.
+在开始之前，你必须安装 **python3** 环境
 
-then execute these command to install it, as follows:
+然后执行以下命令安装 `STCGAL`
 
 ```shell
 pip3 install stcgal --user
 ```
 
-Then you can check stcgal by this command:
+然后你可以用以下命令检查是否安装完毕
 
 ```shell
 stcgal -h
 ```
 
-#### Config
+#### 配置
 
 ![](/img/flasher_stcgal_cfg.png)
 
-- `eeprom Data File Path`: eeprom data file path for stm8 `eeprom` region.
+- `eeprom Data File Path`：eeprom 数据文件
 
-  The path must contain only `numbers`, `letters`, `-` or `_`.
+  *路径必须只包含 ASCII 码，且不能有空格*
 
-- `Extra CommandLine`: Other stcgal commandline options.
+- `Extra CommandLine`：其他 stcgal 命令行
 
-  reference: [stcgal usage](https://github.com/grigorig/stcgal/blob/master/doc/USAGE.md)
+  参考 [stcgal usage](https://github.com/grigorig/stcgal/blob/master/doc/USAGE.md)
 
-- `Other Config`: Specific stc flash config.
+- `Other Config`：stc 烧录参数
 
-  reference: [stcgal option keys](https://github.com/grigorig/stcgal/blob/master/doc/USAGE.md#option-keys)
+  参考 [stcgal option keys](https://github.com/grigorig/stcgal/blob/master/doc/USAGE.md#option-keys)
 
-:::caution Program flash
-After stcgal output a message: `Cycling power done`, you need **reset mcu** to start a program flash process.<br/>
-Otherwise, stcgal will be in the waiting state.
+:::caution 烧录程序
+在 stcgal 输出：`Cycling power done` 之后，你必须**复位**才能启动一个烧录流程<br/>
+否则 stcgal 将一直处于等待状态
 :::
 
-### Use Shell Command
+### 使用 Shell 命令烧录
 
-We support to use any shell command to program your flash.
+我们支持使用任何 shell 命令来编程您的 flash
 
 ![](/img/flasher_shell_cfg.png)
 
-- `Flash Command`: The shell command which will be executed when user trigger a program flash process.
+- `Flash Command`：当用户触发烧录命令时执行的 shell 命令
 
-- `Erase Chip Command`: The shell command which will be executed when user trigger a erase flash process.
+- `Erase Chip Command`：当用户触发全片擦除命令时执行的 shell 命令
 
-:::tip Shell Executable File
-For **Win32**, the shell command will be executed by `CMD.exe`.<br/>
-For **Linux**, the shell command will be executed by `/bin/bash`.
+:::tip Shell 可执行文件
+对于 **Win32**，shell 命令将使用 `CMD.exe` 执行<br/>
+对于 **Linux**，shell 命令将使用 `/bin/bash` 执行
 :::
 
 ---
 
-There are some available variables for shell command:
+shell 命令有一些可用的变量：
 
-- `${programFile}`: Path for the program file. 
+- `${programFile}`：程序文件的路径
   
-  the value is defined by [`Base Config -> Program File`](#base-configurations)
+  该变量的值位于 [`Base Config -> Program File`](#基础配置) 中
 
-- `${port}`: available serial-port name (like: `COM1, COMx` for win32; `ttyUSB0, ttyUSBx` for linux).
+- `${port}`：可用的串口名（比如：`COM1, COMx`，`ttyUSB0, ttyUSBx`）
 
-The following variables are available when there are more than one program file that can be used:
+当可以使用多个程序文件时，以下变量可用：
 
-- `${programFile[n]}`: Path for the NTH program file (`n` starts from zero).
+- `${programFile[n]}`：第 n 个程序文件路径（`n` 从 0 开始）
 
-- `${binAddr[n]}`: (only for `bin` file) Flash start address for the NTH program file (`n` starts from zero).
+- `${binAddr[n]}`：第 n 个程序文件的烧录地址（`n` 从 0 开始）
 
-Some examples:
+一些示例：
 
 ```shell
 # use NuLink to program nuvoton mcu

@@ -2,21 +2,21 @@
 sidebar_position: 2
 ---
 
-# Project Resource
+# 项目资源
 
-Manage your project resources.
+管理你的项目资源
 
-## Introduce
+## 介绍
 
-**Project Resources** view provide a tree view UI to show `source folders`, `source files`, `builder output files` for your project.
+**项目资源** 视图提供了一些 UI 来显示项目中的 `源文件`, `源文件夹`, `输出文件`
 
-We provide many features, you can `add/remove source folders`, `add/remove source files`, `exclude/include source files/folders`, `modify file path for existed source files` .....
+我们提供了一些操作命令，你可以：`添加/移除 源文件，文件夹`, `排除、包含源文件，文件夹`, `修改源文件路径` .....
 
 ![](/img/proj_res_preview.png)
 
-## Context Menu
+## 上下文菜单
 
-Each UI items have their `context menus`, you can **right click** your mouse to trigger these menus.
+每个 UI 都有它的 `上下文菜单`，你可以 **右击** 鼠标触发这些菜单
 
 ![](/img/ctx_menu_prj.png)
 
@@ -26,105 +26,106 @@ Each UI items have their `context menus`, you can **right click** your mouse to 
 
 ![](/img/ctx_menu_prj_file.png)
 
-## Add Sources
+## 添加源文件资源
 
-You can **Add Source Files**, **Add Source Folders** to your project.
+你可以 **添加源文件**，**添加源文件夹** 到你的项目
 
 ![](/img/prj_res_add_src_file.png)
 
-### Add Source Files
+### 添加源文件
 
-Click `Add File` menu item to add some source files.
+点击 `添加文件` 菜单项添加文件
 
-Now, we support these `source` file types:
+我们支持以下 `源文件` 类型：
 
 - `C Files`: `.c`
 - `C++ Files`: `.cpp .cxx .cc .c++`
 - `ASM Files`: `.s, .asm, .a51`
 
-And we also support some `binary` file types:
+我们支持以下 `二进制文件` 类型：
 
 - `Obj Files`: `.obj, .o`
 - `Lib Files`: `.lib, .a`
 
-### Add Source Folders
+### 添加源文件夹
 
-Click `Add Folder` menu item to add source folder.
+点击 `添加源文件夹` 菜单项添加源文件夹
 
-We support 2 folder types:
+我们支持 2 种类型的文件夹：
 
 ![](/img/prj_res_folder_typ.png)
 
-- `Virtual Folder`: Virtual folder, not existed on disk.
+- `Virtual Folder`: 虚拟文件夹，磁盘上不存在
 
-  You need specific a name for virtual folder when create it.
+  在创建虚拟文件夹时，需要为其指定一个名称
 
-  And then you can `add files` or `add folders` by right-click menus.
+  然后你可以通过右键菜单 `添加文件` 或 `添加文件夹`
 
-- `Normal Folder`: An existed folder on your disk. (like: eclipse)
+- `Normal Folder`: 链接磁盘上存在的文件夹
 
-  You can link an exsited folder to project, eide will **auto recursive search** all **source** files in this folder and add **all available source files** to your project.
+  您可以链接一个现有的文件夹到项目，eide 将自动递归搜索该文件夹中的 **所有** 源文件，并将 **所有可用的源文件** 添加到您的项目
 
-  And eide will watch source folder root, if there are some files/folders has been created or deleted, eide will auto research your source folders and auto update sources file list.
+  并且 eide 将监视源文件夹的变化，如果有一些文件/文件夹已经创建或删除，eide 将再次自动搜索您的源文件夹，自动更新源文件列表
 
-  :::caution Ignored Files
-  Eide **only contains** `txt` files when auto search source files, so if you want to add some **.obj**, **.lib**, **.a** files to project, you need add them by using [Add Source Files](#add-source-files) function.
+  :::caution 被忽略的文件
+  EIDE 在搜索过程中 **只处理文本文件**，
+  因此如果你想添加 **.obj**, **.lib**, **.a** 二进制文件到项目，你必须手动通过 [添加源文件](#添加源文件) 功能添加
   :::
 
-How to distinguish `Virtual` or `Normal` folders in an exsited project ?
+如何在已有项目中区分两种文件夹类型？
 
-- `Virtual Folder`: folder which with <img width="16px" bor src="/img/icon/folder_virtual.svg"/> icon.
+- `Virtual Folder`: 带有 <img width="16px" bor src="/img/icon/folder_virtual.svg"/> 图标
 
-- `Normal Folder`: folder which with <img width="16px" bor src="/img/icon/folder_root.svg"/> icon.
+- `Normal Folder`: 带有 <img width="16px" bor src="/img/icon/folder_root.svg"/> 图标
 
 ![](/img/prj_res_folder_typ_cmp.png)
 
-## Import Source Tree
+## 导入源文件树
 
-If you are migrating some projects to eide, you can import source file tree to your project by `Import Source Tree` feature.
+如果您要将一些项目迁移到 eide，您可以通过以下方式将源文件树导入到项目中
 
 ![](/img/prj_res_imp_src_tree.png)
 
-Now, we support some importers: `IAR For ARM`, `IAR For 8051/STM8`, `Segger Embedded Studio`
+目前我们支持 `IAR For ARM`, `IAR For 8051/STM8`, `Segger Embedded Studio` 项目
 
 ![](/img/prj_res_imp_src_tree_importers.png)
 
-Follow the prompts to select the appropriate project file, and then eide will import `source tree`, `include paths` and `macros` to your project.
+按照提示选择适当的项目文件，然后 eide 将导入 `源文件树`, `包含目录` 和 `宏定义` 到你的项目
 
-:::caution File Path Restrictions
-The project file path which will be imported must only contains `ASCII` characters.
+:::caution 文件路径限制
+将要导入的项目文件路径必须只包含 `ASCII` 字符
 :::
 
-:::caution Will override current project
-This function will override `source tree`, `include paths`, `macros` to current project. It's irreversible, you can not undo this operation.
+:::caution 将覆盖当前项目
+注意，这个功能将覆盖 `源文件树`, `包含目录` 和 `宏定义` 到你的项目，这是不可逆的
 :::
 
-## Append Compiler Args For Sources
+## 附加编译参数到源文件
 
-:::caution Notice
-This feature is only used to append **specific** compiler args for some single source files.<br/>
-If you want to add global compiler args for your project, please reference [**Builder Options**](../modules/builder#advance-configurations)
+:::caution 注意
+此特性仅用于为一些单一源文件追加**特定**编译器参数<br/>
+如果您想为您的项目添加全局编译器参数，请参考 [**构建器选项**](../modules/builder#高级配置)
 :::
 
-Sometimes you want to add some **specific compiler args** for some source files. This feature can help you do that.
+有时你想为一些源文件添加一些特定的编译参数，这个特性可以帮助您做到这一点
 
 ![](/img/prj_res_add_src_file_args.png)
 
-Click `Append separate compiler params for source files`, eide will create and open an empty yaml config file, as follows:
+单击 `为源文件附加单独的编译器参数`，eide 将创建并打开一个空的 yaml 配置文件，如下所示：
 
 ![](/img/prj_res_add_src_file_args_preview.png)
 
-Now you can use [glob patterns](https://github.com/micromatch/micromatch#matching-features) to match specific source files and append some args.
+现在你可以使用 [glob patterns](https://github.com/micromatch/micromatch#matching-features) 去匹配对应的源文件，然后附加参数
 
-Because of eide has 2 folder types ([Source Folders](#add-source-folders)), so we provide **2** categorys for `glob patterns`.
+由于我们有两种文件夹类型（[源文件夹](#添加源文件夹)），所以我们提供了两种 `glob patterns` 类型
 
-- `files`: match files by using **real filesystem path**.
+- `files`: 使用 **真实文件系统路径** 匹配文件
 
-- `virtualPathFiles`: match files by using **virtual path**.
+- `virtualPathFiles`: 使用 **虚拟路径** 匹配文件
 
-**Examples:**
+**示例：**
 
-If your project folder structure is as follows:
+如果您的项目文件夹结构如下：
 
 ```
 --
@@ -153,13 +154,13 @@ If your project folder structure is as follows:
  +-- readme.md
 ```
 
-Now if you want to:
+现在如果你想：
 
-- Add `-O2` compiler args for folder `hal/STM32F10x_StdPeriph_Driver/src`
+- 为文件夹 `hal/STM32F10x_StdPeriph_Driver/src` 添加 `-O2` 编译参数
 
-- Add `-O1` compiler args for file `src/main.c`
+- 为源文件 `src/main.c` 添加 `-O1` 参数
 
-You can enter the following content in yaml config:
+您可以在 yaml config 中输入以下内容：
 
 ```yaml
 version: '1.0'
@@ -178,15 +179,15 @@ virtualPathFiles:
 #   'virtual_folder/**/*.c': --c99
 ```
 
-Then you can click `build` button to build you project.
+保存配置，然后你可以点击 `构建` 按钮来重新构建你的项目
 
-### Check File Args
+### 检查文件参数
 
-If you want to check compiler params for source files, you can use `generate builder.params` function.
+如果要检查源文件的附加编译器参数，可以使用 `生成 builder.params` 功能
 
 ![](/img/prj_gen_builder_params.png)
 
-Click this menu item, and eide will refresh `builder.params`, now you can open `build/<targetName>/builder.params` file to check file params.
+单击此菜单项，eide 将刷新 `builder.params`, 现在你可以打开 `build/<targetName>/builder.params` 文件去检查相关参数
 
 ![](/img/prj_builder_params_src_args.png)
 

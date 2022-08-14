@@ -61,11 +61,11 @@ We support 2 folder types:
 
   And then you can `add files` or `add folders` by right-click menus.
 
-- `Normal Folder`: An existed folder on your disk. (like: eclipse)
+- `Normal Folder`: An existed folder on your disk.
 
   You can link an exsited folder to project, eide will **auto recursive search** all **source** files in this folder and add **all available source files** to your project.
 
-  And eide will watch source folder root, if there are some files/folders has been created or deleted, eide will auto research your source folders and auto update sources file list.
+  And eide will watch source folder root, if there are some files/folders has been created or deleted, eide will auto re-search your source folders and auto update sources file list.
 
   :::caution Ignored Files
   Eide **only contains** `txt` files when auto search source files, so if you want to add some **.obj**, **.lib**, **.a** files to project, you need add them by using [Add Source Files](#add-source-files) function.
@@ -178,7 +178,7 @@ virtualPathFiles:
 #   'virtual_folder/**/*.c': --c99
 ```
 
-Then you can click `build` button to build you project.
+Save and then you can click `build` button to rebuild you project.
 
 ### Check File Args
 
