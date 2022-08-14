@@ -117,8 +117,8 @@ const config = {
                 href: 'https://github.com/github0null/eide',
               },
               {
-                label: 'Obsolete Docs',
-                href: 'https://em-ide.com/docs/eide-manual',
+                label: 'Legacy Docs',
+                href: 'https://em-ide.com/legacy-docs',
               },
             ],
           },
