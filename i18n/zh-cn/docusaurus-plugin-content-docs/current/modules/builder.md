@@ -35,7 +35,7 @@ sidebar_position: 10
 
 ![](/img/builer_cfg_btn.png)
 
-Click `modify` button, will open `BUILDER OPTIONS VIEW`, like this:
+点击 `修改` 按钮，将打开 `BUILDER OPTIONS` 视图，如下：
 
 ![](/img/builder_opt_view.png)
 
