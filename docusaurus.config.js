@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Embedded IDE For VSCode',
   tagline: 'A development environment for mcs51/stm8/cortex-m/riscv microcontrollers',
-  url: 'https://docs.em-ide.com',
+  url: 'https://em-ide.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
