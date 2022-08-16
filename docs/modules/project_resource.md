@@ -70,6 +70,10 @@ We support 2 folder types:
   :::caution Ignored Files
   Eide **only contains** `txt` files when auto search source files, so if you want to add some **.obj**, **.lib**, **.a** files to project, you need add them by using [Add Source Files](#add-source-files) function.
   :::
+  
+  :::caution Notice
+  eide will **not** auto search and add `IncludePath` in your source folders, you need to add all `IncludePath` manually !!!, Please check [Version Compatibility](../notice/compatibility_changes)
+  :::
 
 How to distinguish `Virtual` or `Normal` folders in an exsited project ?
 

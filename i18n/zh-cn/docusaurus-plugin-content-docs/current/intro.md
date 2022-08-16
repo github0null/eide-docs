@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # 这是什么？
 
+[![](https://vsmarketplacebadge.apphb.com/version/cl.eide.svg)](https://marketplace.visualstudio.com/items?itemName=CL.eide) [![](https://vsmarketplacebadge.apphb.com/installs/cl.eide.svg)](https://marketplace.visualstudio.com/items?itemName=CL.eide) [![](https://vsmarketplacebadge.apphb.com/downloads/cl.eide.svg)](https://marketplace.visualstudio.com/items?itemName=CL.eide) [![](https://vsmarketplacebadge.apphb.com/rating/cl.eide.svg)](https://marketplace.visualstudio.com/items?itemName=CL.eide)
+
 [EIDE](https://marketplace.visualstudio.com/items?itemName=CL.eide) 是一个 VSCode 插件，用来开发单片机项目，比如：`8051`, `stm8`, `stm32`, `other cortex-m mcus` ...
 
 ![](https://em-ide.com/preview.png)
