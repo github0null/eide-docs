@@ -36,16 +36,16 @@ sidebar_position: 2
 
 点击 `添加文件` 菜单项添加文件
 
-我们支持以下 `源文件` 类型：
+我们支持以下 `文本文件` 类型：
 
-- `C Files`: `.c`
-- `C++ Files`: `.cpp .cxx .cc .c++`
-- `ASM Files`: `.s, .asm, .a51`
+- **C Files**: `.c`
+- **C++ Files**: `.cpp .cxx .cc .c++`
+- **ASM Files**: `.s, .asm, .a51`
 
 我们支持以下 `二进制文件` 类型：
 
-- `Obj Files`: `.obj, .o`
-- `Lib Files`: `.lib, .a`
+- **Obj Files**: `.obj, .o`
+- **Lib Files**: `.lib, .a`
 
 ### 添加源文件夹
 

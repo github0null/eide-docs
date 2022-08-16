@@ -36,16 +36,16 @@ You can **Add Source Files**, **Add Source Folders** to your project.
 
 Click `Add File` menu item to add some source files.
 
-Now, we support these `source` file types:
+Now, we support these `text` file types:
 
-- `C Files`: `.c`
-- `C++ Files`: `.cpp .cxx .cc .c++`
-- `ASM Files`: `.s, .asm, .a51`
+- **C Files**: `.c`
+- **C++ Files**: `.cpp .cxx .cc .c++`
+- **ASM Files**: `.s, .asm, .a51`
 
 And we also support some `binary` file types:
 
-- `Obj Files`: `.obj, .o`
-- `Lib Files`: `.lib, .a`
+- **Obj Files**: `.obj, .o`
+- **Lib Files**: `.lib, .a`
 
 ### Add Source Folders
 
