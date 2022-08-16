@@ -72,7 +72,7 @@ We support 2 folder types:
   :::
   
   :::caution Notice
-  eide will **not** auto search and add `IncludePath` in your source folders, you need to add all `IncludePath` manually !!!, Please check [Version Compatibility](../notice/compatibility_changes)
+  eide will **not** auto search and add `IncludePath` for your source folders, you need to add all `IncludePath` manually !!!, Please check [Version Compatibility](../notice/compatibility_changes)
   :::
 
 How to distinguish `Virtual` or `Normal` folders in an exsited project ?
