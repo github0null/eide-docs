@@ -16,7 +16,7 @@ sidebar_position: 20
 
 你可以在项目中切换烧录器
 
-![](/img/flasher_cfg_switch.png)
+![](/docs_img/flasher_cfg_switch.png)
 
 ## 安装烧录工具
 
@@ -24,7 +24,7 @@ sidebar_position: 20
 
 点击 `烧录程序` 按钮启动 flasher 程序，我们将检查你的 flasher 可执行程序，如果它还没有安装，我们将弹出一个通知，现在你可以安装或设置 flasher
 
-![](/img/flasher_trigger_installer.png)
+![](/docs_img/flasher_trigger_installer.png)
 
 如果您想为 flaser 选择一个现有的安装位置，您需要修改 eide 的插件设置
 
@@ -49,7 +49,7 @@ sidebar_position: 20
 
 在开始烧录程序之前，您需要检查 flasher 配置
 
-![](/img/flasher_cfg_preview.png)
+![](/docs_img/flasher_cfg_preview.png)
 
 每个 flasher 配置都有一些基本字段，如下所示：
 
@@ -90,7 +90,7 @@ sidebar_position: 20
 
 ### JLink
 
-![](/img/flasher_jlink_cfg.png)
+![](/docs_img/flasher_jlink_cfg.png)
 
 - `CPU Name`：JLink 芯片名
 
@@ -98,7 +98,7 @@ sidebar_position: 20
 
   点击 `更改` 按钮，将弹出一个列表
 
-  ![](/img/flasher_jlink_sel_cpu.png)
+  ![](/docs_img/flasher_jlink_sel_cpu.png)
 
 - `Interface Type`：仿真器接口
 
@@ -127,7 +127,7 @@ sidebar_position: 20
 > 对于 STLink，我们支持两种烧录软件：`ST_Cube_Programmer` 和 `STLink_Utility`<br/>
 > 默认情况下，我们使用 `ST_Cube_Programmer`
 
-![](/img/flasher_stlink_cfg.png)
+![](/docs_img/flasher_stlink_cfg.png)
 
 - `Interface Type`：仿真器接口
 
@@ -159,7 +159,7 @@ https://pyocd.io/docs/installing.html
 
 #### 配置
 
-![](/img/flasher_pyocd_cfg.png)
+![](/docs_img/flasher_pyocd_cfg.png)
 
 - `Target Name`：目标 MCU 名称
   
@@ -193,7 +193,7 @@ Windows 安装包：https://freddiechopin.info/en/download/category/4-openocd
 
 #### 配置
 
-![](/img/flasher_openocd_cfg.png)
+![](/docs_img/flasher_openocd_cfg.png)
 
 - `Chip Config`：MCU 配置文件
 
@@ -216,7 +216,7 @@ Windows 安装包：https://freddiechopin.info/en/download/category/4-openocd
 
 [STVP-STM8](https://www.st.com/zh/development-tools/stvp-stm8.html) 被用来烧录 STM8
 
-![](/img/flasher_stvp_cfg.png)
+![](/docs_img/flasher_stvp_cfg.png)
 
 - `CPU Name`：STM8 芯片名
 
@@ -284,7 +284,7 @@ stcgal -h
 
 #### 配置
 
-![](/img/flasher_stcgal_cfg.png)
+![](/docs_img/flasher_stcgal_cfg.png)
 
 - `eeprom Data File Path`：eeprom 数据文件
 
@@ -307,7 +307,7 @@ stcgal -h
 
 我们支持使用任何 shell 命令来编程您的 flash
 
-![](/img/flasher_shell_cfg.png)
+![](/docs_img/flasher_shell_cfg.png)
 
 - `Flash Command`：当用户触发烧录命令时执行的 shell 命令
 

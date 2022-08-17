@@ -8,7 +8,7 @@ Include Paths, Preprocessor Defines, Library Search Directories ....
 
 ## Available Attributes
 
-![](/img/prj_attr_preview.png)
+![](/docs_img/prj_attr_preview.png)
 
 ### Include Directories
 
@@ -60,7 +60,7 @@ Preprocessor Definitions Format For Assembler:
 
 You can use `modify` button to change above configurations.
 
-![](/img/prj_attr_modify.png)
+![](/docs_img/prj_attr_modify.png)
 
 When you're done, press `ctrl+s` to save this file, and the eide will save your config to project.
 

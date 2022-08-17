@@ -10,7 +10,7 @@ eide 项目结构介绍 ...
 
 一个基本的 eide 项目结构如下：
 
-![](/img/prj_folder_preview.png)
+![](/docs_img/prj_folder_preview.png)
 
 有些文件是必须存在的：
 

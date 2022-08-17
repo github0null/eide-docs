@@ -10,7 +10,7 @@ sidebar_position: 10
 
 每个项目都有基础的配置
 
-![](/img/builder_cfg_preview.png)
+![](/docs_img/builder_cfg_preview.png)
 
 有一些基本选项，如：`CPU 类型`，`浮点类型`，`链接器脚本文件路径` 通常它们有固定的含义
 
@@ -33,11 +33,11 @@ sidebar_position: 10
 
 除了上面描述的 `基础选项`，我们还提供了更详细的编译配置项
 
-![](/img/builer_cfg_btn.png)
+![](/docs_img/builer_cfg_btn.png)
 
 点击 `修改` 按钮，将打开 `BUILDER OPTIONS` 视图，如下：
 
-![](/img/builder_opt_view.png)
+![](/docs_img/builder_opt_view.png)
 
 我们把配置项分为 5 个标签页，分别为 `用户任务`, `全局选项`, `C/C++ 编译器`, `汇编器`, `链接器`.
 
@@ -84,7 +84,7 @@ sidebar_position: 10
 
   添加 `--asm --asm_dir="${OutDir}"` 参数到 `Builder Options` -> `C/C++ Compiler` -> `Other C Compiler Options`
 
-  ![](/img/example_gen_asm_for_armcc.png)
+  ![](/docs_img/example_gen_asm_for_armcc.png)
 
 ### 用户任务命令
 

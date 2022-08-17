@@ -8,7 +8,7 @@ sidebar_position: 20
 
 我们支持多种创建新项目的方法
 
-![](/img/create_prj_sel.png)
+![](/docs_img/create_prj_sel.png)
 
 |类型|描述|
 |:----|:----|
@@ -25,21 +25,21 @@ sidebar_position: 20
 
 - 点击 `新建项目` -> `空项目`, 将弹出一个窗口，您需要选择一个项目类型
 
-  ![](/img/new_prj_typ.png)
+  ![](/docs_img/new_prj_typ.png)
 
 - 本例中我们选择 `cortex-m`, 然后输入项目名称
 
-  ![](/img/new_prj_name.png)
+  ![](/docs_img/new_prj_name.png)
 
 - 然后我们需要选择项目的保存位置
   
-  ![](/img/new_prj_loc_sel.png)
+  ![](/docs_img/new_prj_loc_sel.png)
 
 - 接下来，一个新的项目将被创建，eide 将会弹出通知
 
   切换工作空间，将加载新项目
 
-  ![](/img/new_prj_preview.png)
+  ![](/docs_img/new_prj_preview.png)
 
 现在，我们已经成功创建了一个空项目
 
@@ -55,7 +55,7 @@ sidebar_position: 20
 
 默认编译器是 `gcc`，你可以将编译器切换，我们支持 `gcc/armcc/armclang`
 
-![](/img/new_prj_cc_cfg.png)
+![](/docs_img/new_prj_cc_cfg.png)
 
 |字段名称|描述|
 |:--|:--|
@@ -73,7 +73,7 @@ sidebar_position: 20
 
 - 将鼠标移至 `项目资源`，右键单击打开菜单
 
-  ![](/img/new_prj_add_srcs.png)
+  ![](/docs_img/new_prj_add_srcs.png)
 
 - 点击 `添加文件` 按钮，添加一些源文件
 
@@ -83,7 +83,7 @@ sidebar_position: 20
 
 如果项目附带一些头文件，我们需要添加 [包含路径](../modules/project_attr)
 
-![](/img/new_prj_add_src_preview.png)
+![](/docs_img/new_prj_add_src_preview.png)
 
 ### 编译项目
 
@@ -91,4 +91,4 @@ sidebar_position: 20
 
 构建任务将启动，日志将输出到 `Output Panel`
 
-![](/img/new_prj_build.png)
+![](/docs_img/new_prj_build.png)

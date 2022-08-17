@@ -8,7 +8,7 @@ Other project settings
 
 ## Available Settings
 
-![](/img/prj_settings_preview.png)
+![](/docs_img/prj_settings_preview.png)
 
 ### Project Name
 

@@ -10,7 +10,7 @@ Other utility functions.
 
 After build your project, you can use `Show Disassembly` menu button to check disassembly code for your c source file.
 
-![](/img/show_disasm.png)
+![](/docs_img/show_disasm.png)
 
 :::danger Only for GCC/ARMCC
 This function is only supported `GCC` or `ARMCC` compiler.
@@ -22,7 +22,7 @@ After build done, you can open `Output Files` virtual folder node to check your 
 
 If your compiler output an elf format file, then you can click it to open a `ELF Viewer`, eide will dump some informations from this elf file and show in a webview page.
 
-![](/img/elf_viewer.png)
+![](/docs_img/elf_viewer.png)
 
 ## Map View For Arm
 
@@ -32,7 +32,7 @@ After build done, you can open `Output Files` virtual folder node to check your 
 
 Click `*.map.view` file to open `Map View`
 
-![](/img/arm_map_view.png)
+![](/docs_img/arm_map_view.png)
 
 :::caution Only For Arm Project
 This function is only for Arm Project.

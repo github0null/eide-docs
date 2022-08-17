@@ -10,7 +10,7 @@ eide project folder structure ...
 
 A base eide project folder structure is like:
 
-![](/img/prj_folder_preview.png)
+![](/docs_img/prj_folder_preview.png)
 
 There are some **necessary** files or folders in an eide project:
 

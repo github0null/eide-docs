@@ -12,7 +12,7 @@ We provide some external utility tools on [github repository](https://github.com
 
 You can install these tools by eide, as follows:
 
-![](/img/install_ext_tools.png)
+![](/docs_img/install_ext_tools.png)
 
 These tools will be installed to `<user_home>/.eide/tools` folder, and eide will export `bin` path to extension system environment variables.
 

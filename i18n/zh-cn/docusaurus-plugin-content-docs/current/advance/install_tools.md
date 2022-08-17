@@ -12,7 +12,7 @@ sidebar_position: 80
 
 您可以通过 eide 安装这些工具，如下所示：
 
-![](/img/install_ext_tools.png)
+![](/docs_img/install_ext_tools.png)
 
 这些工具将被安装到 `<user_home>/.eide/tools` 目录，然后 eide 将导出 `bin` 路径到系统环境变量
 

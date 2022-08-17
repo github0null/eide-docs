@@ -43,19 +43,19 @@ sidebar_position: 1
 
   打开 VSCode 插件市场，搜索 `eide`，选择 `Embedded IDE` 并安装它
 
-  ![](/img/install_from_market.png)
+  ![](/docs_img/install_from_market.png)
 
   安装插件后，它将启动并开始初始化
 
   插件将**自动下载并安装** [eide-binaries](https://github.com/github0null/eide-resource/tree/master/binaries) 和 [.NET6 X64 运行时](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)，请耐心等待
 
-  ![](/img/install_dotnet.png)
+  ![](/docs_img/install_dotnet.png)
 
   当 `.NET6 运行时` 成功安装后，你需要重启 VSCode 刷新 `系统环境变量`
 
   然后 EIDE 将在启动时检查 `.NET6 运行时`，打开 `输出` 面板查看 `eide-log`
 
-  ![](/img/eide_log_panel.png)
+  ![](/docs_img/eide_log_panel.png)
 
   :::caution 未找到运行时
   有时候，运行时**已经安装**，但是插件仍提示**未找到**<br/>
@@ -73,19 +73,19 @@ sidebar_position: 1
 
 现在，我们将带您浏览插件的功能区域
 
-![](/img/eide_func_area.png)
+![](/docs_img/eide_func_area.png)
 
 - **EIDE 项目**: 项目视图
 
   `EIDE 项目` 视图将显示当前所有你已打开的项目
 
-  ![](/img/eide_prj_area.png)
+  ![](/docs_img/eide_prj_area.png)
 
 - **OPERATIONS**: 操作视图
 
   `操作` 视图将显示所有可用的快捷命令
 
-  ![](/img/eide_operations.png)
+  ![](/docs_img/eide_operations.png)
 
 ## 配置工具链
 
@@ -97,7 +97,7 @@ EIDE 支持很多工具链，但是这些包太大了，所以我们 **没有内
 
   如果你设置的路径是有效的，一个 '✔' 标记将会出现
 
-  ![](/img/toolchains.png)
+  ![](/docs_img/toolchains.png)
 
   :::tip 什么是工具链安装目录
   `工具链安装目录` 是指你的编译器的**根目录**<br/>

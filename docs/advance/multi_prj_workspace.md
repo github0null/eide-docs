@@ -10,7 +10,7 @@ You can make a vscode workspace to contains some projects who is interrelated wi
 
 - Create a folder on disk, and create some eide projects in the folder, as follows.
 
-  ![](/img/prj_multi_prj_ws_dir.png)
+  ![](/docs_img/prj_multi_prj_ws_dir.png)
 
 - Next, create a `.code-workspace` file in the folder (at this demo, this file is: `ewp.code-workspace`).
 
@@ -41,7 +41,7 @@ You can make a vscode workspace to contains some projects who is interrelated wi
 
 - Then, you can double-click this workspace file to open vscode workspace.
 
-  ![](/img/prj_multi_prj_preview.png)
+  ![](/docs_img/prj_multi_prj_preview.png)
 
 ## Project Order
 

@@ -10,7 +10,7 @@ Configure compiler options for your projects.
 
 Each project will have its builder configuration.
 
-![](/img/builder_cfg_preview.png)
+![](/docs_img/builder_cfg_preview.png)
 
 There are some **base options**, like: `CPU Type`, `Floating-Point Type`, `Linker Script File Path` ..., Usually, they have a fixed meaning.
 
@@ -33,11 +33,11 @@ So not every project will have the above fields.
 
 In addition to the **base options** described above, we also provide more detailed compiler configurations.
 
-![](/img/builer_cfg_btn.png)
+![](/docs_img/builer_cfg_btn.png)
 
 Click `modify` button, will open `BUILDER OPTIONS VIEW`, like this:
 
-![](/img/builder_opt_view.png)
+![](/docs_img/builder_opt_view.png)
 
 We divided the configuration into `5` tabs, there are `User Task`, `Global Options`, `C/C++ Compiler`, `Assembler`, `Linker`.
 
@@ -85,7 +85,7 @@ Example:
 
   Add `--asm --asm_dir="${OutDir}"` params in `Builder Options` -> `C/C++ Compiler` -> `Other C Compiler Options`
 
-  ![](/img/example_gen_asm_for_armcc.png)
+  ![](/docs_img/example_gen_asm_for_armcc.png)
 
 ### User Task Commands
 

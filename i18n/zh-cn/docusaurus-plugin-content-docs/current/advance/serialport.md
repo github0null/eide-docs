@@ -12,11 +12,11 @@ sidebar_position: 70
 
 你可以 `打开串口`，`选择串口名称`，`选择波特率`
 
-![](/img/serialport_btns.png)
+![](/docs_img/serialport_btns.png)
 
 点击 `打开串口` 按钮，eide 将执行一个终端命令来打开一个交互式串行端口程序
 
-![](/img/serialport_opened.png)
+![](/docs_img/serialport_opened.png)
 
 现在程序将开始从端口接收文本，你可以在终端发送文本
 

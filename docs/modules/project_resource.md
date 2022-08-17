@@ -12,25 +12,25 @@ Manage your project resources.
 
 We provide many features, you can `add/remove source folders`, `add/remove source files`, `exclude/include source files/folders`, `modify file path for existed source files` .....
 
-![](/img/proj_res_preview.png)
+![](/docs_img/proj_res_preview.png)
 
 ## Context Menu
 
 Each UI items have their `context menus`, you can **right click** your mouse to trigger these menus.
 
-![](/img/ctx_menu_prj.png)
+![](/docs_img/ctx_menu_prj.png)
 
-![](/img/ctx_menu_prj_res.png)
+![](/docs_img/ctx_menu_prj_res.png)
 
-![](/img/ctx_menu_prj_folder.png)
+![](/docs_img/ctx_menu_prj_folder.png)
 
-![](/img/ctx_menu_prj_file.png)
+![](/docs_img/ctx_menu_prj_file.png)
 
 ## Add Sources
 
 You can **Add Source Files**, **Add Source Folders** to your project.
 
-![](/img/prj_res_add_src_file.png)
+![](/docs_img/prj_res_add_src_file.png)
 
 ### Add Source Files
 
@@ -53,7 +53,7 @@ Click `Add Folder` menu item to add source folder.
 
 We support 2 folder types:
 
-![](/img/prj_res_folder_typ.png)
+![](/docs_img/prj_res_folder_typ.png)
 
 - `Virtual Folder`: Virtual folder, not existed on disk.
 
@@ -77,21 +77,21 @@ We support 2 folder types:
 
 How to distinguish `Virtual` or `Normal` folders in an exsited project ?
 
-- `Virtual Folder`: folder which with <img width="16px" bor src="/img/icon/folder_virtual.svg"/> icon.
+- `Virtual Folder`: folder which with <img width="16px" bor src="/docs_img/icon/folder_virtual.svg"/> icon.
 
-- `Normal Folder`: folder which with <img width="16px" bor src="/img/icon/folder_root.svg"/> icon.
+- `Normal Folder`: folder which with <img width="16px" bor src="/docs_img/icon/folder_root.svg"/> icon.
 
-![](/img/prj_res_folder_typ_cmp.png)
+![](/docs_img/prj_res_folder_typ_cmp.png)
 
 ## Import Source Tree
 
 If you are migrating some projects to eide, you can import source file tree to your project by `Import Source Tree` feature.
 
-![](/img/prj_res_imp_src_tree.png)
+![](/docs_img/prj_res_imp_src_tree.png)
 
 Now, we support some importers: `IAR For ARM`, `IAR For 8051/STM8`, `Segger Embedded Studio`
 
-![](/img/prj_res_imp_src_tree_importers.png)
+![](/docs_img/prj_res_imp_src_tree_importers.png)
 
 Follow the prompts to select the appropriate project file, and then eide will import `source tree`, `include paths` and `macros` to your project.
 
@@ -112,11 +112,11 @@ If you want to add global compiler args for your project, please reference [**Bu
 
 Sometimes you want to add some **specific compiler args** for some source files. This feature can help you do that.
 
-![](/img/prj_res_add_src_file_args.png)
+![](/docs_img/prj_res_add_src_file_args.png)
 
 Click `Append separate compiler params for source files`, eide will create and open an empty yaml config file, as follows:
 
-![](/img/prj_res_add_src_file_args_preview.png)
+![](/docs_img/prj_res_add_src_file_args_preview.png)
 
 Now you can use [glob patterns](https://github.com/micromatch/micromatch#matching-features) to match specific source files and append some args.
 
@@ -188,9 +188,9 @@ Save and then you can click `build` button to rebuild you project.
 
 If you want to check compiler params for source files, you can use `generate builder.params` function.
 
-![](/img/prj_gen_builder_params.png)
+![](/docs_img/prj_gen_builder_params.png)
 
 Click this menu item, and eide will refresh `builder.params`, now you can open `build/<targetName>/builder.params` file to check file params.
 
-![](/img/prj_builder_params_src_args.png)
+![](/docs_img/prj_builder_params_src_args.png)
 

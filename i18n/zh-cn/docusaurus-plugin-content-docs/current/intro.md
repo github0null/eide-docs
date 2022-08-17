@@ -45,7 +45,7 @@ sidebar_position: 1
 
   **Ans:** 很多。我们支持 6 种不同的编译器，可以被用来开发 `8051/stm8/cortex-m[0/0+/3/23/33/35p/4/7]/riscv/...` 项目
 
-  ![](/img/toolchains.png)
+  ![](/docs_img/toolchains.png)
 
   :::tip MORE COMPILER
   我们支持任何 GCC 的编译器

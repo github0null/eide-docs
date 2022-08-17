@@ -8,7 +8,7 @@ sidebar_position: 30
 
 ## 可用的设置项
 
-![](/img/prj_settings_preview.png)
+![](/docs_img/prj_settings_preview.png)
 
 ### 项目名
 

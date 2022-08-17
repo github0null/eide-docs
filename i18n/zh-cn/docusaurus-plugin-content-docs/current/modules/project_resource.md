@@ -12,25 +12,25 @@ sidebar_position: 2
 
 我们提供了一些操作命令，你可以：`添加/移除 源文件，文件夹`, `排除、包含源文件，文件夹`, `修改源文件路径` .....
 
-![](/img/proj_res_preview.png)
+![](/docs_img/proj_res_preview.png)
 
 ## 上下文菜单
 
 每个 UI 都有它的 `上下文菜单`，你可以 **右击** 鼠标触发这些菜单
 
-![](/img/ctx_menu_prj.png)
+![](/docs_img/ctx_menu_prj.png)
 
-![](/img/ctx_menu_prj_res.png)
+![](/docs_img/ctx_menu_prj_res.png)
 
-![](/img/ctx_menu_prj_folder.png)
+![](/docs_img/ctx_menu_prj_folder.png)
 
-![](/img/ctx_menu_prj_file.png)
+![](/docs_img/ctx_menu_prj_file.png)
 
 ## 添加源文件资源
 
 你可以 **添加源文件**，**添加源文件夹** 到你的项目
 
-![](/img/prj_res_add_src_file.png)
+![](/docs_img/prj_res_add_src_file.png)
 
 ### 添加源文件
 
@@ -53,7 +53,7 @@ sidebar_position: 2
 
 我们支持 2 种类型的文件夹：
 
-![](/img/prj_res_folder_typ.png)
+![](/docs_img/prj_res_folder_typ.png)
 
 - `Virtual Folder`: 虚拟文件夹，磁盘上不存在
 
@@ -78,21 +78,21 @@ sidebar_position: 2
 
 如何在已有项目中区分两种文件夹类型？
 
-- `Virtual Folder`: 带有 <img width="16px" bor src="/img/icon/folder_virtual.svg"/> 图标
+- `Virtual Folder`: 带有 <img width="16px" bor src="/docs_img/icon/folder_virtual.svg"/> 图标
 
-- `Normal Folder`: 带有 <img width="16px" bor src="/img/icon/folder_root.svg"/> 图标
+- `Normal Folder`: 带有 <img width="16px" bor src="/docs_img/icon/folder_root.svg"/> 图标
 
-![](/img/prj_res_folder_typ_cmp.png)
+![](/docs_img/prj_res_folder_typ_cmp.png)
 
 ## 导入源文件树
 
 如果您要将一些项目迁移到 eide，您可以通过以下方式将源文件树导入到项目中
 
-![](/img/prj_res_imp_src_tree.png)
+![](/docs_img/prj_res_imp_src_tree.png)
 
 目前我们支持 `IAR For ARM`, `IAR For 8051/STM8`, `Segger Embedded Studio` 项目
 
-![](/img/prj_res_imp_src_tree_importers.png)
+![](/docs_img/prj_res_imp_src_tree_importers.png)
 
 按照提示选择适当的项目文件，然后 eide 将导入 `源文件树`, `包含目录` 和 `宏定义` 到你的项目
 
@@ -113,11 +113,11 @@ sidebar_position: 2
 
 有时你想为一些源文件添加一些特定的编译参数，这个特性可以帮助您做到这一点
 
-![](/img/prj_res_add_src_file_args.png)
+![](/docs_img/prj_res_add_src_file_args.png)
 
 单击 `为源文件附加单独的编译器参数`，eide 将创建并打开一个空的 yaml 配置文件，如下所示：
 
-![](/img/prj_res_add_src_file_args_preview.png)
+![](/docs_img/prj_res_add_src_file_args_preview.png)
 
 现在你可以使用 [glob patterns](https://github.com/micromatch/micromatch#matching-features) 去匹配对应的源文件，然后附加参数
 
@@ -189,9 +189,9 @@ virtualPathFiles:
 
 如果要检查源文件的附加编译器参数，可以使用 `生成 builder.params` 功能
 
-![](/img/prj_gen_builder_params.png)
+![](/docs_img/prj_gen_builder_params.png)
 
 单击此菜单项，eide 将刷新 `builder.params`, 现在你可以打开 `build/<targetName>/builder.params` 文件去检查相关参数
 
-![](/img/prj_builder_params_src_args.png)
+![](/docs_img/prj_builder_params_src_args.png)
 

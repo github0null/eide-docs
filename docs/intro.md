@@ -51,7 +51,7 @@ Now we support:
 
   **Ans:** A lot. We support 6 kinds of compilers that can be used to compile `8051/stm8/cortex-m[0/0+/3/23/33/35p/4/7]/riscv/...` mcu projects
 
-  ![](/img/toolchains.png)
+  ![](/docs_img/toolchains.png)
 
   :::tip MORE COMPILER
   We support any GCC family compiler.

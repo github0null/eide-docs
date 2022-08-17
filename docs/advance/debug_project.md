@@ -32,7 +32,7 @@ Debug your **Cortex-M**, **STM8** project.
 
 5. Press `F5` launch debugger.
 
-  ![](/img/debug_cortex-m_prj.png)
+  ![](/docs_img/debug_cortex-m_prj.png)
 
 :::tip More Usage
 Please reference: https://github.com/Marus/cortex-debug/wiki

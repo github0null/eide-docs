@@ -12,7 +12,7 @@ A quick-pick window will be pop-up, we can select project type.
 
 Now we support to import `Keil` and `Eclipse` project.
 
-![](/img/imp_prj_sel.png)
+![](/docs_img/imp_prj_sel.png)
 
 ## Keil Project
 
@@ -32,7 +32,7 @@ Open `OPERATIONS` bar, Click `Import Project` to start importer.
 
 Then you need select a `*.uvproj/*.uvprojx` file, and click `Import`.
 
-![](/img/imp_prj_sel_uvfile.png)
+![](/docs_img/imp_prj_sel_uvfile.png)
 
 A propmt message will pop-up.
 
@@ -41,11 +41,11 @@ A propmt message will pop-up.
 
 If you want `make eide project coexist with the Keil project in the same directory`, please select `Yes` !
 
-![](/img/imp_prj_compate_hint.png)
+![](/docs_img/imp_prj_compate_hint.png)
 
 If no error, a message will pop-up. Then you need switch workspace.
 
-![](/img/imp_prj_ok.png)
+![](/docs_img/imp_prj_ok.png)
 
 ### Configure
 
@@ -55,25 +55,25 @@ We need to configure the project because eide does not import the compiler setti
 
   First, set `Use Custom Linker Script File` to `false`.
 
-  ![](/img/imp_keil_mem_layout.png)
+  ![](/docs_img/imp_keil_mem_layout.png)
   
   Then, click `modify` button on `RAM And ROM Layout` item to open `Memory Layout Editor`.
 
   Now, you need open keil project and copy `ram/rom layout data` to `eide memory layout editor`, and save.
 
-  ![](/img/imp_keil_mem_layout_2.png)
+  ![](/docs_img/imp_keil_mem_layout_2.png)
 
 - **Set Compiler Options**: Copy keil `C/C++, Asm, Linker Options` to eide
 
   Open `Keil Project Options` -> `C/C++`, **copy** keil options to eide `Builder Options View`
 
-  ![](/img/keil_mdk_cpp_opt.png)
+  ![](/docs_img/keil_mdk_cpp_opt.png)
 
-  ![](/img/eide_builer_options.png)
+  ![](/docs_img/eide_builer_options.png)
 
   Copy other keil `Misc-Controls` to eide `Other C Compiler Options`
 
-  ![](/img/imp_prj_cpy_keil_opts.png)
+  ![](/docs_img/imp_prj_cpy_keil_opts.png)
 
   **Repeat the above steps for `Asm, Linker` options**.
 
@@ -88,7 +88,7 @@ We need to configure the project because eide does not import the compiler setti
   
   If there are any missing or incorrect items, manually complete them.
 
-  ![](/img/eide_prj_attr.png)
+  ![](/docs_img/eide_prj_attr.png)
 
 ### Build
 

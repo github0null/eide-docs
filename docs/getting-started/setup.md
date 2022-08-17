@@ -43,19 +43,19 @@ If you need to install **offline**, please goto [**Github Release**](https://git
 
   Open vscode extension market, search `eide`, select `Embedded IDE` and install it.
 
-  ![](/img/install_from_market.png)
+  ![](/docs_img/install_from_market.png)
 
   When the plug-in has been installed, it will launch and start to init.
 
   The plug-in will **auto download and install** [eide-binaries](https://github.com/github0null/eide-resource/tree/master/binaries) and [.NET6 X64 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) package, please wait !
 
-  ![](/img/install_dotnet.png)
+  ![](/docs_img/install_dotnet.png)
 
   When `.NET Runtime` has been installed, you need to restart vscode to refresh `System Envirnoment Variables`.
 
   EIDE will check `.NET Runtime` before launch, goto VSCode `Output Panel` to check log.
 
-  ![](/img/eide_log_panel.png)
+  ![](/docs_img/eide_log_panel.png)
 
   :::caution Not found runtime
   Sometimes, the runtime is installed, but plug-in still prompts that it **cannot be found**.<br/>
@@ -73,19 +73,19 @@ When you have completed the above operations, EIDE will be installed normally on
 
 Now we'll walk you through the functional areas of the plug-in.
 
-![](/img/eide_func_area.png)
+![](/docs_img/eide_func_area.png)
 
 - **EIDE PROJECTS**: Project View
 
   The `EIDE PROJECTS` area will display the projects you have open.
 
-  ![](/img/eide_prj_area.png)
+  ![](/docs_img/eide_prj_area.png)
 
 - **OPERATIONS**: Operations View
 
   The `OPERATIONS` area will display some `Common Commands` for user.
 
-  ![](/img/eide_operations.png)
+  ![](/docs_img/eide_operations.png)
 
 ## Configure Toolchains
 
@@ -97,7 +97,7 @@ EIDE support many toolchains, but these package is so big, so we **not built-in*
 
   If you configure done, a check mark '✔' will be appeared after the item.
 
-  ![](/img/toolchains.png)
+  ![](/docs_img/toolchains.png)
 
   :::tip What is the "Toolchain Installation Folder Path" ?
   The `Toolchain Installation Folder` is the **root path** for your compiler.<br/>

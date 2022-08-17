@@ -14,11 +14,11 @@ sidebar_position: 20
 
 - 首先，右键单击项目视图以打开菜单项，然后单击 `Switch Target`
 
-  ![](/img/prj_switch_target_btn.png)
+  ![](/docs_img/prj_switch_target_btn.png)
 
 - 然后，eide 将弹出一个列表
 
   现在你可以：`添加新的 target`, `删除 target` or `点击 target 名进行切换`
 
-  ![](/img/prj_switch_target_sel.png)
+  ![](/docs_img/prj_switch_target_sel.png)
 

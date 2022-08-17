@@ -16,7 +16,7 @@ We support many flasher for your embedded projects.
 
 You can switch flasher for your project.
 
-![](/img/flasher_cfg_switch.png)
+![](/docs_img/flasher_cfg_switch.png)
 
 ## Install Flasher Tools
 
@@ -24,7 +24,7 @@ Flasher tools are not integrated into the EIDE installation package, so you need
 
 Click `Upload To Device` button to start a flash program, we will check you flasher executable and if it's has not been installed, we will pop-up a notification, now you can install or set flasher.
 
-![](/img/flasher_trigger_installer.png)
+![](/docs_img/flasher_trigger_installer.png)
 
 If you want to select an existing installation location for your flashers, you need modify eide's plug-in settings.
 
@@ -49,7 +49,7 @@ You must install corresponding flasher software before modify your flasher confi
 
 Before start to program flash, you need to check your flasher config.
 
-![](/img/flasher_cfg_preview.png)
+![](/docs_img/flasher_cfg_preview.png)
 
 Each flasher configuration has some base fields, as follows:
 
@@ -90,7 +90,7 @@ You must install corresponding flasher software before modify your flasher confi
 
 ### JLink
 
-![](/img/flasher_jlink_cfg.png)
+![](/docs_img/flasher_jlink_cfg.png)
 
 - `CPU Name`: JLink device name. 
 
@@ -98,7 +98,7 @@ You must install corresponding flasher software before modify your flasher confi
 
   click `modify` button, a list will popup.
 
-  ![](/img/flasher_jlink_sel_cpu.png)
+  ![](/docs_img/flasher_jlink_sel_cpu.png)
 
 - `Interface Type`: Interface for your debug probe.
 
@@ -127,7 +127,7 @@ You must install corresponding flasher software before modify your flasher confi
 > For STLink, we support 2 flasher software: `ST_Cube_Programmer` and `STLink_Utility`.<br/>
 > By default, we use `ST_Cube_Programmer`
 
-![](/img/flasher_stlink_cfg.png)
+![](/docs_img/flasher_stlink_cfg.png)
 
 - `Interface Type`: Interface for your debug probe.
 
@@ -159,7 +159,7 @@ https://pyocd.io/docs/installing.html
 
 #### Config
 
-![](/img/flasher_pyocd_cfg.png)
+![](/docs_img/flasher_pyocd_cfg.png)
 
 - `Target Name`: Target mcu name. 
   
@@ -193,7 +193,7 @@ We recommend to install `v0.10.0`.
 
 #### Config
 
-![](/img/flasher_openocd_cfg.png)
+![](/docs_img/flasher_openocd_cfg.png)
 
 - `Chip Config`: The configuration file for mcu.
 
@@ -216,7 +216,7 @@ The plug-in will found them and then you can choose config file.
 
 [STVP-STM8](https://www.st.com/zh/development-tools/stvp-stm8.html) is used to program flash for **STM8** chips.
 
-![](/img/flasher_stvp_cfg.png)
+![](/docs_img/flasher_stvp_cfg.png)
 
 - `CPU Name`: STM8 chip name. 
 
@@ -284,7 +284,7 @@ stcgal -h
 
 #### Config
 
-![](/img/flasher_stcgal_cfg.png)
+![](/docs_img/flasher_stcgal_cfg.png)
 
 - `eeprom Data File Path`: eeprom data file path for `eeprom` region.
 
@@ -307,7 +307,7 @@ Otherwise, stcgal will be in the waiting state.
 
 We support to use any shell command to program your flash.
 
-![](/img/flasher_shell_cfg.png)
+![](/docs_img/flasher_shell_cfg.png)
 
 - `Flash Command`: The shell command which will be executed when user trigger a program flash process.
 

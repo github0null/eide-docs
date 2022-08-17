@@ -32,7 +32,7 @@ sidebar_position: 10
 
 5. 按下 `F5` 启动调试器
 
-  ![](/img/debug_cortex-m_prj.png)
+  ![](/docs_img/debug_cortex-m_prj.png)
 
 :::tip 更多用法
 参考 https://github.com/Marus/cortex-debug/wiki

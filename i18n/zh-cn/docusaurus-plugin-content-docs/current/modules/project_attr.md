@@ -8,7 +8,7 @@ sidebar_position: 25
 
 ## 可用的属性
 
-![](/img/prj_attr_preview.png)
+![](/docs_img/prj_attr_preview.png)
 
 ### 包含目录
 
@@ -50,7 +50,7 @@ sidebar_position: 25
 
 你可以通过 `更改` 按钮来修改这些属性
 
-![](/img/prj_attr_modify.png)
+![](/docs_img/prj_attr_modify.png)
 
 完成修改后，按下 `ctrl+s` 保存文件，eide 将会应用配置到项目 
 

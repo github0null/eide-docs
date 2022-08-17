@@ -12,17 +12,17 @@ sidebar_position: 50
 
 经过特定工具的解析后，可以生成 GUI 配置向导，指导用户查看和修改头文件中的配置
 
-![](/img/cmsis_wizard_keil.png)
+![](/docs_img/cmsis_wizard_keil.png)
 
 ## 打开配置向导
 
 打开一个带有正确 `CMSIS Configuration 注释` 格式的 c 头文件
 
-![](/img/cmsis_cfg_wizard_btn.png)
+![](/docs_img/cmsis_cfg_wizard_btn.png)
 
 然后一个 webview 将在一个新标签打开
 
-![](/img/cmsis_cfg_wizard_preview.png)
+![](/docs_img/cmsis_cfg_wizard_preview.png)
 
 现在可以开始修改头文件配置了
 
@@ -38,12 +38,12 @@ sidebar_position: 50
 
 1. 数组类型
    
-   ![](/img/no_imp_cmsis_syntaxs/array.png)
+   ![](/docs_img/no_imp_cmsis_syntaxs/array.png)
 
 2. 带有 `..` 修饰符的项
 
-   ![](/img/no_imp_cmsis_syntaxs/modifier.png)
+   ![](/docs_img/no_imp_cmsis_syntaxs/modifier.png)
 
 3. 数字格式化显示
 
-   ![](/img/no_imp_cmsis_syntaxs/format.png)
+   ![](/docs_img/no_imp_cmsis_syntaxs/format.png)

@@ -12,7 +12,7 @@ EIDE 将弹出选择列表，现在需要选择一个项目类型
 
 目前我们支持 `Keil` 或 `Eclipse` 项目
 
-![](/img/imp_prj_sel.png)
+![](/docs_img/imp_prj_sel.png)
 
 ## Keil 项目
 
@@ -32,7 +32,7 @@ EIDE 将弹出选择列表，现在需要选择一个项目类型
 
 然后选择你要导入的 `.uvproj` 或者 `.uvprojx` 文件（`.uvproj` 代表 C51 项目，`.uvprojx` 代表 ARM 项目），点击 `Import` 按钮执行导入
 
-![](/img/imp_prj_sel_uvfile.png)
+![](/docs_img/imp_prj_sel_uvfile.png)
 
 一个提示信息将被弹出
 
@@ -40,11 +40,11 @@ EIDE 将弹出选择列表，现在需要选择一个项目类型
 
 如果你想要让 `新生成的 EIDE 项目` 与 `被导入的 Keil 项目` 处于**同一个**文件夹下，请选择 `是`
 
-![](/img/imp_prj_compate_hint.png)
+![](/docs_img/imp_prj_compate_hint.png)
 
 如果没有错误产生，一个提示消息将弹出，现在你可以切换工作区以打开已导入的项目
 
-![](/img/imp_prj_ok.png)
+![](/docs_img/imp_prj_ok.png)
 
 ### 配置
 
@@ -54,25 +54,25 @@ EIDE 将弹出选择列表，现在需要选择一个项目类型
 
   首先，设置 `使用自定义链接脚本` 选项为 `false`.
 
-  ![](/img/imp_keil_mem_layout.png)
+  ![](/docs_img/imp_keil_mem_layout.png)
   
   然后，点击 `RAM And ROM Layout` 条目上的 `更改` 按钮以打开 `存储器布局编辑器`
 
   现在，你需要打开 Keil 项目，复制 `ram/rom 布局数据` 到 eide 的 `存储器布局编辑器` 中，然后保存
 
-  ![](/img/imp_keil_mem_layout_2.png)
+  ![](/docs_img/imp_keil_mem_layout_2.png)
 
 - **设置编译器选项**: 复制 Keil 的 `C/C++, Asm, Linker 编译选项` 到 eide
 
   打开 `Keil Project Options` -> `C/C++`, **复制** keil 编译选项到 eide 的 `构建器选项` 视图
 
-  ![](/img/keil_mdk_cpp_opt.png)
+  ![](/docs_img/keil_mdk_cpp_opt.png)
 
-  ![](/img/eide_builer_options.png)
+  ![](/docs_img/eide_builer_options.png)
 
   复制 keil 项目的 `Misc-Controls` 到 eide 的 `Other C Compiler Options` 中
 
-  ![](/img/imp_prj_cpy_keil_opts.png)
+  ![](/docs_img/imp_prj_cpy_keil_opts.png)
 
   **为 `Asm, Linker` 选项重复上述步骤**.
 
@@ -86,7 +86,7 @@ EIDE 将弹出选择列表，现在需要选择一个项目类型
   
   如果有任何缺失或不正确的项目，手动补全它们
 
-  ![](/img/eide_prj_attr.png)
+  ![](/docs_img/eide_prj_attr.png)
 
 ### 构建
 

@@ -12,11 +12,11 @@ sidebar_position: 90
 
 您可以通过这个终端直接执行/访问这些 eide 内置的程序
 
-![](/img/eide_terminal.png)
+![](/docs_img/eide_terminal.png)
 
 ## Msys 终端
 
 **对于 Windows**，我们提供了一个内部的 **linux shell 环境**，通过该环境，您可以在 Windows 上执行 shell 脚本，程序
 
-![](/img/eide_msys_bash.png)
+![](/docs_img/eide_msys_bash.png)
 

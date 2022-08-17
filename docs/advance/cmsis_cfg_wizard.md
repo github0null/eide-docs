@@ -12,17 +12,17 @@ We support to open [cmsis config wizard](https://open-cmsis-pack.github.io/Open-
 
 After parsed by specific tools, the GUI configuration wizard can be generated to guide users to view and modify the configuration in the header file
 
-![](/img/cmsis_wizard_keil.png)
+![](/docs_img/cmsis_wizard_keil.png)
 
 ## Open Wizard View
 
 Open a `c header` file which with a correct `CMSIS Configuration Annotations` format.
 
-![](/img/cmsis_cfg_wizard_btn.png)
+![](/docs_img/cmsis_cfg_wizard_btn.png)
 
 Then a webview will be opened at a new tab.
 
-![](/img/cmsis_cfg_wizard_preview.png)
+![](/docs_img/cmsis_cfg_wizard_preview.png)
 
 Now you can start to modify header file configurations.
 
@@ -38,12 +38,12 @@ We refer to the implementation in Keil, so we are not full support all syntax.
 
 1. Array Type:
    
-   ![](/img/no_imp_cmsis_syntaxs/array.png)
+   ![](/docs_img/no_imp_cmsis_syntaxs/array.png)
 
 2. The modifiers with `..` 
 
-   ![](/img/no_imp_cmsis_syntaxs/modifier.png)
+   ![](/docs_img/no_imp_cmsis_syntaxs/modifier.png)
 
 3. Digital formatting display function
 
-   ![](/img/no_imp_cmsis_syntaxs/format.png)
+   ![](/docs_img/no_imp_cmsis_syntaxs/format.png)

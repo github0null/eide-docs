@@ -8,7 +8,7 @@ Create a new eide project.
 
 There are many ways to create a new project.
 
-![](/img/create_prj_sel.png)
+![](/docs_img/create_prj_sel.png)
 
 |Type|Description|
 |:----|:----|
@@ -25,21 +25,21 @@ In this section, we will help you to create an empty cortex-m project.
 
 - Click `New Project` -> `Empty Project`, a window will be pop-up, you need choose a project type.
 
-  ![](/img/new_prj_typ.png)
+  ![](/docs_img/new_prj_typ.png)
 
 - In this tutorial we select `cortex-m`, then we need input a project name.
 
-  ![](/img/new_prj_name.png)
+  ![](/docs_img/new_prj_name.png)
 
 - Then we need select the project location.
   
-  ![](/img/new_prj_loc_sel.png)
+  ![](/docs_img/new_prj_loc_sel.png)
 
 - And then, the new project will be create, and eide will pop-up a notification.
 
   Switch workspace, the new project will be load.
 
-  ![](/img/new_prj_preview.png)
+  ![](/docs_img/new_prj_preview.png)
 
 Now, an empty project has been created.
 
@@ -55,7 +55,7 @@ We need configure compiler before build.
 
 Default compiler is `gcc`, you can switch compiler for cortex-m project, we support `gcc/armcc/armclang`.
 
-![](/img/new_prj_cc_cfg.png)
+![](/docs_img/new_prj_cc_cfg.png)
 
 |Field Name|Description|
 |:--|:--|
@@ -73,7 +73,7 @@ Now we can add some source file to project.
 
 - Move to `Project Resource` and open context menu by right-click.
 
-  ![](/img/new_prj_add_srcs.png)
+  ![](/docs_img/new_prj_add_srcs.png)
 
 - Click `Add File` to add some source files.
 
@@ -83,7 +83,7 @@ Ok, all sources files have been added to project, like this.
 
 If there are some c header files, we need to add [IncludePath](../modules/project_attr)
 
-![](/img/new_prj_add_src_preview.png)
+![](/docs_img/new_prj_add_src_preview.png)
 
 ### Build Project
 
@@ -91,4 +91,4 @@ All ready, now we only need to click the `Build` button to start compiling.
 
 A builder task will launch, and the log will be output to `Output Panel`.
 
-![](/img/new_prj_build.png)
+![](/docs_img/new_prj_build.png)

@@ -26,7 +26,7 @@ This function is not necessary, eide will work well even if you don't install an
 
 We support 2 ways to install a chip support package for your project.
 
-![](/img/prj_install_chip_pack_typ.png)
+![](/docs_img/prj_install_chip_pack_typ.png)
 
 ### From Repo
 
@@ -55,6 +55,6 @@ There are some sites:
 
 You can install `Peripheral Components` to project from chip support package.
 
-![](/img/prj_chip_pkg_ins_comp.png)
+![](/docs_img/prj_chip_pkg_ins_comp.png)
 
 Then these files will be compiled with your project.

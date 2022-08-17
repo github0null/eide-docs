@@ -6,7 +6,7 @@ sidebar_position: 40
 
 你可以导出你的 eide 项目
 
-![](/img/prj_export_btns.png)
+![](/docs_img/prj_export_btns.png)
 
 ## 导出项目模板
 
@@ -29,7 +29,7 @@ sidebar_position: 40
 
 你也可以创建一个 `.eideignore` 文件在您的项目工作空间文件夹中，并将文件忽略列表放在其中
 
-![](/img/export_ignore_file.png)
+![](/docs_img/export_ignore_file.png)
 
 ## 导出 Keil 项目
 
@@ -37,7 +37,7 @@ sidebar_position: 40
 
 当操作完成后，一个 `uvproj/uvprojx` 文件将被生成到你的工作区
 
-![](/img/export_keil_prj_file.png)
+![](/docs_img/export_keil_prj_file.png)
 
 :::caution 仅 Keil v5
 我们仅支持导出 Keil v5 项目

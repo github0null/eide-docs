@@ -12,11 +12,11 @@ There are some buttons in status bar for `Serialport` function.
 
 You can `Open Serial Port`, `Select Serial Port Name`, `Select Baud Rate`
 
-![](/img/serialport_btns.png)
+![](/docs_img/serialport_btns.png)
 
 Click `Open Serial` button, eide will post a shell command to open an **interactive** serial port program.
 
-![](/img/serialport_opened.png)
+![](/docs_img/serialport_opened.png)
 
 Now the program will start to receive text from port, and you can `send` text in terminal. 
 

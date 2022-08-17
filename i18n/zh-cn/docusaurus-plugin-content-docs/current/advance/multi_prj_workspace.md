@@ -10,7 +10,7 @@ sidebar_position: 30
 
 - 在磁盘上创建一个文件夹，并在该文件夹中创建一些 eide 项目，如下所示
 
-  ![](/img/prj_multi_prj_ws_dir.png)
+  ![](/docs_img/prj_multi_prj_ws_dir.png)
 
 - 接下来，在目录中新建一个 `.code-workspace` 文件（本例中，这个文件为：`ewp.code-workspace`）
 
@@ -41,7 +41,7 @@ sidebar_position: 30
 
 - 然后，你可以双击这个工作空间文件打开 vscode 工作空间
 
-  ![](/img/prj_multi_prj_preview.png)
+  ![](/docs_img/prj_multi_prj_preview.png)
 
 ## 项目次序
 

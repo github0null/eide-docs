@@ -26,7 +26,7 @@ sidebar_position: 5
 
 我们支持两种方式为您的项目安装芯片支持包
 
-![](/img/prj_install_chip_pack_typ.png)
+![](/docs_img/prj_install_chip_pack_typ.png)
 
 ### 从仓库安装
 
@@ -55,6 +55,6 @@ sidebar_position: 5
 
 你可以将芯片包里的 `外设组件` 安装到项目中
 
-![](/img/prj_chip_pkg_ins_comp.png)
+![](/docs_img/prj_chip_pkg_ins_comp.png)
 
 这些文件将和你的项目一起被编译
