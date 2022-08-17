@@ -25,7 +25,7 @@ export default function Home() {
                 <p class="hero-paragraph">A development environment for mcs51/stm8/cortex-m/riscv microcontrollers.</p>
                 <div class="hero-cta">
                   <a class="button button-primary" href="/docs/intro">Getting Start</a>
-                  <a class="button" href="https://marketplace.visualstudio.com/items?itemName=CL.eide">Home Page</a></div>
+                  <a class="button" href="https://marketplace.visualstudio.com/items?itemName=CL.eide">Install</a></div>
               </div>
               <div class="hero-figure anime-element">
                 <svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
