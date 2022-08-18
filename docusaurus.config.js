@@ -122,6 +122,10 @@ const config = {
                 href: 'https://github.com/github0null/eide',
               },
               {
+                label: 'SourceForge',
+                href: 'https://em-ide.sourceforge.io/'
+              },
+              {
                 label: 'Legacy Docs',
                 href: 'https://em-ide.com/legacy-docs',
               },

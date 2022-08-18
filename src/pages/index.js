@@ -7,7 +7,9 @@ import Head from '@docusaurus/Head';
 import styles from './index.module.css'
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
+  const { siteConfig, i18n } = useDocusaurusContext();
+  let localePathRoot = '';
+  if (i18n.currentLocale != i18n.defaultLocale) localePathRoot = '/' + i18n.currentLocale;
   return (
     <Layout title={`Hello from ${siteConfig.title}`}>
       <Head>
@@ -24,7 +26,7 @@ export default function Home() {
                 <h1 class="hero-title mt-0">Embbedded IDE For VSCode</h1>
                 <p class="hero-paragraph">A development environment for mcs51/stm8/cortex-m/riscv microcontrollers.</p>
                 <div class="hero-cta">
-                  <a class="button button-primary" href="/docs/intro">Getting Start</a>
+                  <a class="button button-primary" href={`${localePathRoot}/docs/intro`}>Getting Start</a>
                   <a class="button" href="https://marketplace.visualstudio.com/items?itemName=CL.eide">Install</a></div>
               </div>
               <div class="hero-figure anime-element">
