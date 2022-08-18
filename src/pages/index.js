@@ -23,8 +23,8 @@ export default function Home() {
           <div class="container">
             <div class="hero-inner">
               <div class="hero-copy">
-                <h1 class="hero-title mt-0">Embbedded IDE For VSCode</h1>
-                <p class="hero-paragraph">A development environment for mcs51/stm8/cortex-m/riscv microcontrollers.</p>
+                <h1 class="hero-title mt-0">{siteConfig.title}</h1>
+                <p class="hero-paragraph">{siteConfig.tagline}</p>
                 <div class="hero-cta">
                   <a class="button button-primary" href={`${localePathRoot}/docs/intro`}>Getting Start</a>
                   <a class="button" href="https://marketplace.visualstudio.com/items?itemName=CL.eide">Install</a></div>
