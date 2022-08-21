@@ -33,6 +33,28 @@ eide 项目结构介绍 ...
 
 对于其他文件或文件夹，您可以随意修改它们
 
+### Git Ignore
+
+如果你想在你的项目中添加 `.gitignore`, 你可以参考以下模板：
+
+```gitignore
+# dot files
+/.vscode/launch.json
+/.eide/log
+/.eide.usr.ctx.json
+/.settings
+
+# project out
+/build
+/out
+/bin
+/obj
+
+# eide template
+*.ept
+*.eide-template
+```
+
 ## 建议的行为
 
 这里有一些建议可以帮助你在 VSCode 上有一个更好的体验

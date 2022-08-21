@@ -33,7 +33,29 @@ Otherwise you will not be able to open the eide project.
 
 For other files or folders, you are free to modify them.
 
-## Good Norms
+### Git Ignore
+
+If you want to add a `.gitignore` file in your project folder, you can refer to the following template:
+
+```gitignore
+# dot files
+/.vscode/launch.json
+/.eide/log
+/.eide.usr.ctx.json
+/.settings
+
+# project out
+/build
+/out
+/bin
+/obj
+
+# eide template
+*.ept
+*.eide-template
+```
+
+## Good Practice
 
 There are some suggestions can help you have a better experience on VSCode.
 

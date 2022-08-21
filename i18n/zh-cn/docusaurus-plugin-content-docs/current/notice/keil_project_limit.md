@@ -24,3 +24,6 @@ sidebar_position: 1
 
   ![](https://discuss.em-ide.com/assets/files/2022-05-11/1652277659-209867-image.png)
 
+  :::caution 强制导入
+  如果你强行导入一个带有 RTE 组件的 Keil 项目，你必须手动添加缺失的 `源文件`，`包含目录` 到项目 ！
+  :::

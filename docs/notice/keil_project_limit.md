@@ -24,3 +24,7 @@ Some limitations of project-import feature for **Keil Project**
 
   ![](https://discuss.em-ide.com/assets/files/2022-05-11/1652277659-209867-image.png)
 
+  :::caution Force Import
+  If you force import a keil project which with RTE components, you need to add missing `source files`, `include path` manually !
+  :::
+
