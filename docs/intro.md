@@ -10,7 +10,7 @@ sidebar_position: 1
 
 ![](https://em-ide.com/preview.png)
 
-:::caution Platform Limitations
+:::caution Platform
 Now we support: 
   - `Windows 10 or later`
   - `Linux X64`
@@ -20,7 +20,7 @@ Now we support:
 
 - **Q:** Why use it ?
 
-  **Ans:**
+  **A:**
     - **Better coding experience**: On VSCode, we can get a much better coding experience. This helps improve efficiency and reduces coding errors. 
     - **Unify Development Environment**: This plug-in support many kinds of `compiler, project type, flasher, utility tools`. You don't have to switch between multiple development environments. It's enough that work with VsCode.
     - **Cross Platform**: This plug-in support `Windows`, `Linux x64` platform.
@@ -31,7 +31,7 @@ Now we support:
 
 - **Q:** How is it different from Keil/IAR ?
 
-  **Ans:** There's **not** a lot of difference. It is based on VSCode, this is the main difference.
+  **A:** There's **not** a lot of difference. It is based on VSCode, this is the main difference.
 
   :::caution weak debugger feature
   Compared with `Keil, IAR`, this plug-in lacks debugger capabilities.<br/>
@@ -43,13 +43,13 @@ Now we support:
 
 - **Q:** How many functions ?
 
-  **Ans:** `Create/Import/Export Project`, `Manage Project`, `Build Project`, `Program Chip`
+  **A:** `Create/Import/Export Project`, `Manage Project`, `Build Project`, `Program Chip`
 
 ---
 
 - **Q:** How many chips does it support ?
 
-  **Ans:** A lot. We support 6 kinds of compilers that can be used to compile `8051/stm8/cortex-m[0/0+/3/23/33/35p/4/7]/riscv/...` mcu projects
+  **A:** A lot. We support 6 kinds of compilers that can be used to compile `8051/stm8/cortex-m[0/0+/3/23/33/35p/4/7]/riscv/...` mcu projects
 
   ![](/docs_img/toolchains.png)
 
