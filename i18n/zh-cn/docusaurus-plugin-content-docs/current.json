@@ -44,7 +44,11 @@
     "description": "ChangeLog"
   },
   "sidebar.tutorialSidebar.category.Utility Links": {
-    "message": "实用链接",
+    "message": "相关链接",
     "description": "Utility Links"
+  },
+  "sidebar.tutorialSidebar.category.Utility Links.category.Compiler Guide": {
+    "message": "编译器指南",
+    "description": "Compiler Guide"
   }
 }

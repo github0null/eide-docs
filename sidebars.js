@@ -29,66 +29,103 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Arm Compiler 5 User Guide',
+          label: 'Compiler Guide',
           items: [
             {
               type: 'link',
-              label: 'armcc User Guide',
-              href: 'https://developer.arm.com/docs/dui0472/latest/'
+              label: 'GCC User Guide (8.3.0)',
+              href: 'https://gcc.gnu.org/onlinedocs/gcc-8.3.0/gcc/'
+            },
+            {
+              type: 'category',
+              label: 'Arm Compiler 5 User Guide',
+              items: [
+                {
+                  type: 'link',
+                  label: 'armcc User Guide',
+                  href: 'https://developer.arm.com/docs/dui0472/latest/'
+                },
+                {
+                  type: 'link',
+                  label: 'armasm User Guide',
+                  href: 'https://developer.arm.com/docs/dui0473/latest/'
+                },
+                {
+                  type: 'link',
+                  label: 'armlink User Guide',
+                  href: 'https://developer.arm.com/docs/dui0474/latest/'
+                },
+                {
+                  type: 'link',
+                  label: 'armar User Guide',
+                  href: 'https://developer.arm.com/docs/dui0476/latest/'
+                },
+                {
+                  type: 'link',
+                  label: 'fromelf User Guide',
+                  href: 'https://developer.arm.com/docs/dui0477/latest/'
+                }
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Arm Compiler 6 User Guide',
+              items: [
+                {
+                  type: 'link',
+                  label: 'armclang User Guide',
+                  href: 'https://developer.arm.com/documentation/100067/0612/?lang=en'
+                },
+                {
+                  type: 'link',
+                  label: 'armasm User Guide',
+                  href: 'https://developer.arm.com/documentation/100069/0612/?lang=en'
+                },
+                {
+                  type: 'link',
+                  label: 'armlink User Guide',
+                  href: 'https://developer.arm.com/documentation/100070/0612/?lang=en'
+                },
+                {
+                  type: 'link',
+                  label: 'armar User Guide',
+                  href: 'https://developer.arm.com/documentation/100072/0612/?lang=en'
+                },
+                {
+                  type: 'link',
+                  label: 'fromelf User Guide',
+                  href: 'https://developer.arm.com/documentation/100071/0612/?lang=en'
+                }
+              ],
             },
             {
               type: 'link',
-              label: 'armasm User Guide',
-              href: 'https://developer.arm.com/docs/dui0473/latest/'
+              label: 'SDCC User Guide',
+              href: 'http://sdcc.sourceforge.net/doc/sdccman.pdf'
             },
             {
-              type: 'link',
-              label: 'armlink User Guide',
-              href: 'https://developer.arm.com/docs/dui0474/latest/'
-            },
-            {
-              type: 'link',
-              label: 'armar User Guide',
-              href: 'https://developer.arm.com/docs/dui0476/latest/'
-            },
-            {
-              type: 'link',
-              label: 'fromelf User Guide',
-              href: 'https://developer.arm.com/docs/dui0477/latest/'
+              type: 'category',
+              label: 'Keil C51 Compiler Guide',
+              items: [
+                {
+                  type: 'link',
+                  label: 'CX51 Compiler Guide',
+                  href: 'https://www.keil.com/support/man/docs/c51/c51_compiling.htm'
+                },
+                {
+                  type: 'link',
+                  label: 'AX51 Assembler Guide',
+                  href: 'https://www.keil.com/support/man/docs/a51/a51_assembling.htm'
+                },
+                {
+                  type: 'link',
+                  label: 'LX51 Linker Guide',
+                  href: 'https://www.keil.com/support/man/docs/lx51/lx51_linking.htm'
+                }
+              ]
             }
-          ],
+          ]
         },
-        {
-          type: 'category',
-          label: 'Arm Compiler 6 User Guide',
-          items: [
-            {
-              type: 'link',
-              label: 'armclang User Guide',
-              href: 'https://developer.arm.com/documentation/100067/0612/?lang=en'
-            },
-            {
-              type: 'link',
-              label: 'armasm User Guide',
-              href: 'https://developer.arm.com/documentation/100069/0612/?lang=en'
-            },
-            {
-              type: 'link',
-              label: 'armlink User Guide',
-              href: 'https://developer.arm.com/documentation/100070/0612/?lang=en'
-            },
-            {
-              type: 'link',
-              label: 'armar User Guide',
-              href: 'https://developer.arm.com/documentation/100072/0612/?lang=en'
-            },
-            {
-              type: 'link',
-              label: 'fromelf User Guide',
-              href: 'https://developer.arm.com/documentation/100071/0612/?lang=en'
-            }
-          ],
-        }
       ]
     }
   ],
