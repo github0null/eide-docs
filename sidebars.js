@@ -22,6 +22,74 @@ const sidebars = {
       type: 'link',
       label: 'ChangeLog',
       href: 'https://marketplace.visualstudio.com/items/CL.eide/changelog'
+    },
+    {
+      type: 'category',
+      label: 'Utility Links',
+      items: [
+        {
+          type: 'category',
+          label: 'Arm Compiler 5 User Guide',
+          items: [
+            {
+              type: 'link',
+              label: 'armcc User Guide',
+              href: 'https://developer.arm.com/docs/dui0472/latest/'
+            },
+            {
+              type: 'link',
+              label: 'armasm User Guide',
+              href: 'https://developer.arm.com/docs/dui0473/latest/'
+            },
+            {
+              type: 'link',
+              label: 'armlink User Guide',
+              href: 'https://developer.arm.com/docs/dui0474/latest/'
+            },
+            {
+              type: 'link',
+              label: 'armar User Guide',
+              href: 'https://developer.arm.com/docs/dui0476/latest/'
+            },
+            {
+              type: 'link',
+              label: 'fromelf User Guide',
+              href: 'https://developer.arm.com/docs/dui0477/latest/'
+            }
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Arm Compiler 6 User Guide',
+          items: [
+            {
+              type: 'link',
+              label: 'armclang User Guide',
+              href: 'https://developer.arm.com/documentation/100067/0612/?lang=en'
+            },
+            {
+              type: 'link',
+              label: 'armasm User Guide',
+              href: 'https://developer.arm.com/documentation/100069/0612/?lang=en'
+            },
+            {
+              type: 'link',
+              label: 'armlink User Guide',
+              href: 'https://developer.arm.com/documentation/100070/0612/?lang=en'
+            },
+            {
+              type: 'link',
+              label: 'armar User Guide',
+              href: 'https://developer.arm.com/documentation/100072/0612/?lang=en'
+            },
+            {
+              type: 'link',
+              label: 'fromelf User Guide',
+              href: 'https://developer.arm.com/documentation/100071/0612/?lang=en'
+            }
+          ],
+        }
+      ]
     }
   ],
 
