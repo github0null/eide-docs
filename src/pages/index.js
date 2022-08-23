@@ -11,7 +11,7 @@ export default function Home() {
   let localePathRoot = '';
   if (i18n.currentLocale != i18n.defaultLocale) localePathRoot = '/' + i18n.currentLocale;
   return (
-    <Layout title={`Hello from ${siteConfig.title}`}>
+    <Layout title={`Embedded IDE - A microcontroller development environment`}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="landing_page/css/fonts.css" />
