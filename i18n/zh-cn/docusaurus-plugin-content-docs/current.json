@@ -20,7 +20,7 @@
     "description": "The generated-index page description for category Function Modules in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Advance": {
-    "message": "进阶",
+    "message": "进阶功能",
     "description": "The label for category Advance in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Advance.link.generated-index.description": {
