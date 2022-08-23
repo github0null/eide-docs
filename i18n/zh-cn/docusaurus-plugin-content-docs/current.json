@@ -35,6 +35,10 @@
     "message": "一些注意事项",
     "description": "The generated-index page description for category Notices in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.link.ChangeLog": {
+    "message": "更新日志",
+    "description": "ChangeLog"
+  },
   "sidebar.tutorialSidebar.category.ChangeLog": {
     "message": "更新日志",
     "description": "ChangeLog"
