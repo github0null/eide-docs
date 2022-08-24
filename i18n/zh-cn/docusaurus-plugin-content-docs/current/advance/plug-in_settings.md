@@ -38,3 +38,97 @@ sidebar_position: 9
 
 `Workspace > Folder > User`
 
+## 小技巧
+
+有一些关于 eide 插件设置的技巧
+
+### 为项目单独指定编译器
+
+> arm gcc 项目示例
+
+如果你安装了不同版本的 gcc 编译器，比如：`arm-none-eabi-gcc v7.3`, `arm-none-eabi-gcc v9.3`, `arm-none-eabi-gcc v10.3`
+
+如果全局默认使用的编译器为 `arm-none-eabi-gcc v9.3`，而现在你有如下打算：
+
+- 你想在 项目 `prj_A` 中使用 `v7.3` 版本的 `arm-none-eabi-gcc`
+
+- 你想在 项目 `prj_B` 中使用 `v10.3` 版本的 `arm-none-eabi-gcc`
+
+你可以这样做：
+
+- 打开 项目 `prj_A` 的 `.code-workspace` 工作区配置文件，修改 `EIDE.ARM.GCC.InstallDirectory` 设置，如下：
+
+  ```json
+  {
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+
+        // other settings ....
+
+        "EIDE.ARM.GCC.InstallDirectory": "/your/arm-none-eabi-gcc-v7.3/compiler/path"
+        
+        // other settings ....
+    }
+  }
+  ```
+
+- 打开 项目 `prj_B` 的 `.code-workspace` 工作区配置文件，修改 `EIDE.ARM.GCC.InstallDirectory` 设置，如下：
+
+  ```json
+  {
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+
+        // other settings ....
+
+        "EIDE.ARM.GCC.InstallDirectory": "/your/arm-none-eabi-gcc-v10.3/compiler/path"
+
+        // other settings ....
+    }
+  }
+  ```
+
+然后：
+
+- 点击 `build`，你的项目 `prj_A` 将会使用 `/your/arm-none-eabi-gcc-v7.3/compiler/path/bin/arm-none-eabi-gcc` 进行编译
+
+- 点击 `build`，你的项目 `prj_B` 将会使用 `/your/arm-none-eabi-gcc-v10.3/compiler/path/bin/arm-none-eabi-gcc` 进行编译
+
+
+除此之外，还有一些变量可以在设置项中使用：
+
+```shell
+# vscode project workspace folder path 
+${workspaceFolder}
+
+# user home path
+${userRoot}
+```
+
+例如，如果你想指定某个 `eide utility tools` 的路径，你可以这样使用：
+
+```json
+{
+  "folders": [
+      {
+          "path": "."
+      }
+  ],
+  "settings": {
+
+      // other settings ....
+
+      "EIDE.ARM.GCC.InstallDirectory": "${userRoot}/.eide/tools/gcc_arm_v7_3_1"
+
+      // other settings ....
+  }
+}
+```

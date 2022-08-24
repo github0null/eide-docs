@@ -38,3 +38,97 @@ The Scope Priority:
 
 `Workspace > Folder > User`
 
+## Tips
+
+There are some tips for eide plug-in settings.
+
+### Specify The Compiler Separately For Project
+
+> Example for arm gcc project
+
+If you have install some gcc compilers with different versions, like: `arm-none-eabi-gcc v7.3`, `arm-none-eabi-gcc v9.3`, `arm-none-eabi-gcc v10.3`
+
+If the global default compiler is `arm-none-eabi-gcc v9.3`, but now:
+
+- You want to use arm-none-eabi-gcc `v7.3` in project `prj_A`
+
+- You want to use arm-none-eabi-gcc `v10.3` in project `prj_B`
+
+You can do this as follows:
+
+- Open `.code-workspace` file in project `prj_A`, and modify settings: `EIDE.ARM.GCC.InstallDirectory`
+
+  ```json
+  {
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+
+        // other settings ....
+
+        "EIDE.ARM.GCC.InstallDirectory": "/your/arm-none-eabi-gcc-v7.3/compiler/path"
+        
+        // other settings ....
+    }
+  }
+  ```
+
+- Open `.code-workspace` file in project `prj_B`, and modify settings: `EIDE.ARM.GCC.InstallDirectory`
+
+  ```json
+  {
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+
+        // other settings ....
+
+        "EIDE.ARM.GCC.InstallDirectory": "/your/arm-none-eabi-gcc-v10.3/compiler/path"
+
+        // other settings ....
+    }
+  }
+  ```
+
+Then:
+
+- Click `build`, your project `prj_A` will be build with compiler: `/your/arm-none-eabi-gcc-v7.3/compiler/path/bin/arm-none-eabi-gcc`
+
+- Click `build`, your project `prj_B` will be build with compiler: `/your/arm-none-eabi-gcc-v10.3/compiler/path/bin/arm-none-eabi-gcc`
+
+
+Besides, there are some variables can be used in settings items:
+
+```shell
+# vscode project workspace folder path 
+${workspaceFolder}
+
+# user home path
+${userRoot}
+```
+
+For example, if you want to specify some `eide utility tools` path, you can use it like this:
+
+```json
+{
+  "folders": [
+      {
+          "path": "."
+      }
+  ],
+  "settings": {
+
+      // other settings ....
+
+      "EIDE.ARM.GCC.InstallDirectory": "${userRoot}/.eide/tools/gcc_arm_v7_3_1"
+
+      // other settings ....
+  }
+}
+```
