@@ -73,18 +73,30 @@ sidebar_position: 10
 
 |变量名|描述|备注|
 |:----|:----|:----|
-|`${OutName}`|`.o` 文件名|相对路径，无文件后缀名| 
-|`${OutDir}`|`.o` 目录路径|相对路径| 
-|`${FileName}`|源文件名|相对路径，无文件后缀名| 
+|`${OutName}`|`.o` 文件名|相对路径，无文件后缀名|
+|`${OutDir}`|`.o` 目录路径|相对路径|
+|`${FileName}`|源文件名|相对路径，无文件后缀名|
 |`${FileDir}`|源文件目录路径|相对路径|
+|`${ArgsFile:ARGS_FILE_PATH}`|从文件 `ARGS_FILE_PATH` 中导入编译参数|路径不得包含特殊符号及非ASCII码|
 
-示例:
+并且我们支持使用一些特殊的表达式：
+
+|表达式|描述|
+|:----|:----|
+|`$<override:new_args>`|使用 `new_args` 覆盖所有编译参数|
+|`$<replace:old_args/new_args>`|替换编译参数，将 `old_args` 替换为 `new_args`|
+
+示例：
 
 - **在使用 `Armcc` 编译 `.c` 文件时，同时输出 `asm` 文件：**
 
-  添加 `--asm --asm_dir="${OutDir}"` 参数到 `Builder Options` -> `C/C++ Compiler` -> `Other C Compiler Options`
+  添加 `--asm --asm_dir="${OutDir}"` 参数到 `Builder Options` -> `C/C++ Compiler` -> `Other C Compiler Options` 中
 
   ![](/docs_img/example_gen_asm_for_armcc.png)
+
+- **从 `./my_cmd.args.txt` 文件中导入一些 C 编译器参数：**
+
+  添加 `${ArgsFile:./my_cmd.args.txt}` 参数到 `Builder Options` -> `C/C++ Compiler` -> `Other C Compiler Options` 中
 
 ### 用户任务命令
 
