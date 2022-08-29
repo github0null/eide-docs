@@ -79,13 +79,6 @@ sidebar_position: 10
 |`${FileDir}`|源文件目录路径|相对路径|
 |`${ArgsFile:ARGS_FILE_PATH}`|从文件 `ARGS_FILE_PATH` 中导入编译参数|路径不得包含特殊符号及非ASCII码|
 
-并且我们支持使用一些特殊的表达式：
-
-|表达式|描述|
-|:----|:----|
-|`$<override:new_args>`|使用 `new_args` 覆盖所有编译参数|
-|`$<replace:old_args/new_args>`|替换编译参数，将 `old_args` 替换为 `new_args`|
-
 示例：
 
 - **在使用 `Armcc` 编译 `.c` 文件时，同时输出 `asm` 文件：**

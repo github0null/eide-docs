@@ -80,13 +80,6 @@ We support some specific variable for builder options:
 |`${FileDir}`|source file directory path|relative path|
 |`${ArgsFile:ARGS_FILE_PATH}`|import `compiler args` from file `ARGS_FILE_PATH`|only ASCII characters and no special symbols|
 
-And we also support some expressions:
-
-|Expression|Description|
-|:----|:----|
-|`$<override:new_args>`|override all compiler args with `new_args`|
-|`$<replace:old_args/new_args>`|replace compiler args, replace `old_args` with `new_args`|
-
 Example:
 
 - **Output `asm` file when compile `.c` file for `Armcc` compiler:**
