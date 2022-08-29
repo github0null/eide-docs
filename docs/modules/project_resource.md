@@ -126,12 +126,16 @@ Because of eide has 2 folder types ([Source Folders](#add-source-folders)), so w
 
 - `virtualPathFiles`: match files by using **virtual path**.
 
-And we also support some expressions:
+We support some expressions in compiler args:
 
 |Expression|Description|
 |:----|:----|
 |`$<override:new_args>`|override all compiler args with `new_args`|
 |`$<replace:old_args/new_args>`|replace compiler args, replace `old_args` with `new_args`|
+
+:::caution Notice
+The **expression** can not contain `<`, `>`, `/`, `:` metacharacters.
+:::
 
 **Examples:**
 

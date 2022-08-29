@@ -127,12 +127,16 @@ sidebar_position: 2
 
 - `virtualPathFiles`: 使用 **虚拟路径** 匹配文件
 
-并且我们支持使用一些特殊的表达式：
+我们支持在编译器参数中使用一些特殊的表达式：
 
 |表达式|描述|
 |:----|:----|
 |`$<override:new_args>`|使用 `new_args` 覆盖所有编译参数|
 |`$<replace:old_args/new_args>`|替换编译参数，将 `old_args` 替换为 `new_args`|
+
+:::caution 注意
+**表达式** 中**不得**出现 `<`，`>`，`/`，`:` 之类的元字符
+:::
 
 **示例：**
 
