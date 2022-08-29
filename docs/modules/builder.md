@@ -94,7 +94,7 @@ Example:
 
 ### User Task Commands
 
-There are some utility commands for references.
+There are some example commands:
 
 ```shell
 # [For Windows10] execute windows bat script
@@ -104,22 +104,22 @@ There are some utility commands for references.
 powershell -Command ls env:
 
 # [For Windows10] copy .hex .bin file to dist dir
-mkdir .\dist & copy /B "${OutDir}\${targetName}.hex" .\dist\ & copy /B "${OutDir}\${targetName}.bin" .\dist\
+mkdir .\dist & copy /B "${OutDir}\\${targetName}.hex" .\dist\ & copy /B "${OutDir}\\${targetName}.bin" .\dist\
 
 # [For Windows10] copy .a file to dist dir
-mkdir .\dist & copy /B "${OutDir}\${targetName}.a" .\dist\lib${targetName}.a
+mkdir .\dist & copy /B "${OutDir}\\${targetName}.a" .\dist\lib${targetName}.a
 
 # print compiler version for arm gcc project
 "${CompilerFolder}/${toolPrefix}gcc" -v
 
 # generate s19 file for armcc compiler
-"${CompilerFolder}/fromelf" --m32combined -o "${OutDir}\${targetName}.s19" "${OutDir}\${targetName}.axf"
+"${CompilerFolder}/fromelf" --m32combined -o "${OutDir}\\${targetName}.s19" "${OutDir}\\${targetName}.axf"
 
 # generate hex file for arm gcc compiler
-"${CompilerFolder}/${CompilerPrefix}objcopy" -O ihex "${OutDir}\${TargetName}.elf" "${OutDir}\${TargetName}.hex"
+"${CompilerFolder}/${CompilerPrefix}objcopy" -O ihex "${OutDir}/${TargetName}.elf" "${OutDir}/${TargetName}.hex"
 
 # generate bin file for arm gcc compiler
-"${CompilerFolder}/${CompilerPrefix}objcopy" -O binary "${OutDir}\${TargetName}.elf" "${OutDir}\${TargetName}.bin"
+"${CompilerFolder}/${CompilerPrefix}objcopy" -O binary "${OutDir}/${TargetName}.elf" "${OutDir}/${TargetName}.bin"
 
 # convert `hex` to `bin` by hex2bin
 "${BuilderFolder}/utils/hex2bin" -b -c "${outDir}/${targetName}.hex"
@@ -185,4 +185,43 @@ echo expr find gawk-3.1.7 gawk grep gzip head
 kill ln ls make-old make makeinfo md5sum mkdir mv 
 openssl pwd rm rmdir sed sh sha1sum sleep tar test 
 touch tr unzip wget xargs zip
+```
+
+Example:
+
+```bash title="./tools/pack_firmware.sh"
+
+#
+# make firmware file. add timestamp, crc32 checksum
+#
+# [in]:
+#   args(1): build output binary file path
+#
+# [env]:
+#   ${FIRMWARE_OUT_DIR}
+#   ${PRODUCT_NAME}
+#   ${FIRMWARE_VERSION}
+#
+# [out]:
+#   output firmware file to:
+#     '${FIRMWARE_OUT_DIR}/${PRODUCT_NAME}_V${FIRMWARE_VERSION}_${timeStamp}_${crc32}.${fileSuffix}'
+#
+
+# convert '\' -> '/' for unix
+inputFile=$(echo $1 | sed 's/\\/\//g')
+
+crc32Val=$(crc32 "${inputFile}" | sed -E 's/.*0x([0-9a-fA-F]+).*/\1/g' | tr 'A-Z' 'a-z')
+baseFileName=$(basename "${inputFile}")
+fSuffix=${baseFileName##*.}
+
+echo "make output dir: '${FIRMWARE_OUT_DIR}'"
+mkdir -p ${FIRMWARE_OUT_DIR}
+rm -rf ./${FIRMWARE_OUT_DIR}/*.${fSuffix}
+
+timeStamp=$(date +%y%m%d%H%M)
+firmwareName="${PRODUCT_NAME}_V${FIRMWARE_VERSION}_${timeStamp}_${crc32Val}"
+firmwareOutPath="${FIRMWARE_OUT_DIR}/${firmwareName}.${fSuffix}"
+
+echo "output firmware: '${firmwareOutPath}'"
+cp "${inputFile}" "${firmwareOutPath}"
 ```
