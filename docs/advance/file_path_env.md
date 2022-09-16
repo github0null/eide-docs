@@ -16,6 +16,6 @@ There are some fixed variables only for `source` file path.
 - `${OutDir}`: output folder path
 - `${OutDirBase}`: output folder base name
 - `${ProjectName}`: eide project name
+- `${ConfigName}`: project config name, like: 'debug', 'release'
 - `${ExecutableName}`: output file absolute path
 - `${ProjectRoot}`: project root path, like: `${workspaceFolder}`
-

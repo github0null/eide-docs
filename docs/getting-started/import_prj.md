@@ -4,7 +4,7 @@ sidebar_position: 30
 
 # Import Project
 
-Import an existed other ide's project from disk.
+Import an existed other ide's project from disk and create a new eide project.
 
 Click `Import Project` item at `OPERATIONS` view.
 
