@@ -140,7 +140,7 @@ mkdir .\dist & copy /B "${OutDir}\\${targetName}.a" .\dist\lib${targetName}.a
 项目变量：
 
 |变量名|描述|备注|
-|:----|:----|
+|:----|:----|:----|
 |`${ProjectName}`|项目名称|
 |`${ConfigName}`|项目目标名，如：'Debug', 'Release'
 |`${ProjectRoot}`|项目根目录名|
@@ -157,7 +157,7 @@ mkdir .\dist & copy /B "${OutDir}\\${targetName}.a" .\dist\lib${targetName}.a
 编译器变量：
 
 |变量名|描述|备注|
-|:----|:----|
+|:----|:----|:----|
 |`${ToolchainRoot}`|编译器根目录|
 |`${CompilerPrefix}`|GCC 编译器前缀，如：arm-none-eabi-|
 |`${CompilerId}`|编译器 ID，如：'gcc', 'sdcc', 'ac5'|
@@ -173,6 +173,7 @@ mkdir .\dist & copy /B "${OutDir}\\${targetName}.a" .\dist\lib${targetName}.a
 其他扩展的编译器变量：
 
 |变量名|描述|
+|:----|:----|
 |`${EIDE_CUR_OS_TYPE}`|OS 类型，'win32' or 'linux'|
 |`${EIDE_CUR_COMPILER_ID}`|同 `${CompilerId}`|
 |`${EIDE_CUR_COMPILER_NAME}`|同 `${CompilerName}`|

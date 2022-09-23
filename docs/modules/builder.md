@@ -141,7 +141,7 @@ There are some variables that you can use in `task commandline`
 Variables for **project**:
 
 |Variable Name|Description|Note|
-|:----|:----|
+|:----|:----|:----|
 |`${ProjectName}`|Project name|
 |`${ConfigName}`|Project config name, like: `Debug`, `Release`
 |`${ProjectRoot}`|Project root directory path|
@@ -158,7 +158,7 @@ Variables for **project**:
 Variables for **compiler**:
 
 |Variable Name|Description|Note|
-|:----|:----|
+|:----|:----|:----|
 |`${ToolchainRoot}`|Compiler root folder|
 |`${CompilerPrefix}`|GCC compiler prefix, like: arm-none-eabi-|
 |`${CompilerId}`|Compiler ID, like: 'gcc', 'sdcc', 'ac5'|
@@ -174,6 +174,7 @@ Variables for **compiler**:
 Other extended compiler variables:
 
 |Variable Name|Description|
+|:----|:----|
 |`${EIDE_CUR_OS_TYPE}`|OS Type, 'win32' or 'linux'|
 |`${EIDE_CUR_COMPILER_ID}`|same as `${CompilerId}`|
 |`${EIDE_CUR_COMPILER_NAME}`|same as `${CompilerName}`|
