@@ -129,7 +129,7 @@ mkdir .\dist & copy /B "${OutDir}\\${targetName}.a" .\dist\lib${targetName}.a
 ```
 
 :::tip 命令的Shell
-对于 `Win32` 系统，我们使用 `cmd.exe` 执行上述的命令行</br>
+对于 `Win32` 系统，我们使用 `cmd.exe` 执行上述的命令行<br/>
 对于 `Linux` 系统，我们使用 `/bin/bash` 执行上述的命令行
 :::
 

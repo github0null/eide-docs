@@ -130,7 +130,7 @@ mkdir .\dist & copy /B "${OutDir}\\${targetName}.a" .\dist\lib${targetName}.a
 ```
 
 :::tip Commandline Shell
-For `Win32`, we use `cmd.exe` execute your commandline</br>
+For `Win32`, we use `cmd.exe` execute your commandline<br/>
 For `Linux`, we use `/bin/bash` execute your commandline
 :::
 
