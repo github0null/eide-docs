@@ -168,7 +168,7 @@ mkdir .\dist & copy /B "${OutDir}\\${targetName}.a" .\dist\lib${targetName}.a
 |~~`${CompilerFolder}`~~|~~编译器 bin 目录~~|即将被废弃
 |`${re:BuilderFolder}`|构建工具根目录相对路径|
 |`${re:ToolchainRoot}`|编译器根目录相对路径|
-|~~`${re:CompilerFolder}`~~|~~编译器 bin 目录相对路径~~|
+|~~`${re:CompilerFolder}`~~|~~编译器 bin 目录相对路径~~|即将被废弃
 
 其他扩展的编译器变量：
 

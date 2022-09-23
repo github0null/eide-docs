@@ -169,7 +169,7 @@ Variables for **compiler**:
 |~~`${CompilerFolder}`~~|~~Compiler bin folder~~|will be deprecated|
 |`${re:BuilderFolder}`|Relative path of builder tools root folder |
 |`${re:ToolchainRoot}`|Relative path of compiler root folder|
-|~~`${re:CompilerFolder}`~~|Relative path of compiler bin folder|
+|~~`${re:CompilerFolder}`~~|Relative path of compiler bin folder|will be deprecated|
 
 Other extended compiler variables:
 
