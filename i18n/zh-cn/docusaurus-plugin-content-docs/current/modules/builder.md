@@ -150,7 +150,7 @@ mkdir .\dist & copy /B "${OutDir}\\${targetName}.a" .\dist\lib${targetName}.a
 |`${workspaceFolder}`|vscode 工作区文件夹完整路径
 |`${workspaceFolderBasename}`|vscode 工作区文件夹名称
 |`${ToolchainRoot}`|工具链根目录完整路径
-|~~`${targetName}`~~|~~项目名~~|即将被废弃
+|~~`${targetName}`~~|~~项目名~~|即将废弃
 |`${re:ProjectRoot}`|项目根目录相对路径，固定值：'.'|
 |`${re:OutDir}`|构建输出目录相对路径，如：'build/Debug'|
 
@@ -165,10 +165,10 @@ mkdir .\dist & copy /B "${OutDir}\\${targetName}.a" .\dist\lib${targetName}.a
 |`${CompilerFullName}`|编译器全名称，如：'arm-none-eabi-gcc.exe (GNU Tools for Arm Embedded Processors 8-2019-q3-update) 8.3.1 20190703 ...'|
 |`${CompilerVersion}`|编译器版本号，如：'8.3.1'|
 |`${BuilderFolder}`|eide 构建工具根目录路径|
-|~~`${CompilerFolder}`~~|~~编译器 bin 目录~~|即将被废弃
+|~~`${CompilerFolder}`~~|~~编译器 bin 目录~~|即将废弃
 |`${re:BuilderFolder}`|构建工具根目录相对路径|
 |`${re:ToolchainRoot}`|编译器根目录相对路径|
-|~~`${re:CompilerFolder}`~~|~~编译器 bin 目录相对路径~~|即将被废弃
+|~~`${re:CompilerFolder}`~~|~~编译器 bin 目录相对路径~~|即将废弃
 
 其他扩展的编译器变量：
 
