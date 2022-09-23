@@ -94,6 +94,10 @@ Example:
 
 ### User Task Commands
 
+We support execute some builder task before/after build your project.
+
+![](/docs_img/builder_tasks.png)
+
 There are some example commands:
 
 ```shell
@@ -125,35 +129,65 @@ mkdir .\dist & copy /B "${OutDir}\\${targetName}.a" .\dist\lib${targetName}.a
 "${BuilderFolder}/utils/hex2bin" -b -c "${outDir}/${targetName}.hex"
 ```
 
+:::tip Commandline Shell
+For `Win32`, we use `cmd.exe` execute your commandline</br>
+For `Linux`, we use `/bin/bash` execute your commandline
+:::
+
 #### User Task Variables
 
-Variables for project:
+There are some variables that you can use in `task commandline`
 
-|Variable Name|Description|
+Variables for **project**:
+
+|Variable Name|Description|Note|
 |:----|:----|
-|`${targetName}`|Project name
-|`${ConfigName}`|Project Target Name, like: 'Debug', 'Release'
+|`${ProjectName}`|Project name|
+|`${ConfigName}`|Project config name, like: `Debug`, `Release`
 |`${ProjectRoot}`|Project root directory path|
-|`${OutDir}`|Build output directory path|
-|`${re:ProjectRoot}`|Relative path of project root, Fixed value: '.'|
-|`${re:OutDir}`|Relative path of output folder, like: 'build/Debug'|
+|`${OutDir}`|Builder output directory full path, like: `d:/path/my_project/proj_a/build/Debug`|
+|`${OutDirRoot}`|Output directory root name, like: `build`|
+|`${OutDirBase}`|Output directory base name, like: `build/Debug`|
+|`${workspaceFolder}`|vscode workspace folder path
+|`${workspaceFolderBasename}`|vscode workspace folder base name
+|`${ToolchainRoot}`|toolchain root full path
+|~~`${targetName}`~~|~~Project name~~|will be deprecated|
+|`${re:ProjectRoot}`|Relative path of project root, Fixed value: `.`|
+|`${re:OutDir}`|Relative path of output folder, like: `build/Debug`|
 
-Variables for compiler:
+Variables for **compiler**:
 
-|Variable Name|Description|
+|Variable Name|Description|Note|
 |:----|:----|
-|`${BuilderFolder}`|Builder tools root folder path|
 |`${ToolchainRoot}`|Compiler root folder|
 |`${CompilerPrefix}`|GCC compiler prefix, like: arm-none-eabi-|
-|`${CompilerFolder}`|Compiler bin folder|
 |`${CompilerId}`|Compiler ID, like: 'gcc', 'sdcc', 'ac5'|
 |`${CompilerName}`|Compiler Short Name, like: 'GNU Tools for Arm Embedded Processors 8-2019-q3-update'|
 |`${CompilerFullName}`|Compiler Full Name, like: 'arm-none-eabi-gcc.exe (GNU Tools for Arm Embedded Processors 8-2019-q3-update) 8.3.1 20190703 ...'|
 |`${CompilerVersion}`|Compiler Version, like: '8.3.1'|
+|`${BuilderFolder}`|eide builder tools root folder path|
+|~~`${CompilerFolder}`~~|~~Compiler bin folder~~|will be deprecated|
 |`${re:BuilderFolder}`|Relative path of builder tools root folder |
 |`${re:ToolchainRoot}`|Relative path of compiler root folder|
-|`${re:CompilerFolder}`|Relative path of compiler bin folder|
+|~~`${re:CompilerFolder}`~~|Relative path of compiler bin folder|
 
+Other extended compiler variables:
+
+|Variable Name|Description|
+|`${EIDE_CUR_OS_TYPE}`|OS Type, 'win32' or 'linux'|
+|`${EIDE_CUR_COMPILER_ID}`|same as `${CompilerId}`|
+|`${EIDE_CUR_COMPILER_NAME}`|same as `${CompilerName}`|
+|`${EIDE_CUR_COMPILER_NAME_FULL}`|same as `${CompilerFullName}`|
+|`${EIDE_CUR_COMPILER_VERSION}`|same as `${CompilerVersion}`|
+|`${EIDE_CUR_COMPILER_PREFIX}`|Compiler Prefix|
+|`${EIDE_CUR_COMPILER_CC_PATH}`|`C` Compiler full path|
+|`${EIDE_CUR_COMPILER_AS_PATH}`|`ASM` Compiler full path|
+|`${EIDE_CUR_COMPILER_LD_PATH}`|`LINKER` full path|
+|`${EIDE_CUR_COMPILER_CXX_PATH}`|`C++` Compiler full path|
+|`${EIDE_CUR_COMPILER_CC_BASE_ARGS}`|`C` source base compiler args|
+|`${EIDE_CUR_COMPILER_AS_BASE_ARGS}`|`ASM` source base compiler args|
+|`${EIDE_CUR_COMPILER_LD_BASE_ARGS}`|`LINKER` base args|
+|`${EIDE_CUR_COMPILER_CXX_BASE_ARGS}`|`C++` source base compiler args|
 
 #### Built-in Linux Shell For Windows
 

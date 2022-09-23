@@ -6,9 +6,9 @@ sidebar_position: 10
 
 为项目配置编译器选项
 
-## 基础配置
+## 基本配置
 
-每个项目都有基础的配置
+每个项目都有基本的配置
 
 ![](/docs_img/builder_cfg_preview.png)
 
@@ -25,13 +25,13 @@ sidebar_position: 10
 - `RAM / FLASH 布局`: 提供一个类似于 Keil 的存储器布局编辑器，用于为 `RAM/ROM` 修改 `地址，大小`信息，当选项 `使用自定义链接器脚本文件` 为 `false` 时将显示
 
 :::tip 没有上述的字段
-每种项目类型都有不同的基础配置<br/>
+每种项目类型都有不同的基本配置<br/>
 因此，并不是每种项目类型都会有上述字段
 :::
 
 ## 高级配置
 
-除了上面描述的 `基础选项`，我们还提供了更详细的编译配置项
+除了上面描述的 `基本选项`，我们还提供了更详细的编译配置项
 
 ![](/docs_img/builer_cfg_btn.png)
 
@@ -93,6 +93,10 @@ sidebar_position: 10
 
 ### 用户任务命令
 
+我们支持在构建项目之前/之后执行一些构建器任务。
+
+![](/docs_img/builder_tasks.png)
+
 这里有一些示例命令
 
 ```shell
@@ -124,35 +128,65 @@ mkdir .\dist & copy /B "${OutDir}\\${targetName}.a" .\dist\lib${targetName}.a
 "${BuilderFolder}/utils/hex2bin" -b -c "${outDir}/${targetName}.hex"
 ```
 
+:::tip 命令的Shell
+对于 `Win32` 系统，我们使用 `cmd.exe` 执行上述的命令行</br>
+对于 `Linux` 系统，我们使用 `/bin/bash` 执行上述的命令行
+:::
+
 #### 用户任务变量
+
+这里有一些变量，你可以在构建任务中使用
 
 项目变量：
 
-|变量名|描述|
+|变量名|描述|备注|
 |:----|:----|
-|`${targetName}`|项目名
+|`${ProjectName}`|项目名称|
 |`${ConfigName}`|项目目标名，如：'Debug', 'Release'
 |`${ProjectRoot}`|项目根目录名|
 |`${OutDir}`|构建输出目录路径|
+|`${OutDirRoot}`|输出目录根名称，例如：`build`|
+|`${OutDirBase}`|输出目录基本名，例如：`build\Debug`|
+|`${workspaceFolder}`|vscode 工作区文件夹完整路径
+|`${workspaceFolderBasename}`|vscode 工作区文件夹名称
+|`${ToolchainRoot}`|工具链根目录完整路径
+|~~`${targetName}`~~|~~项目名~~|即将被废弃
 |`${re:ProjectRoot}`|项目根目录相对路径，固定值：'.'|
 |`${re:OutDir}`|构建输出目录相对路径，如：'build/Debug'|
 
 编译器变量：
 
-|变量名|描述|
+|变量名|描述|备注|
 |:----|:----|
-|`${BuilderFolder}`|构建工具根目录路径|
 |`${ToolchainRoot}`|编译器根目录|
 |`${CompilerPrefix}`|GCC 编译器前缀，如：arm-none-eabi-|
-|`${CompilerFolder}`|编译器 bin 目录|
 |`${CompilerId}`|编译器 ID，如：'gcc', 'sdcc', 'ac5'|
 |`${CompilerName}`|编译器短名称，如：'GNU Tools for Arm Embedded Processors 8-2019-q3-update'|
 |`${CompilerFullName}`|编译器全名称，如：'arm-none-eabi-gcc.exe (GNU Tools for Arm Embedded Processors 8-2019-q3-update) 8.3.1 20190703 ...'|
 |`${CompilerVersion}`|编译器版本号，如：'8.3.1'|
+|`${BuilderFolder}`|eide 构建工具根目录路径|
+|~~`${CompilerFolder}`~~|~~编译器 bin 目录~~|即将被废弃
 |`${re:BuilderFolder}`|构建工具根目录相对路径|
 |`${re:ToolchainRoot}`|编译器根目录相对路径|
-|`${re:CompilerFolder}`|编译器 bin 目录相对路径|
+|~~`${re:CompilerFolder}`~~|~~编译器 bin 目录相对路径~~|
 
+其他扩展的编译器变量：
+
+|变量名|描述|
+|`${EIDE_CUR_OS_TYPE}`|OS 类型，'win32' or 'linux'|
+|`${EIDE_CUR_COMPILER_ID}`|同 `${CompilerId}`|
+|`${EIDE_CUR_COMPILER_NAME}`|同 `${CompilerName}`|
+|`${EIDE_CUR_COMPILER_NAME_FULL}`|同 `${CompilerFullName}`|
+|`${EIDE_CUR_COMPILER_VERSION}`|同 `${CompilerVersion}`|
+|`${EIDE_CUR_COMPILER_PREFIX}`|同 `${CompilerPrefix}`|
+|`${EIDE_CUR_COMPILER_CC_PATH}`|`C` 编译器完整路径|
+|`${EIDE_CUR_COMPILER_AS_PATH}`|`ASM` 编译器完整路径|
+|`${EIDE_CUR_COMPILER_LD_PATH}`|`LINKER` 完整路径|
+|`${EIDE_CUR_COMPILER_CXX_PATH}`|`C++` 编译器完整路径|
+|`${EIDE_CUR_COMPILER_CC_BASE_ARGS}`|`C` 基本编译参数|
+|`${EIDE_CUR_COMPILER_AS_BASE_ARGS}`|`ASM` 基本编译参数|
+|`${EIDE_CUR_COMPILER_LD_BASE_ARGS}`|`LINKER` 基本参数|
+|`${EIDE_CUR_COMPILER_CXX_BASE_ARGS}`|`C++` 基本编译参数|
 
 #### 为 Windows 内置的 Linux Shell 终端
 
