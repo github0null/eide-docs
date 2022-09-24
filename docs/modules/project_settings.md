@@ -18,7 +18,7 @@ The project name.
 
   It's used to determine the file name when generating build output files (like: `.elf`, `.hex`, `.bin` ...).
 
-  It's the value of env variable `${TargetName}`
+  It's the value of env variable `${ProjectName}`
 
 ### Output Folder Name
 

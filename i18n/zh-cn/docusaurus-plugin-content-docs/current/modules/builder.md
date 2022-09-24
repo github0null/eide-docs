@@ -107,25 +107,25 @@ sidebar_position: 10
 powershell -Command ls env:
 
 # [For Windows10] copy .hex .bin file to dist dir
-mkdir .\dist & copy /B "${OutDir}\\${targetName}.hex" .\dist\ & copy /B "${OutDir}\\${targetName}.bin" .\dist\
+mkdir .\dist & copy /B "${OutDir}\\${ProjectName}.hex" .\dist\ & copy /B "${OutDir}\\${ProjectName}.bin" .\dist\
 
 # [For Windows10] copy .a file to dist dir
-mkdir .\dist & copy /B "${OutDir}\\${targetName}.a" .\dist\lib${targetName}.a
+mkdir .\dist & copy /B "${OutDir}\\${ProjectName}.a" .\dist\lib${ProjectName}.a
 
 # print compiler version for arm gcc project
 "${CompilerFolder}/${toolPrefix}gcc" -v
 
 # generate s19 file for armcc compiler
-"${CompilerFolder}/fromelf" --m32combined -o "${OutDir}\\${targetName}.s19" "${OutDir}\\${targetName}.axf"
+"${CompilerFolder}/fromelf" --m32combined -o "${OutDir}\\${ProjectName}.s19" "${OutDir}\\${ProjectName}.axf"
 
 # generate hex file for arm gcc compiler
-"${CompilerFolder}/${CompilerPrefix}objcopy" -O ihex "${OutDir}/${TargetName}.elf" "${OutDir}/${TargetName}.hex"
+"${CompilerFolder}/${CompilerPrefix}objcopy" -O ihex "${OutDir}/${ProjectName}.elf" "${OutDir}/${ProjectName}.hex"
 
 # generate bin file for arm gcc compiler
-"${CompilerFolder}/${CompilerPrefix}objcopy" -O binary "${OutDir}/${TargetName}.elf" "${OutDir}/${TargetName}.bin"
+"${CompilerFolder}/${CompilerPrefix}objcopy" -O binary "${OutDir}/${ProjectName}.elf" "${OutDir}/${ProjectName}.bin"
 
 # convert `hex` to `bin` by hex2bin
-"${BuilderFolder}/utils/hex2bin" -b -c "${outDir}/${targetName}.hex"
+"${BuilderFolder}/utils/hex2bin" -b -c "${outDir}/${ProjectName}.hex"
 ```
 
 :::tip 命令的Shell
@@ -204,22 +204,26 @@ mkdir .\dist & copy /B "${OutDir}\\${targetName}.a" .\dist\lib${targetName}.a
 bash ./xxx/xxx.sh [script arguments...]
 
 # output crc32 checksum for hex file
-crc32 "${OutDir}/${TargetName}.hex"
+bash -c "crc32 \"${OutDir}/${ProjectName}.hex\""
 
 # output sha1 checksum for hex file
-sha1sum "${OutDir}/${TargetName}.hex"
+bash -c "sha1sum \"${OutDir}/${ProjectName}.hex\""
 ```
 
 所有可用的 shell 命令：
 
-```shell
-awk basename bash bunzip2 bzip2 bzip2recover 
-cat chmod cksum cp crc32 curl date dd dirname dos2unix 
-echo expr find gawk-3.1.7 gawk grep gzip head 
-kill ln ls make-old make makeinfo md5sum mkdir mv 
-openssl pwd rm rmdir sed sh sha1sum sleep tar test 
-touch tr unzip wget xargs zip
-```
+- 可 **直接调用的** 命令：
+
+  ```shell
+  a2p awk basename bash bison bunzip2 bzcat bzip2 bzip2recover cat chgrp chmod chown chroot cksum cmp comm cp csplit curl cut date dd df diff diff3 dir dircolors dirname du echo egrep env error-mode expand expr factor false fgrep find flex fmt fold funzip gawk-3.1.7 gawk grep gzexe gzip head hostname id install install.manifest join kill link ln locate logname ls lzcat lzma lzmadec lzmainfo m4 make md5sum mkdir mkfifo mknod msysmnt mv nice nl nohup od oldfind openssl paste patch patch.manifest pathchk perl perl5.8.8 pgawk-3.1.7 pgawk pinky pkg-config pr printenv printf ps ptx pwd readlink rm rmdir scp sdiff sed seq sftp sh sha1sum shred sleep slogin sort split ssh-add ssh-agent ssh-keygen ssh-keyscan ssh stat strace stty su sum sync tac tail tar tee test touch tr true tsort tty uname unexpand uniq unlink unlzma unxz unzip unzipsfx users vdir wc who whoami xargs xz xzcat xzdec yes zipinfo
+  ```
+
+- 仅能通过 **bash -c** 调用的命令：
+
+  ```shell
+  aclocal autoconf autoheader autom4te automake autopoint autoreconf autoscan autoupdate bashbug bzcmp bzdiff bzegrep bzfgrep bzgrep bzless bzmore c2ph c_rehash cls clsb cmd config_data cpan cpantest crc32 dprofpp enc2xs find2perl ftp groups gunzip gzexe h2ph h2xs ifnames igawk instmodsh ld2 libnetcfg libtool libtoolize lnkcnv lzcmp lzdiff lzegrep lzfgrep lzgrep lzless lzmore mount msysinfo perlbug perlcc perldoc perlivp perlld perlrebase piconv pl2pm pod2html pod2latex pod2man pod2readme pod2text pod2usage pod_cover podchecker podselect prove psed pstruct 
+  ptar ptardiff ptee s2p shasum splain start umount uncompress updatedb which xsubpp xzcmp xzdiff xzegrep xzfgrep xzgrep xzless xzmore yacc ysh zcat zcmp zdiff zegrep zfgrep zforce zgrep zipgrep zless zmore znew
+  ```
 
 示例：
 

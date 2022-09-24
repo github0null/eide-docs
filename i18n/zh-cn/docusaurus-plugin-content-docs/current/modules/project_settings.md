@@ -18,7 +18,7 @@ sidebar_position: 30
 
   它用于在生成输出文件时确定文件名 (比如：`.elf`, `.hex`, `.bin` ...).
 
-  它是变量 `${TargetName}` 的值
+  它是变量 `${ProjectName}` 的值
 
 ### 输出文件夹名
 
