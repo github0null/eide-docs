@@ -14,6 +14,11 @@ Now we support to import `Keil` and `Eclipse` project.
 
 ![](/docs_img/imp_prj_sel.png)
 
+:::caution For Project Import
+Although the plug-in has some "import xxx project" functionality, this does not mean that the plug-in must be used with the xxx development environment.<br/>
+Instead, the import function extracts the information about the target project and creates an eide type project from it. After the import is complete, the eide project will be disconnected from the old project.
+:::
+
 ## Keil Project
 
 :::danger Keil project limit

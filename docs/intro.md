@@ -29,6 +29,12 @@ Now we support:
 
 ---
 
+- **Q:** Is it the VSCode version of Keil MDK ?
+
+  **A:** NO ! It's NOT !
+
+---
+
 - **Q:** How is it different from Keil/IAR ?
 
   **A:** There's **not** a lot of difference. It is based on VSCode, this is the main difference.
@@ -38,6 +44,12 @@ Now we support:
   But you can get debugger capabilities from other plug-ins, like: [**Cortex-Debug**](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug), 
   [**STM8-Debug**](https://marketplace.visualstudio.com/items?itemName=CL.stm8-debug)
   :::
+
+---
+
+- **Q:** How do I migrate Keil_MDK/IAR/Eclipse projects to VSCode ?
+
+  **A:** The plug-in has the project import function and supports the import of most projects.
 
 ---
 
