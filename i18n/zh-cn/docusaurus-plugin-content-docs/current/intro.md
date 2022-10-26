@@ -8,12 +8,15 @@ sidebar_position: 1
 
 [EIDE](https://marketplace.visualstudio.com/items?itemName=CL.eide) 是一个 VSCode 插件，用来开发单片机项目，比如：`8051`, `stm8`, `stm32`, `other cortex-m mcus` ...
 
+![](https://em-ide.com/welcome_page.png)
+
 ![](https://em-ide.com/preview.png)
 
 :::caution 平台支持
 我们支持如下平台：
-  - `Windows 10 or later`
+  - `Windows 10+ x64`
   - `Linux X64`
+  - `macOS`（仅在 macOS 10.15 x64 中测试过）
 :::
 
 ## 一些疑问？

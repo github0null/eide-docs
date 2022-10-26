@@ -8,12 +8,15 @@ sidebar_position: 1
 
 [EIDE](https://marketplace.visualstudio.com/items?itemName=CL.eide) is a **VSCode plug-in**, used to development `single-chip microcomputer projects`, like: `8051`, `stm8`, `stm32`, `other cortex-m mcus` ...
 
+![](https://em-ide.com/welcome_page.png)
+
 ![](https://em-ide.com/preview.png)
 
 :::caution Platform
 Now we support: 
-  - `Windows 10 or later`
+  - `Windows 10+ x64`
   - `Linux X64`
+  - `macOS` (Only tested in macOS 10.15 x64)
 :::
 
 ## Q&A
