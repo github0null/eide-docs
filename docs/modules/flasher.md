@@ -314,7 +314,7 @@ We support to use any shell command to program your flash.
 - `Erase Chip Command`: The shell command which will be executed when user trigger a erase flash process.
 
 :::tip Shell Executable File
-For **Win32**, the shell command will be executed by `CMD.exe`.<br/>
+For **Win32**, the shell command will be executed by `CMD.exe`. And we have built-in a [msys shell envirnoment](https://em-ide.com/docs/modules/builder#built-in-linux-shell-for-windows), so you can alse use `bash` command<br/>
 For **Linux**, the shell command will be executed by `/bin/bash`.
 :::
 

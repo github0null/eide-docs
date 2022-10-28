@@ -189,7 +189,7 @@ mkdir .\dist & copy /B "${OutDir}\\${ProjectName}.a" .\dist\lib${ProjectName}.a
 |`${EIDE_CUR_COMPILER_LD_BASE_ARGS}`|`LINKER` 基本参数|
 |`${EIDE_CUR_COMPILER_CXX_BASE_ARGS}`|`C++` 基本编译参数|
 
-#### 为 Windows 内置的 Linux Shell 终端
+### 为 Windows 内置的 Unix Shell 终端 {#built-in-linux-shell-for-windows}
 
 对于 Win32，插件内置了一个 MSYS 环境（位置：C:\Users\USER_NAME\.eide\bin\builder\msys\bin）
 
