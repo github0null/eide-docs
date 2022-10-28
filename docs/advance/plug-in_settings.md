@@ -71,7 +71,7 @@ Here are available settings for gcc prefix:
   }
   ```
 
-:::notice Need Relaunch VSCode
+:::caution Need Relaunch VSCode
 You need relaunch vscode if you have modified these settings.
 :::
 
