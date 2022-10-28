@@ -51,7 +51,7 @@ If you need to install **offline**, please goto [**Github Release**](https://git
 
   ![](/docs_img/install_dotnet.png)
 
-  When `.NET Runtime` has been installed, you need to restart vscode to refresh `System Envirnoment Variables`.
+  When `.NET Runtime` has been installed, you need to restart vscode to refresh `System Environment Variables`.
 
   EIDE will check `.NET Runtime` before launch, goto VSCode `Output Panel` to check log.
 
@@ -59,7 +59,7 @@ If you need to install **offline**, please goto [**Github Release**](https://git
 
   :::caution Not found runtime
   Sometimes, the runtime is installed, but plug-in still prompts that it **cannot be found**.<br/>
-  You may need **close all vscode instances** and execute command `code .` in shell to refresh `System Envirnoment Variables`.
+  You may need **close all vscode instances** and execute command `code .` in shell to refresh `System Environment Variables`.
   :::
 
   :::info For Linux

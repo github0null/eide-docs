@@ -191,7 +191,7 @@ mkdir .\dist & copy /B "${OutDir}\\${ProjectName}.a" .\dist\lib${ProjectName}.a
 
 ### 为 Windows 内置的 Unix Shell 终端 {#built-in-linux-shell-for-windows}
 
-对于 Win32，插件内置了一个 MSYS 环境（位置：C:\Users\USER_NAME\.eide\bin\builder\msys\bin）
+对于 Win32，插件内置了一个 MSYS 环境（位置：C:\Users\USER_NAME/.eide\bin\builder\msys\bin）
 
 所以你可以在 Windows 平台上执行 `unix shell script`
 

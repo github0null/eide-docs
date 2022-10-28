@@ -190,9 +190,9 @@ Other extended compiler variables:
 |`${EIDE_CUR_COMPILER_LD_BASE_ARGS}`|`LINKER` base args|
 |`${EIDE_CUR_COMPILER_CXX_BASE_ARGS}`|`C++` source base compiler args|
 
-### Built-in Linux Shell For Windows
+### Built-in Unix Shell For Windows {#built-in-linux-shell-for-windows}
 
-For Win32, the plugin built-in a MSYS environment (location: C:\Users\USER_NAME\.eide\bin\builder\msys\bin).
+For Win32, the plugin built-in a MSYS environment (location: C:/Users/USER_NAME/.eide/bin/builder/msys/bin).
 
 So you can execute `unix shell script` in windows platform.
 

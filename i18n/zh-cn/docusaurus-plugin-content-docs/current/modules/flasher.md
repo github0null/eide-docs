@@ -313,9 +313,13 @@ stcgal -h
 
 - `Erase Chip Command`：当用户触发全片擦除命令时执行的 shell 命令
 
-:::tip Shell 可执行文件
-对于 **Win32**，shell 命令将使用 `CMD.exe` 执行。同时我们内置了 [msys shell 环境](https://em-ide.com/zh-cn/docs/modules/builder#built-in-linux-shell-for-windows)，所以你可以在 Windows 下执行 `bash` 命令和脚本<br/>
-对于 **Linux**，shell 命令将使用 `/bin/bash` 执行
+:::tip shell 可执行文件
+对于 **Win32**，shell 命令将使用 `CMD.exe` 执行<br/>
+对于 **Unix**，shell 命令将使用 `/bin/bash` 执行
+:::
+
+:::tip 在 Windows 中执行 unix shell 命令或脚本
+我们为 Windows 内置了 [unix shell 终端](https://em-ide.com/zh-cn/docs/modules/builder#built-in-linux-shell-for-windows)，所以你可以直接使用 `bash` 命令执行命令/脚本来实现复杂的烧录流程
 :::
 
 ---
@@ -337,6 +341,9 @@ shell 命令有一些可用的变量：
 一些示例：
 
 ```shell
+# execute unix shell script
+bash ./xxx/xxx.sh [script arguments...]
+
 # use NuLink to program nuvoton mcu
 NuLink -w APROM "${programFile}"
 
