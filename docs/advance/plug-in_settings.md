@@ -42,6 +42,35 @@ The Scope Priority:
 
 There are some tips for eide plug-in settings.
 
+### Setup GCC Compiler Prefix
+
+> You can set the compiler prefix for gcc compiler.
+
+Here are available settings for gcc prefix:
+
+|settings name|description|
+|:--|:--|
+|`EIDE.ARM.GCC.Prefix`|**ARM GCC** toolchain prefix, example: `arm-none-eabi-`|
+|`EIDE.RISCV.ToolPrefix`|**RISC-V** toolchain prefix, like: `riscv-none-embed-`|
+|`EIDE.Toolchain.AnyGcc.ToolPrefix`|Any gcc famliy toolchain prefix|
+
+- 1) If you want to apply settings to **Global Region**, goto `VSCode Settings` and modify it.
+
+- 2) If you want modify compiler prefix for **current project**, open `xxx.code-workspace` file in your workspace root folder, and modify settings like this:
+
+  ```json
+  {
+      "settings": {
+
+            // other settings ....
+
+            "EIDE.ARM.GCC.Prefix": "arm-none-eabi-"
+            
+            // other settings ....
+        }
+  }
+  ```
+
 ### Specify The Compiler Separately For Project
 
 > Example for arm gcc project

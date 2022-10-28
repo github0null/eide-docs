@@ -42,6 +42,37 @@ sidebar_position: 9
 
 有一些关于 eide 插件设置的技巧
 
+### 设置 GCC 编译器前缀
+
+> 支持为 gcc 编译器选择不同的前缀
+
+关于前缀，下表包含了所有可用的设置名称：
+
+|设置名称|描述|
+|:--|:--|
+|`EIDE.ARM.GCC.Prefix`|**ARM GCC** 编译器前缀，例如：`arm-none-eabi-`|
+|`EIDE.RISCV.ToolPrefix`|**RISC-V** 编译器前缀，例如：`riscv-none-embed-`|
+|`EIDE.Toolchain.AnyGcc.ToolPrefix`|gcc 编译器前缀|
+
+If you want modify compiler prefix for current project, open `xxx.code-workspace` file in your workspace root folder, and modify settings like this:
+
+- 1) 如果你希望将设置应用到**全局范围**，请打开 VSCode 设置页面修改设置项，见上一节中
+
+- 2) 如果你要为**当前项目**更改 arm-gcc 的编译器前缀，打开 `xxx.code-workspace` 文件，编辑以下设置项：
+
+  ```json
+  {
+      "settings": {
+
+            // other settings ....
+
+            "EIDE.ARM.GCC.Prefix": "arm-none-eabi-"
+            
+            // other settings ....
+        }
+  }
+  ```
+
 ### 为项目单独指定编译器
 
 > arm gcc 项目示例
