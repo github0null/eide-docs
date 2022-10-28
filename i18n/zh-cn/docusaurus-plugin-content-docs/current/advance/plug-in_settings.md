@@ -73,6 +73,10 @@ If you want modify compiler prefix for current project, open `xxx.code-workspace
   }
   ```
 
+:::notice 需要重启 VSCode
+如果你修改了这些设置，你需要重新启动 VSCode 以刷新内置的环境变量
+:::
+
 ### 为项目单独指定编译器
 
 > arm gcc 项目示例
