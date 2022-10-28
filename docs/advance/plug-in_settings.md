@@ -62,11 +62,15 @@ Here are available settings for gcc prefix:
   {
       "settings": {
 
-            // other settings ....
+            // .... other settings ....
 
             "EIDE.ARM.GCC.Prefix": "arm-none-eabi-"
-            
-            // other settings ....
+
+            //"EIDE.RISCV.ToolPrefix": "riscv-none-embed-"
+
+            //"EIDE.Toolchain.AnyGcc.ToolPrefix": "xxx"
+
+            // .... other settings ....
         }
   }
   ```

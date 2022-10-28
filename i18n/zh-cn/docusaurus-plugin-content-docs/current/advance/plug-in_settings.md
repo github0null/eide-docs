@@ -56,17 +56,21 @@ sidebar_position: 9
 
 - 1) 如果你希望将设置应用到**全局范围**，请打开 VSCode 设置页面修改设置项，见上一节中
 
-- 2) 如果你要为**当前项目**更改 arm-gcc 的编译器前缀，打开 `xxx.code-workspace` 文件，编辑以下设置项：
+- 2) 如果你要为**当前项目**更改编译器前缀，打开 `xxx.code-workspace` 文件，在其中编辑设置项：
 
   ```json
   {
       "settings": {
 
-            // other settings ....
+            // .... other settings ....
 
             "EIDE.ARM.GCC.Prefix": "arm-none-eabi-"
+
+            //"EIDE.RISCV.ToolPrefix": "riscv-none-embed-"
+
+            //"EIDE.Toolchain.AnyGcc.ToolPrefix": "xxx"
             
-            // other settings ....
+            // .... other settings ....
         }
   }
   ```
