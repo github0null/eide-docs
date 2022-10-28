@@ -52,9 +52,7 @@ sidebar_position: 9
 |:--|:--|
 |`EIDE.ARM.GCC.Prefix`|**ARM GCC** 编译器前缀，例如：`arm-none-eabi-`|
 |`EIDE.RISCV.ToolPrefix`|**RISC-V** 编译器前缀，例如：`riscv-none-embed-`|
-|`EIDE.Toolchain.AnyGcc.ToolPrefix`|gcc 编译器前缀|
-
-If you want modify compiler prefix for current project, open `xxx.code-workspace` file in your workspace root folder, and modify settings like this:
+|`EIDE.Toolchain.AnyGcc.ToolPrefix`|通用 gcc 编译器前缀|
 
 - 1) 如果你希望将设置应用到**全局范围**，请打开 VSCode 设置页面修改设置项，见上一节中
 
