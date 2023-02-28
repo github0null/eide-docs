@@ -112,6 +112,36 @@ If you want to add global compiler args for your project, please reference [**Bu
 
 Sometimes you want to add some **specific compiler args** for some source files. This feature can help you do that.
 
+Right-click the source `source file` or `folder` to which you want to apply the parameters, 
+
+and select `Modify Extra Compiler Args` to open UI.
+
+![](/docs_img/explorer_add_extra_args.png)
+
+When extra compiler args are applied to a file or folder, their file icon will be changed !
+
+![](/docs_img/explorer_check_extra_args.png)
+
+We support some expressions in compiler args:
+
+|Expression|Description|
+|:----|:----|
+|`$<override:new_args>`|override all compiler args with `new_args`|
+|`$<replace:old_args/new_args>`|replace compiler args, replace `old_args` with `new_args`|
+
+:::caution Notice
+The **expression** can not contain `<`, `>`, `/`, `:` metacharacters.
+:::
+
+## Append Compiler Args For Sources (Not Recommended)
+
+:::caution Notice
+This feature is only used to append **specific** compiler args for some single source files.<br/>
+If you want to add global compiler args for your project, please reference [**Builder Options**](../modules/builder#advance-configurations)
+:::
+
+Sometimes you want to add some **specific compiler args** for some source files. This feature can help you do that.
+
 ![](/docs_img/prj_res_add_src_file_args.png)
 
 Click `Append separate compiler params for source files`, eide will create and open an empty yaml config file, as follows:
