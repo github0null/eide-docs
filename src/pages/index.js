@@ -76,7 +76,7 @@ export default function Home() {
                       <img src="landing_page/images/feature-icon-03.svg" alt="Feature 03" />
                     </div>
                     <h4 class="feature-title mt-24">Supported Many Kinds Of MCU</h4>
-                    <p class="text-sm mb-0">We support 6 kinds of compilers that can be used to compile <strong>mcs51/stm8/cortex-m[0/0+/3/23/33/35p/4/7]/riscv</strong> mcu projects</p>
+                    <p class="text-sm mb-0">We support <strong>8</strong> kinds of compilers that can be used to compile <strong>mcs51/stm8/cortex-m[0/0+/3/23/33/35p/4/7]/riscv</strong> mcu projects</p>
                   </div>
                 </div>
               </div>

@@ -6,6 +6,16 @@ sidebar_position: 10
 
 Configure compiler options for your projects.
 
+## Toolchain Configurations
+
+You can switch toolchain for your project. (For each project type, we provide some selections !)
+
+![](/docs_img/builder_select_toolchain.png)
+
+And you can also configure your `toolchain path` or `toolchain prefix` for current project.
+
+![](/docs_img/builder_configure_toolchain.png)
+
 ## Base Configurations
 
 Each project will have its builder configuration.

@@ -6,6 +6,18 @@ sidebar_position: 10
 
 为项目配置编译器选项
 
+## 编译器配置
+
+你可以为你的项目选择一个合适编译工具（对于每一种项目，我们都提供一些选择）
+
+![](/docs_img/builder_select_toolchain.png)
+
+并且你可以为当前项目**单独**配置编译器的 `toolchain path（编译器路径）` 和 `toolchain prefix（编译器前缀）`
+
+这些配置项**仅在当前工作区**生效，不会影响到全局的编译器设置
+
+![](/docs_img/builder_configure_toolchain.png)
+
 ## 基本配置
 
 每个项目都有基本的配置
