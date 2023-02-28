@@ -140,7 +140,7 @@ This feature is only used to append **specific** compiler args for some single s
 If you want to add global compiler args for your project, please reference [**Builder Options**](../modules/builder#advance-configurations)
 :::
 
-Sometimes you want to add some **specific compiler args** for some source files. This feature can help you do that.
+Sometimes if you want to add some **specific compiler args** for some source files. This feature can help you do that.
 
 ![](/docs_img/prj_res_add_src_file_args.png)
 
