@@ -16,7 +16,17 @@ This function is only for **Cortex-M** project.
 
 We support install [cmsis-pack](https://developer.arm.com/tools-and-software/embedded/cmsis/cmsis-packs) to project.
 
-When you install a chip support cmsis-pack and select mcu name for your project, eide will be able to better generate `debug/flasher` configurations for the mcu of your choice.
+When you install a chip support cmsis-pack and select mcu name for your project, the plug-in will know the chip model and specifications you are using, and the following features will be optimized: 
+
+- `Builder Configurations`: The plug-in will auto select the `CPU Type` by chip informations.
+
+- `Flasher Configurations`: For JLink flasher, plug-in can automatically complete the chip selection and flasher algorithm file installation.
+
+- `Debugger Configurations`: Plugin can automatically generate more debug configurations(for cortex-debug) based on chip model (including: chip name, SVD path, etc.)
+
+- `RAM/ROM Layout`: Plugin will automatically fill the RAM/ROM address and size based on the selected chip information.
+
+- `Peripheral Components`: Allow user install the source file components from cmsis-pack.
 
 :::tip Not necessary
 This function is not necessary, eide will work well even if you don't install any chip support package.

@@ -16,10 +16,20 @@ sidebar_position: 5
 
 我们支持安装 [cmsis-pack](https://developer.arm.com/tools-and-software/embedded/cmsis/cmsis-packs) 到 eide 项目
 
-当您安装了 cmsis-pack 并为您的项目选择了 mcu 具体型号后，eide 将能够更好地为您选择的 mcu 生成 `调试/烧录` 配置
+当您安装了 cmsis-pack 并为您的项目选择了 mcu 具体型号后，插件将得知你所使用的芯片型号和规格，以下功能将得到优化：
 
-:::tip 不是必要的
-这个功能不是必需的，即使您没有安装任何芯片支持包，eide 也会很好地工作
+- `编译配置`：插件将自动根据芯片类型选择 `CPU Type`
+
+- `烧录配置`：对于 JLink 等烧录器，插件可以自动完成型号的选择，以及烧录算法文件的安装
+
+- `调试配置`：插件可以根据芯片型号自动生成更完整的调试配置（用于Cortex-debug）（包括：芯片型号，SVD 路径等）
+
+- `RAM/ROM Layout`：将根据已选择的芯片信息，自动填写 RAM/ROM 地址 和 大小
+
+- `外设组件`：允许安装 cmsis-pack 内附带的源码组件
+
+:::tip 不是必需的!
+这个功能不是必需的，即使您没有安装任何芯片支持包，插件也能**完全正常**地工作
 :::
 
 ## 安装芯片支持包
