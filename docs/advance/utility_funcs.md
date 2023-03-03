@@ -16,6 +16,28 @@ After build your project, you can use `Show Disassembly` menu button to check di
 This function is only supported `GCC` or `ARMCC` compiler.
 :::
 
+## ELF Disassembly
+
+The plug-in supports disassembly of the whole program.
+
+Method 1:
+
+  - Open [ELF/AXF Viewer](#elf-viewer)
+
+  - And open the right-click menu, click `Show Disassembly`
+
+    ![](/docs_img/utils_show_disasm_all.png)
+
+Method 2:
+
+  - Open VSCode explorer, and goto 'build' folder, find output file: xxx.elf (or xxx.axf), open the right-click menu, click `Show Disassembly`
+
+    ![](/docs_img/utils_show_disasm_all_2.png)
+
+:::danger Only for GCC/ARMCC
+This function is only supported `GCC` or `ARMCC` compiler.
+:::
+
 ## ELF Viewer
 
 After build done, you can open `Output Files` virtual folder node to check your output products.

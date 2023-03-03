@@ -13,7 +13,29 @@ sidebar_position: 60
 ![](/docs_img/show_disasm.png)
 
 :::danger 仅支持 GCC/ARMCC
-这个功能仅支持 `GCC` 家族 或 `ARMCC` 编译器
+反汇编功能仅支持 `GCC` 家族 或 `ARMCC` 编译器
+:::
+
+## ELF 反汇编
+
+插件支持反汇编整个程序
+
+使用方法 1：
+
+  - 打开 [ELF/AXF 查看器](#elf-查看器)
+
+  - 在查看器中，打开右键菜单，选择 `查看反汇编`，即可触发该功能
+
+    ![](/docs_img/utils_show_disasm_all.png)
+
+使用方法 2：
+
+  - 打开 VSCode 文件资源管理器，打开 build 目录，找到生成的 elf/axf 文件，右键选择 `查看反汇编` 即可
+
+    ![](/docs_img/utils_show_disasm_all_2.png)
+
+:::danger 仅支持 GCC/ARMCC
+反汇编功能仅支持 `GCC` 家族 或 `ARMCC` 编译器
 :::
 
 ## ELF 查看器
