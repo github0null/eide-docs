@@ -80,6 +80,10 @@ sidebar_position: 20
   如果这个字段值为 **空白**，则 `${ExecutableName}.hex` 作为该字段的值
   :::
 
+  :::caution 多文件烧录
+  上述的多文件烧录仅支持 `JLink`, `OpenOCD`, `pyOCD` 烧录器；对于其它类型的烧录器，需要切换至 Custom 烧录器，然后编写脚本自定义烧录流程
+  :::
+
 ## 特定的配置
 
 每个 flasher 都有其特定的配置

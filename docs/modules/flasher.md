@@ -80,6 +80,10 @@ Each flasher configuration has some base fields, as follows:
   If the value of this field is **blank**, the `${ExecutableName}.hex` will be used.
   :::
 
+  :::caution Program More Than One Files
+  Only support program multi-files for `JLink`, `OpenOCD`, `pyOCD` flasher.
+  :::
+
 ## Specific Configurations
 
 Each flasher has their specific configurations.
