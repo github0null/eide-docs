@@ -52,6 +52,11 @@ If you need to install **offline**, please goto [**Github Release**](https://git
   So you need install [.NET6 X64 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) manualy.
   :::
 
+  :::caution .NET Runtime Version
+  If you want to install the .NET runtime manually, you must install a version with **major** version number **6** (e.g. v6.0.5).
+  [Click here to download the runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+  :::
+
 When you have completed the above operations, EIDE will be installed normally on your computer and we are now ready to begin.
 
 ## Function Region Layout

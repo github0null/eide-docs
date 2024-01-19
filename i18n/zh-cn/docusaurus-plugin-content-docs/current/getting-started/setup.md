@@ -47,9 +47,14 @@ sidebar_position: 1
   你可能需要 **关闭所有 VSCode 示例**，然后在系统终端中执行 `code .` 命令，刷新 VSCode 的 `系统环境变量`
   :::
 
-  :::info For Linux
+  :::info 对于 Linux 系统
   我们不支持为 Linux 自动安装 `.NET6 运行时`<br/>
   因此对于 Linux，需要手动下载并安装 [.NET6 X64 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+  :::
+
+  :::caution 运行时版本要求
+  如果您打算手动安装运行时，您必须安装**主版本号**为 **6** 的版本（如：v6.0.5）
+  [点击此处下载运行时](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
   :::
 
 当您完成上述操作后，EIDE 将正常安装在您的计算机上，一切就绪
