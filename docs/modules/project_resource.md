@@ -47,6 +47,12 @@ And we also support some `binary` file types:
 - **Obj Files**: `.obj, .o`
 - **Lib Files**: `.lib, .a`
 
+### Exclude Source Files
+
+You can use `Exclude File` function to exclude this file when build:
+
+![](/docs_img/explorer_exclude_file.png)
+
 ### Add Source Folders
 
 Click `Add Folder` menu item to add source folder.

@@ -47,6 +47,12 @@ sidebar_position: 2
 - **Obj Files**: `.obj, .o`
 - **Lib Files**: `.lib, .a`
 
+### 排除源文件
+
+你可以使用 `Exclude File` 按钮排除某些源文件，被排除的源文件**不会被编译**
+
+![](/docs_img/explorer_exclude_file.png)
+
 ### 添加源文件夹
 
 点击 `添加源文件夹` 菜单项添加源文件夹

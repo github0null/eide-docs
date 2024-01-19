@@ -22,3 +22,6 @@ sidebar_position: 20
 
   ![](/docs_img/prj_switch_target_sel.png)
 
+:::tip 何时使用 Target 功能
+当你想使用多个编译配置，但使用同一份源码的时候，你可以新建不同的Target，以便在同一个项目中区分出它们
+:::
