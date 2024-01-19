@@ -10,23 +10,8 @@ sidebar_position: 1
 
 这个插件基于 VSCode，如果你要使用它，请：
 
-- **确保你熟悉 VSCode**：
-
-  - 知道什么是 vscode `workspace`
-  
-  - 知道如何使用 vscode `commands`
-
-  - 知道如何编辑 vscode `settings`
-  
-  - 知道如何编辑 `json, yaml` 格式的文件
-
-- **确保您熟悉 c/c++ 项目的基本构建过程**：
-
-  - 知道什么是 `compiler, toolchain`
-  
-  - 知道什么是 `IncludePath, Preprocessor Defines ....`
-
-  - 知道什么是 `linker script, armcc scatter files`
+- **确保你熟悉 VSCode**
+- **确保您熟悉 c/c++ 项目的基本构建过程**
 
 **因为本文档以上述条件为前提！！！**
 

@@ -10,23 +10,8 @@ Install Eide on your pc and setup development envrionment.
 
 This plug-in base on VSCode, if you are going to use it, please:
 
-- **Make sure you're familiar with VSCode**: At least the following
-
-  - Know what is the vscode `workspace`.
-  
-  - Know how to use vscode `commands`.
-
-  - Know how to edit vscode `settings`.
-  
-  - Know how to edit `json, yaml` text files.
-
-- **Make sure you're familiar with the basic build process of c/c++ project**: At least the following
-
-  - Know what is `compiler, toolchain`.
-  
-  - Know what is `IncludePath, Preprocessor Defines ....`.
-
-  - Know what is `linker script, armcc scatter files`.
+- **Make sure you're familiar with VSCode**
+- **Make sure you're familiar with the basic build process of c/c++ project**
 
 Because this docs takes the above conditions as the premise.
 
