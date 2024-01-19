@@ -23,6 +23,6 @@ Each target has their independent `builder options`, `project attributes`, `flas
   ![](/docs_img/prj_switch_target_sel.png)
 
 :::tip When to use Target
-When you want to use more than one build configuration, but use the same source code,</br>
+When you want to use more than one build configuration, but use the same source code,<br/>
 you can create different Target to distinguish them in the same project.
 :::
