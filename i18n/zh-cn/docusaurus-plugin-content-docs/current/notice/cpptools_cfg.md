@@ -13,5 +13,5 @@ EIDE 将在内部使用 `cpptool CustomConfiguraionProvider api` 为你的项目
 因此 **不要手动 新建，编写 c_cpp_properties.json 文件**，如果你这样做了，C/C++ 插件将优先使用 `c_cpp_properties.json`，如果你的 c_cpp_properties.json 存在错误，那么项目的 补全，智能感知等功能将不能正常工作。
 
 :::caution 注意
-不论你之前从哪个地方得知需要为 C/C++ 插件配置 `c_cpp_properties.json` 文件，在 EIDE 项目中，**都是不需要的**，这个文件会干扰 C/C++ 插件的行为，在 EIDE 项目中，请删除它！
+在 EIDE 项目中，请删除 `.vscode/c_cpp_properties.json` 这个文件
 :::
