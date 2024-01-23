@@ -25,7 +25,7 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
+    defaultLocale: 'zh-cn',
     locales: ['en', 'zh-cn'],
     localeConfigs: {
       'zh-cn': {
@@ -105,12 +105,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Github Discussions',
-                href: 'https://github.com/github0null/eide/discussions',
-              },
-              {
                 label: 'EIDE Forum',
                 href: 'https://discuss.em-ide.com',
+              },
+              {
+                label: 'Github Issues',
+                href: 'https://github.com/github0null/eide/issues',
+              },
+              {
+                label: 'Github Discussions',
+                href: 'https://github.com/github0null/eide/discussions',
               }
             ],
           },
@@ -118,21 +122,17 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Embedded IDE',
+                label: 'Source Code',
                 href: 'https://github.com/github0null/eide',
               },
               {
                 label: 'SourceForge',
                 href: 'https://em-ide.sourceforge.io/'
-              },
-              {
-                label: 'Legacy Docs',
-                href: 'https://em-ide.com/legacy-docs',
-              },
+              }
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} github0null.io`,
+        copyright: `Copyright © ${new Date().getFullYear()} em-ide.com`,
       },
       prism: {
         theme: lightCodeTheme,
