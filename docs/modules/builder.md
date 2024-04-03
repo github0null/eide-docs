@@ -28,9 +28,9 @@ There are some **base options**, like: `CPU Type`, `Floating-Point Type`, `Linke
 
 - `Floating-Point Type`: FPU type, like: `sp, dp, none`
 
-- `Use Custom Linker Script File`: This option is **only for `Armcc/Armclang` compiler**. Used to decide whether to generate `Linker Script File` automatically by plug-in.
+- `Use Custom Linker Script File`: This option is **only for `Armcc/Armclang` compiler**. Used to decide whether to generate `Linker Script File (Scatter File)` automatically by plug-in.
 
-- `Linker Script File Path`: A description file with memory layout which we call `Linker Script File`, like: `xxx.sct, xxx.lds, xxx.ld`. It will be passed to the linker. 
+- `Linker Script File Path`: A description file with memory layout which we call `Linker Script File (Scatter File)`, like: `xxx.sct, xxx.lds, xxx.ld`. It will be passed to the linker. 
 
 - `RAM And ROM Layout`: Provides a memory layout editor similar to Keil, used to modify `Address, Size` for `RAM/ROM`. It will be shown when option `Use Custom Linker Script File` is `false`. (**Only for armcc/armclang compiler**)
 
