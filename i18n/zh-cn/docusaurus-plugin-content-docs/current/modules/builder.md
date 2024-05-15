@@ -80,7 +80,7 @@ sidebar_position: 10
 :::
 
 :::tip 单独为某个文件设置编译选项
-如果你只想为个别的源文件单独设置选项，请参考这个：[附加编译参数到源文件](./project_resource#append-compiler-args-for-sources)
+如果你只想为个别的源文件单独设置选项，请参考这个：[附加编译参数到源文件](../modules/project_resource#append-compiler-args-for-sources)
 :::
 
 ### 可用的变量

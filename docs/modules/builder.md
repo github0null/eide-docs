@@ -80,7 +80,7 @@ We **not support** auto-save.
 
 :::tip Set Compiler Options For Single Source File
 If you want to set some options just for specific source file, 
-look this: [Append Compiler Args For Sources](./project_resource#append-compiler-args-for-sources)
+look this: [Append Compiler Args For Sources](../modules/project_resource#append-compiler-args-for-sources)
 :::
 
 ### Specific Variables
