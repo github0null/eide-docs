@@ -46,7 +46,7 @@ If you use this way, eide will pull all available packages from above repository
 
 :::tip Why trim package
 Some cmsis package are very large in size, this will affect the size of project.<br/>
-So we have to trim them and remove unused contents to reduce disk usage.<br/>
+So we can trim them and remove unused contents to reduce disk usage.<br/>
 :::
 
 ### From Disk

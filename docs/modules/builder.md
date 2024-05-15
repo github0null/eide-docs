@@ -12,6 +12,10 @@ You can switch toolchain for your project. (For each project type, we provide so
 
 ![](/docs_img/builder_select_toolchain.png)
 
+:::caution Notice
+Choose the right compiler for your code. Using the wrong compiler will cause compilation failures
+:::
+
 And you can also configure your `toolchain path` or `toolchain prefix` for current project.
 
 ![](/docs_img/builder_configure_toolchain.png)
@@ -69,13 +73,14 @@ We divided the configuration into `5` tabs, there are `User Task`, `Global Optio
 
 - `Linker`: Specific options for linker.
 
-:::tip Not GUI
-If you don't like GUI, please click `OPEN CONFIG` to open config file and modify it.
-:::
-
 :::caution Save your configurations
 Please click `Save` button or press `ctrl+s` to save your configurations.<br/>
 We **not support** auto-save.
+:::
+
+:::tip Set Compiler Options For Single Source File
+If you want to set some options just for specific source file, 
+look this: [Append Compiler Args For Sources](./project_resource#append-compiler-args-for-sources)
 :::
 
 ### Specific Variables

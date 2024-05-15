@@ -12,6 +12,10 @@ sidebar_position: 10
 
 ![](/docs_img/builder_select_toolchain.png)
 
+:::caution 谨慎选择
+为你的代码选择合适的编译器，使用不正确的编译工具可能会导致编译失败
+:::
+
 并且你可以为当前项目**单独**配置编译器的 `toolchain path（编译器路径）` 和 `toolchain prefix（编译器前缀）`
 
 这些配置项**仅在当前工作区**生效，不会影响到全局的编译器设置
@@ -71,12 +75,12 @@ sidebar_position: 10
 
 - `链接器`: 特定于链接器的选项
 
-:::tip 无GUI
-如果你不想使用 GUI 配置页面，点击 `OPEN CONFIG` 可以直接打开配置文件进行修改
-:::
-
 :::caution 保存你的配置
 单击 `Save` 按钮或者按下 `ctrl+s` 以保存你的配置，我们不支持自动保存
+:::
+
+:::tip 单独为某个文件设置编译选项
+如果你只想为个别的源文件单独设置选项，请参考这个：[附加编译参数到源文件](./project_resource#append-compiler-args-for-sources)
 :::
 
 ### 可用的变量
