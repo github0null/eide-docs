@@ -113,7 +113,7 @@ This function will override `source tree`, `include paths`, `macros` to current 
 
 :::caution Notice
 This feature is only used to append **specific** compiler args for some single source files.<br/>
-If you want to add global compiler args for your project, please reference [**Builder Options**](../modules/builder#advance-configurations)
+If you want to add global compiler args for your project, please reference [**Builder Options**](/docs/modules/builder#advance-configurations)
 :::
 
 Sometimes you want to add some **specific compiler args** for some source files. This feature can help you do that.
