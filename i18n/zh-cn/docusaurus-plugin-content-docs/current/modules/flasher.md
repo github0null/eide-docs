@@ -26,7 +26,7 @@ sidebar_position: 20
 
 ![](/docs_img/flasher_trigger_installer.png)
 
-如果您想为 flaser 选择一个现有的安装位置，您需要修改 eide 的插件设置
+如果您想为 flasher 选择一个现有的安装位置，您需要修改 eide 的插件设置
 
 这里是插件的 flasher 设置列表：
 
