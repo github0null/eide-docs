@@ -32,7 +32,7 @@ This function will not work and not popup any notifications if your header has a
 
 ## Syntax Implement
 
-We refer to the implementation in Keil, so we are not full support all syntax.
+Implementation refer to [cmsis config wizard](https://open-cmsis-pack.github.io/Open-CMSIS-Pack-Spec/main/html/configWizard.html), **not full support all syntax**.
 
 **There are unsupported syntaxs:**
 
@@ -47,3 +47,7 @@ We refer to the implementation in Keil, so we are not full support all syntax.
 3. Digital formatting display function
 
    ![](/docs_img/no_imp_cmsis_syntaxs/format.png)
+
+4. Dropdown options with an **identifier**
+
+   ![](/docs_img/no_imp_cmsis_syntaxs/o_identifier.png)

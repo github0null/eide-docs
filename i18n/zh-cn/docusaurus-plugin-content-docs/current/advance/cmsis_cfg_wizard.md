@@ -32,7 +32,7 @@ sidebar_position: 50
 
 ## 语法实现
 
-我们参考了 keil 中的实现，所以我们不完全支持所有语法
+参考 [cmsis config wizard](https://open-cmsis-pack.github.io/Open-CMSIS-Pack-Spec/main/html/configWizard.html) 进行实现，**不完全支持所有语法**
 
 **不支持的语法有：**
 
@@ -47,3 +47,7 @@ sidebar_position: 50
 3. 数字格式化显示
 
    ![](/docs_img/no_imp_cmsis_syntaxs/format.png)
+
+4. 带有**标识符**的下拉选项 `<o identifier>`
+
+   ![](/docs_img/no_imp_cmsis_syntaxs/o_identifier.png)
