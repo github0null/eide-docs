@@ -32,7 +32,7 @@ This function will not work and not popup any notifications if your header has a
 
 ## Syntax Implement
 
-Implementation refer to [cmsis config wizard](https://open-cmsis-pack.github.io/Open-CMSIS-Pack-Spec/main/html/configWizard.html), **not full support all syntax**.
+Implementation refer to [cmsis config wizard](https://open-cmsis-pack.github.io/Open-CMSIS-Pack-Spec/main/html/configWizard.html), **but not full support all syntax**.
 
 **There are unsupported syntaxs:**
 

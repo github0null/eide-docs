@@ -32,7 +32,7 @@ sidebar_position: 50
 
 ## 语法实现
 
-参考 [cmsis config wizard](https://open-cmsis-pack.github.io/Open-CMSIS-Pack-Spec/main/html/configWizard.html) 进行实现，**不完全支持所有语法**
+参考 [cmsis config wizard](https://open-cmsis-pack.github.io/Open-CMSIS-Pack-Spec/main/html/configWizard.html) 进行实现，**但不完全支持所有语法**
 
 **不支持的语法有：**
 
