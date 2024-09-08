@@ -33,6 +33,6 @@
   },
   "link.item.label.Sponsor The Auther": {
     "message": "赞助作者",
-    "description": ""
+    "description": "Footer link with label=Sponsor The Auther"
   }
 }
