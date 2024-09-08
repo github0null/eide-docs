@@ -128,6 +128,10 @@ const config = {
               {
                 label: 'SourceForge',
                 href: 'https://em-ide.sourceforge.io/'
+              },
+              {
+                label: 'Sponsor The Auther',
+                href: 'https://em-ide.com/sponsor'
               }
             ],
           },
