@@ -29,7 +29,7 @@ export default function Home() {
                   <a class="button button-primary" href={`${localePathRoot}/docs/intro`}>Getting Start</a>
                   <a class="button" href="https://marketplace.visualstudio.com/items?itemName=CL.eide">Install</a></div>
               </div>
-              <img width="800px" src="landing_page/images/eide_preview_s.png" alt="Feature preview" />
+              <img width="600px" src="landing_page/images/eide_preview_s.png" alt="Feature preview" />
             </div>
           </div>
         </section>
