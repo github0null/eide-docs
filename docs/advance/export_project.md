@@ -10,7 +10,7 @@ You can export your eide project.
 
 ## Export To Project Template
 
-Click `Export EIDE Project Template`, eide will compress your vscode workspace by `7z`.
+Click `Export As ...` -> `EIDE Project Template`, eide will compress your vscode workspace by `7z`.
 
 Then a `.ept` template file will be generated in your project workspace. Now you can [create new project](../getting-started/new_prj) by this template file.
 
@@ -71,7 +71,7 @@ You must place the script in the `.eide` folder
 
 ## Export To Keil Project
 
-Click `Export Keil Project`, eide will export your eide project to a keil project.
+Click `Export As ...` -> `Keil Project`, eide will export your eide project to a keil project.
 
 When export operation done, a `uvproj/uvprojx` file will be generated to your worksapce folder.
 
@@ -79,4 +79,26 @@ When export operation done, a `uvproj/uvprojx` file will be generated to your wo
 
 :::caution Keil v5 only
 We only support to export Keil **v5** project.
+:::
+
+## Export GNU Makefile
+
+Click `Export As ...` -> `GNU Makefile`, eide will export a Makefile into your workspace folder.
+
+![](/docs_img/export_makefile.png)
+
+![](/docs_img/export_makefile2.png)
+
+Then you can build your project by `make` with following command:
+
+```shell
+make prebuild
+make all -j4
+```
+
+This feature makes it easier to automate builds for your projects.
+
+:::caution Hard-coded Format
+The format in this Makefile: the path and file name of the rule are hard coded without many variables, <br/>
+so when you change the compiler options, or add some new source files, you need to re-export the Makefile
 :::

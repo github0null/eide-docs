@@ -10,7 +10,7 @@ sidebar_position: 40
 
 ## 导出项目模板
 
-点击 `导出 EIDE 项目模板`，eide 将使用 7z 压缩你的 VSCode 工作区并保存为一个 `.ept` 文件
+点击 `导出为 ...` -> `EIDE 项目模板`，eide 将使用 7z 压缩你的 VSCode 工作区并保存为一个 `.ept` 文件
 
 现在你可以通过这个模板文件 [新建项目](../getting-started/new_prj)
 
@@ -69,7 +69,7 @@ wget "https://my.web.disk.com/my_files/xxx-tools.zip"
 
 ## 导出 Keil 项目
 
-点击 `导出 Keil 项目`，eide 将以 Keil 项目格式（uvprojx）导出你的 eide 项目
+点击 `导出为 ...` -> `Keil 项目`，eide 将以 Keil 项目格式（uvprojx）导出你的 eide 项目
 
 当操作完成后，一个 `uvproj/uvprojx` 文件将被生成到你的工作区
 
@@ -77,4 +77,25 @@ wget "https://my.web.disk.com/my_files/xxx-tools.zip"
 
 :::caution 仅 Keil v5
 我们仅支持导出 Keil v5 项目
+:::
+
+## 导出 GNU Makefile
+
+点击 `导出为 ...` -> `GNU Makefile`, 插件将生成一个 Makefile 文件到该项目的根目录下
+
+![](/docs_img/export_makefile.png)
+
+![](/docs_img/export_makefile2.png)
+
+现在你可以使用 make 工具对该项目进行构建：
+
+```shell
+make prebuild
+make all -j4
+```
+
+该功能可以帮助你更容易地对项目实施自动化构建
+
+:::caution 这个Makefile中的格式
+规则的路径和文件名是硬编码的，没有太多变量，因此当你更改了编译参数，新增加了源文件之后，你需要重新导出Makefile
 :::
