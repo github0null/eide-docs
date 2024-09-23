@@ -102,3 +102,8 @@ This feature makes it easier to automate builds for your projects.
 The format in this Makefile: the path and file name of the rule are hard coded without many variables, <br/>
 so when you change the compiler options, or add some new source files, you need to re-export the Makefile
 :::
+
+:::caution Fail to make
+If your project contains [user tasks](https://em-ide.com/en/docs/modules/builder/#user-task-commands) that you have customized,<br/>
+You need to check that your custom task can be executed by **make**, otherwise the makefile will fail at the `prebuild` or `postbuild` rules.
+:::

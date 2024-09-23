@@ -99,3 +99,8 @@ make all -j4
 :::caution 这个Makefile中的格式
 规则的路径和文件名是硬编码的，没有太多变量，因此当你更改了编译参数，新增加了源文件之后，你需要重新导出Makefile
 :::
+
+:::caution 执行make后某些命令失败
+如果你的项目中含有你自定义的 [用户任务](https://em-ide.com/docs/modules/builder#%E7%94%A8%E6%88%B7%E4%BB%BB%E5%8A%A1%E5%91%BD%E4%BB%A4)，你需要检查你的自定义任务能否被 make 所执行<br/>
+因为无效的命令会导致 make 在执行 `prebuild` 或 `postbuild` 规则时出现失败情况。
+:::
