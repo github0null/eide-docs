@@ -387,9 +387,9 @@ echo ==========================
 
 ```
 
-接下来，在上述脚本中编写你的烧录流程
+Next, write your flash program process in the above script.
 
-完成后，点击烧录按钮即可执行烧录
+When finished, click the program button to perform the flash program.
 
 :::caution Unix command support on Windows platform
 Only a limited number of unix commands are supported.
