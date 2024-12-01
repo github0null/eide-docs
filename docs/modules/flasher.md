@@ -393,5 +393,5 @@ When finished, click the program button to perform the flash program.
 
 :::caution Unix command support on Windows platform
 Only a limited number of unix commands are supported.
-For available commands, [see here](builder#built-in-linux-shell-for-windows)
+For available commands, [see here](../builder#built-in-linux-shell-for-windows)
 :::
