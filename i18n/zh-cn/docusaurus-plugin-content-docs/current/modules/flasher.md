@@ -392,5 +392,5 @@ echo ==========================
 完成后，点击烧录按钮即可执行烧录
 
 :::caution Windows平台上的unix命令支持
-Windows上仅支持有限的unix命令，可用的命令见[此处](../builder#built-in-linux-shell-for-windows)
+Windows上仅支持有限的unix命令，[可用的命令见此处](https://em-ide.com/docs/modules/builder#built-in-linux-shell-for-windows)
 :::
