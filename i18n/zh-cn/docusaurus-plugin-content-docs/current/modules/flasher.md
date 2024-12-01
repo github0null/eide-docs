@@ -342,7 +342,7 @@ shell 命令有一些可用的变量：
 
 - `${binAddr[n]}`：第 n 个程序文件的烧录地址（`n` 从 0 开始）
 
-一些示例：
+**一些简单的示例命令：**
 
 ```shell
 # execute unix shell script
@@ -357,3 +357,40 @@ python ./tools/stcflash.py -p ${port} "${programFile}"
 # use STM32CubeProgramer + STLink probe to program STM32 mcu
 STM32_Programmer_CLI -c port=SWD FREQ=4000 mode=NORMAL reset=SWrst --download "${programFile}" -v --go
 ```
+
+**编写shell脚本：**
+
+如果你的烧录流程比较复杂，含有多个步骤，你也可以自行编写 shell 脚本来执行烧录
+
+首先，在 烧录配置 -> **Flash Command** UI 中填写： `bash ./program_flash.sh "${programFile}"`
+
+在工程根目录下新建一个 `program_flash.sh` 文件，内容如下：
+
+```shell
+# 要烧录的文件路径
+HEX_PATH=$1
+
+# 如果你的脚本需要同时兼容windows和linux环境，
+# 你可能需要在这个分支中做一些兼容处理
+if uname | grep -qi 'mingw'; then
+    # Windows 下会进入这里
+    HEX_PATH=$(echo $HEX_PATH | sed 's/\\/\//g') # Windows 下需要将路径中的 \ 转换成 /
+else
+    # Linux 下会进入这里
+fi
+
+echo ==========================
+echo - FILE: ${HEX_PATH}
+echo ==========================
+
+# 接下来你可以在此处编写你的烧录流程 ....
+
+```
+
+接下来，在上述脚本中编写你的烧录流程
+
+完成后，点击烧录按钮即可执行烧录
+
+:::caution Windows平台上的unix命令支持
+Windows上仅支持有限的unix命令，可用的命令见[此处](builder#built-in-linux-shell-for-windows)
+:::

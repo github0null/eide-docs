@@ -357,3 +357,41 @@ python ./tools/stcflash.py -p ${port} "${programFile}"
 # use STM32CubeProgramer + STLink probe to program STM32 mcu
 STM32_Programmer_CLI -c port=SWD FREQ=4000 mode=NORMAL reset=SWrst --download "${programFile}" -v --go
 ```
+
+**Write a shell script:**
+
+If your flash program process is more complex and contains multiple steps, 
+you can also write your own shell scripts to perform the flash program.
+
+First, open `Flasher Configurations` -> `Flash Command` and then setup command: `bash ./program_flash.sh "${programFile}"`
+
+Then, create a new shell script file `program_flash.sh` in your project root folder:
+
+```shell
+# The firmware file path. like: aaa/bbb/ccc/fw.hex
+HEX_PATH=$1
+
+# Do some compatibility work for both windows and linux.
+if uname | grep -qi 'mingw'; then
+    # Windows here
+    HEX_PATH=$(echo $HEX_PATH | sed 's/\\/\//g') # Convert '\' to '/' in path for Windows platform.
+else
+    # Linux here
+fi
+
+echo ==========================
+echo - FILE: ${HEX_PATH}
+echo ==========================
+
+# Next you can write your flash program process here....
+
+```
+
+接下来，在上述脚本中编写你的烧录流程
+
+完成后，点击烧录按钮即可执行烧录
+
+:::caution Unix command support on Windows platform
+Only a limited number of unix commands are supported.
+For available commands, [see here](builder#built-in-linux-shell-for-windows)
+:::
