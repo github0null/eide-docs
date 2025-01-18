@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# What's This
+# What's This ?
 
 [Embedded IDE](https://marketplace.visualstudio.com/items?itemName=CL.eide) is a **VSCode plug-in**, used to development `single-chip microcomputer projects`, like: `8051`, `stm8`, `stm32`, `other cortex-m mcus` ...
 
@@ -17,7 +17,7 @@ Now we support:
   - `macOS` (Only tested in macOS 10.15 x64)
 :::
 
-## Q&A
+## FAQ
 
 - **Q:** Why use it ?
 

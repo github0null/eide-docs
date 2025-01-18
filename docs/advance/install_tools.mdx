@@ -16,11 +16,6 @@ You can install these tools by eide, as follows:
 
 These tools will be installed to `<user_home>/.eide/tools` folder, and eide will export `bin` path to extension system environment variables.
 
-:::tip Not Found Tools For Linux
-`Linux` software mostly has dependencies. So most of the tools we provide are for `Windows`.<br/>
-Please use system package manager to install linux softwares.
-:::
-
 ### Check Tool Location
 
 We provide a terminal type for vscode: `EIDE Terminal`.
@@ -45,3 +40,38 @@ import TabItem from '@theme/TabItem';
 Execute above command to list all env items, then you can check your tool's location:
 
 ![](/docs_img/list_env.png)
+
+## Install Toolchains On Linux/Macos
+
+`Linux` software mostly has dependencies. Please use system package manager to install linux softwares.
+
+Or consider use [xpack](https://xpack-dev-tools.github.io/) package manager to install them.
+
+### Install toolchain by system package manager
+
+- **Ubuntu/Debian**
+
+|name|command|description|
+|----|----|----|
+|Small Device C Compiler(sdcc)|apt install sdcc| Used to compile 8051 stm8 projects |
+|GNU Arm Embedded Toolchain(gcc-arm-none-eabi)|apt install gcc-arm-none-eabi| Used to compile cortex-m projects |
+
+- **MacOS**
+
+|name|command|description|
+|----|----|----|
+|Small Device C Compiler(sdcc)|brew install sdcc| Used to compile 8051 stm8 projects |
+|GNU Arm Embedded Toolchain(gcc-arm-none-eabi)|brew install gcc-arm-none-eabi| Used to compile cortex-m projects |
+
+### Install toolchain by xpack package manager
+
+You need to install xpm first, See docs: https://xpack-dev-tools.github.io/riscv-none-elf-gcc-xpack/docs/install/#prerequisites
+
+|name|command|description|
+|----|----|----|
+|RISC-V GCC Toolchain (riscv-none-embed-gcc)| xpm install @xpack-dev-tools/riscv-none-elf-gcc | for riscv mcu project |
+|GNU Arm Embedded Toolchain(gcc-arm-none-eabi)| xpm install @xpack-dev-tools/arm-none-eabi-gcc | for cortex-m project |
+
+:::caution Notice
+These commands need to be executed in the root directory of the current project and need to be initialized by `xpm init`
+:::
