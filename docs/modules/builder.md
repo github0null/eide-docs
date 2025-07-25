@@ -116,32 +116,32 @@ We support execute some builder task before/after build your project.
 There are some example commands:
 
 ```shell
-# [For Windows10] execute windows bat script
+# [gcc toolchain] just run preprocessor 
+${CompilerPrefix}gcc ${EIDE_CUR_COMPILER_CC_BASE_ARGS} -E -P -o ${OutDirBase}/daplink.ld ./xxx/daplink.ld
+${CompilerPrefix}gcc ${EIDE_CUR_COMPILER_CC_BASE_ARGS} -E -P -o ${OutDirBase}/abc.c ./xxx/abc.c
+
+# [For Windows10] run windows bat script
 .\xxx\xxx\xxx.bat [script arguments...]
 
-# [For Windows10] show internal envs
+# [For Windows10] print internal system envs
 powershell -Command ls env:
 
-# [For Windows10] copy .hex .bin file to dist dir
-mkdir .\dist & copy /B "${OutDir}\\${ProjectName}.hex" .\dist\ & copy /B "${OutDir}\\${ProjectName}.bin" .\dist\
+# [For Windows10] copy .hex .bin files to 'dist' folder
+mkdir .\dist & copy /B "${ExecutableName}.hex" .\dist\ & copy /B "${ExecutableName}.bin" .\dist\
 
-# [For Windows10] copy .a file to dist dir
-mkdir .\dist & copy /B "${OutDir}\\${ProjectName}.a" .\dist\lib${ProjectName}.a
+# [gcc toolchain] print gcc compiler version
+${CompilerPrefix}gcc -v
 
-# print compiler version for arm gcc project
-"${CompilerFolder}/${toolPrefix}gcc" -v
+# Use Armcc generate s19 file
+fromelf --m32combined -o "${ExecutableName}.s19" "${ExecutableName}.axf"
 
-# generate s19 file for armcc compiler
-"${CompilerFolder}/fromelf" --m32combined -o "${OutDir}\\${ProjectName}.s19" "${OutDir}\\${ProjectName}.axf"
+# Use gcc generate hex file
+${CompilerPrefix}objcopy -O ihex "${ExecutableName}.elf" "${ExecutableName}.hex"
+# Use gcc generate bin file
+${CompilerPrefix}objcopy -O binary "${ExecutableName}.elf" "${ExecutableName}.bin"
 
-# generate hex file for arm gcc compiler
-"${CompilerFolder}/${CompilerPrefix}objcopy" -O ihex "${OutDir}/${ProjectName}.elf" "${OutDir}/${ProjectName}.hex"
-
-# generate bin file for arm gcc compiler
-"${CompilerFolder}/${CompilerPrefix}objcopy" -O binary "${OutDir}/${ProjectName}.elf" "${OutDir}/${ProjectName}.bin"
-
-# convert `hex` to `bin` by hex2bin
-"${BuilderFolder}/utils/hex2bin" -b -c "${outDir}/${ProjectName}.hex"
+# Use hex2bin convert hex to bin file
+hex2bin -b -c "${ExecutableName}.hex"
 ```
 
 :::tip Commandline Shell

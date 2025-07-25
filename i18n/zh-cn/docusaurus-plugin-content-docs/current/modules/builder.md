@@ -116,32 +116,33 @@ sidebar_position: 10
 这里有一些示例命令
 
 ```shell
-# [For Windows10] execute windows bat script
+# [gcc toolchain] 仅运行预处理器程序，执行预处理操作
+${CompilerPrefix}gcc ${EIDE_CUR_COMPILER_CC_BASE_ARGS} -E -P -o ${OutDirBase}/daplink.ld ./xxx/daplink.ld
+${CompilerPrefix}gcc ${EIDE_CUR_COMPILER_CC_BASE_ARGS} -E -P -o ${OutDirBase}/abc.c ./xxx/abc.c
+
+# [For Windows10] 执行 windows bat 脚本
 .\xxx\xxx\xxx.bat [script arguments...]
 
-# [For Windows10] show internal envs
+# [For Windows10] 打印内部的环境变量 envs
 powershell -Command ls env:
 
-# [For Windows10] copy .hex .bin file to dist dir
-mkdir .\dist & copy /B "${OutDir}\\${ProjectName}.hex" .\dist\ & copy /B "${OutDir}\\${ProjectName}.bin" .\dist\
+# [For Windows10] 将 .hex .bin 文件复制到 dist 目录
+mkdir .\dist & copy /B "${ExecutableName}.hex" .\dist\ & copy /B "${ExecutableName}.bin" .\dist\
 
-# [For Windows10] copy .a file to dist dir
-mkdir .\dist & copy /B "${OutDir}\\${ProjectName}.a" .\dist\lib${ProjectName}.a
+# [gcc toolchain] 打印 gcc 的版本号
+${CompilerPrefix}gcc -v
 
-# print compiler version for arm gcc project
-"${CompilerFolder}/${toolPrefix}gcc" -v
+# 使用 armcc 生成 s19 格式的文件
+fromelf --m32combined -o "${ExecutableName}.s19" "${ExecutableName}.axf"
 
-# generate s19 file for armcc compiler
-"${CompilerFolder}/fromelf" --m32combined -o "${OutDir}\\${ProjectName}.s19" "${OutDir}\\${ProjectName}.axf"
+# 使用 gcc 生成 hex 文件
+${CompilerPrefix}objcopy -O ihex "${ExecutableName}.elf" "${ExecutableName}.hex"
 
-# generate hex file for arm gcc compiler
-"${CompilerFolder}/${CompilerPrefix}objcopy" -O ihex "${OutDir}/${ProjectName}.elf" "${OutDir}/${ProjectName}.hex"
+# 使用 gcc 生成 bin 文件
+${CompilerPrefix}objcopy -O binary "${ExecutableName}.elf" "${ExecutableName}.bin"
 
-# generate bin file for arm gcc compiler
-"${CompilerFolder}/${CompilerPrefix}objcopy" -O binary "${OutDir}/${ProjectName}.elf" "${OutDir}/${ProjectName}.bin"
-
-# convert `hex` to `bin` by hex2bin
-"${BuilderFolder}/utils/hex2bin" -b -c "${outDir}/${ProjectName}.hex"
+# 使用 hex2bin 将 hex 转换为 bin
+hex2bin -b -c "${ExecutableName}.hex"
 ```
 
 :::tip 命令的Shell
