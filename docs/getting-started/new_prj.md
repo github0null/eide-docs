@@ -17,6 +17,18 @@ There are many ways to create a new project.
 |Local Template|Create a new project by local project template file(*.ept)|
 |From Remote Repository|Download project template from remote [git repository](https://github.com/github0null/eide-templates) and create new project|
 
+## Create From Project Template
+
+When using this plugin for the first time, you may not get used to it. Therefore, we suggest starting with a project template. Although the number of project templates is limited, we are constantly adding new ones.
+
+You can browse and download the project template online from this place: https://templates.em-ide.com/
+
+![](/docs_img/templates_page.png)
+
+On this page, you can browse by MCU brand. After choosing the template, click Download, and a file with the '.ept 'suffix will be saved to your computer.
+
+Then open the VSCode plugin, click on 'New Project' -> 'Local Project Template', and then select the template file with the '.ept 'suffix that was just downloaded. You can then create a new project.
+
 ## Empty Project
 
 In this section, we will help you to create an empty cortex-m project.

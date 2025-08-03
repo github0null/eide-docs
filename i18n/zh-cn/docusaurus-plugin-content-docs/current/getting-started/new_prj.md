@@ -17,6 +17,18 @@ sidebar_position: 20
 |Local Template|使用本地模板文件（.ept）新建一个项目|
 |From Remote Repository|从 [git repository](https://github.com/github0null/eide-templates) 下载模板并新建项目|
 
+## Create From Project Template
+
+初次使用这个插件，可能不太习惯，因此我们建议先从一个项目模板开始，虽然项目模板的数量有限，但我们正在不断新增更多的模板。
+
+你可以从这个地方在线浏览和下载项目模板：https://templates.em-ide.com/
+
+![](/docs_img/templates_page.png)
+
+在这个页面你可以根据MCU品牌进行浏览，选择好模板后点击下载，一个 `.ept` 后缀的文件将被保存到你的电脑中。
+
+然后打开VSCode插件，点击 `新建项目` -> `本地项目模板`，然后选择刚刚下载好的 `.ept` 后缀的模板文件。即可新建项目。
+
 ## Empty Project
 
 在本节中，我们将帮助您创建一个空的 cortex-m 项目
