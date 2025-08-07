@@ -79,6 +79,10 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
+          {
+            href: 'https://templates.em-ide.com/',
+            label: 'Project Templates',
+          },
           /* {
             to: '/blog', label: 'Blog', position: 'left'
           }, */
