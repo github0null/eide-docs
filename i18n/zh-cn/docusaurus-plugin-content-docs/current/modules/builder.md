@@ -109,7 +109,7 @@ sidebar_position: 10
 
 ### 用户任务命令
 
-我们支持在构建项目之前/之后执行一些构建器任务。
+我们支持在构建项目 **之前** 或者 **之后** 执行一些构建器任务。
 
 ![](/docs_img/builder_tasks.png)
 
@@ -144,6 +144,18 @@ ${CompilerPrefix}objcopy -O binary "${ExecutableName}.elf" "${ExecutableName}.bi
 # 使用 hex2bin 将 hex 转换为 bin
 hex2bin -b -c "${ExecutableName}.hex"
 ```
+
+命令的跨平台兼容性：
+
+如果要实现在 windows 和 unix 上兼容的命令，请使用 shell 命令（对于windows系统，插件内置了msys环境因此可以执行shell命令）
+
+对于一些简单的命令，可以使用如下格式：
+
+`bash -c "命令 <参数>"`
+
+如果命令比较复杂含有多个步骤，请将命令编写在 shell 脚本中，并使用如下格式设置命令
+
+`bash -c 'chmod +x ./my_script.sh' && bash -c './my_script.sh "params 1" "params 2"'`
 
 :::tip 命令的Shell
 对于 `Win32` 系统，我们使用 `cmd.exe` 执行上述的命令行<br/>

@@ -144,6 +144,18 @@ ${CompilerPrefix}objcopy -O binary "${ExecutableName}.elf" "${ExecutableName}.bi
 hex2bin -b -c "${ExecutableName}.hex"
 ```
 
+Cross-platform compatibility of commands:
+
+If you want to implement commands compatible on both windows and unix, please use shell commands (for windows systems, the plugin has a built-in msys environment, so shell commands can be executed).
+
+For some simple commands, the following format can be used:
+
+`bash -c "命令 <参数>"`
+
+If the command is complex and involves multiple steps, please write the command in a shell script and format it as follows:
+
+`bash -c 'chmod +x ./my_script.sh' && bash -c './my_script.sh "params 1" "params 2"'`
+
 :::tip Commandline Shell
 For `Win32`, we use `cmd.exe` execute your commandline<br/>
 For `Linux`, we use `/bin/bash` execute your commandline

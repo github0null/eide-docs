@@ -24,40 +24,40 @@ We need download some packages from network, make sure your network is ok !<br/>
 If you need to install **offline**, please goto [**Github Release**](https://github.com/github0null/eide/releases) to download installation package.
 :::
 
-- **Install plug-in**
-
-  Open vscode extension market, search `eide`, select `Embedded IDE` and install it.
+- Open vscode extension market, search `eide`, select `Embedded IDE` and install it.
 
   ![](/docs_img/install_from_market.png)
 
-  When the plug-in has been installed, it will launch and start to init.
+- When the plug-in has been installed, it will launch and start to init.
 
   The plug-in will **auto download and install** [eide-binaries](https://github.com/github0null/eide-resource/tree/master/binaries) and [.NET6 X64 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) package, please wait !
 
   ![](/docs_img/install_dotnet.png)
 
-  When `.NET Runtime` has been installed, you need to restart vscode to refresh `System Environment Variables`.
+- When `.NET Runtime` has been installed, you need to restart vscode to refresh `System Environment Variables`.
 
   EIDE will check `.NET Runtime` before launch, goto VSCode `Output Panel` to check log.
 
   ![](/docs_img/eide_log_panel.png)
 
-  :::caution Not found runtime
-  Sometimes, the runtime is installed, but plug-in still prompts that it **cannot be found**.<br/>
-  You may need **close all vscode instances** and execute command `code .` in shell to refresh `System Environment Variables`.
-  :::
-
-  :::info For Linux
-  We not support **auto install** `.NET6_X64` runtime for **Linux** platform.<br/>
-  So you need install [.NET6 X64 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) manualy.
-  :::
-
-  :::caution .NET Runtime Version
-  If you want to install the .NET runtime manually, you must install a version with **major** version number **6** (e.g. v6.0.5).
-  [Click here to download the runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-  :::
-
 When you have completed the above operations, EIDE will be installed normally on your computer and we are now ready to begin.
+
+:::caution Not found runtime
+Sometimes, the runtime is installed, but plug-in still prompts that it **cannot be found**.<br/>
+You may need **close all vscode instances** and execute command `code .` in shell to refresh `System Environment Variables`.
+:::
+
+:::info How to install dotnet on Unix platform
+You can install dotnet to the global environment using the system's package manager. If you are unable to access the package manager, you can follow these steps to install it:<br/>
+1. Run [dotnet-install.sh](https://dotnet.microsoft.com/en-us/download/dotnet/scripts) to install.<br/>
+2. Run `ln -s ~/.dotnet/dotnet ~/.local/bin/dotnet` to add a symbol link.<br/>
+3. Logout and login, then restart vscode.<br/>
+:::
+
+:::caution .NET Runtime Version
+If you want to install the .NET runtime manually, you must install a version with **major** version number **6** (e.g. v6.0.5).
+[Click here to download the runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+:::
 
 ## Function Region Layout
 

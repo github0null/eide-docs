@@ -24,40 +24,40 @@ sidebar_position: 1
 如果你需要**离线安装**，请前往 [**Github Release**](https://github.com/github0null/eide/releases) 下载离线安装包
 :::
 
-- **安装插件**
-
-  打开 VSCode 插件市场，搜索 `eide`，选择 `Embedded IDE` 并安装它
+- 打开 VSCode 插件市场，搜索 `eide`，选择 `Embedded IDE` 并安装它
 
   ![](/docs_img/install_from_market.png)
 
-  安装插件后，它将启动并开始初始化
+- 安装插件后，它将启动并开始初始化
 
   插件将**自动下载并安装** [eide-binaries](https://github.com/github0null/eide-resource/tree/master/binaries) 和 [.NET6 X64 运行时](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)，请耐心等待
 
   ![](/docs_img/install_dotnet.png)
 
-  当 `.NET6 运行时` 成功安装后，你需要重启 VSCode 刷新 `系统环境变量`
+- 当 `.NET6 运行时` 成功安装后，你需要重启 VSCode 刷新 `系统环境变量`
 
   然后 EIDE 将在启动时检查 `.NET6 运行时`，打开 `输出` 面板查看 `eide-log`
 
   ![](/docs_img/eide_log_panel.png)
 
-  :::caution 未找到运行时
-  有时候，运行时**已经安装**，但是插件仍提示**未找到**<br/>
-  你可能需要 **关闭所有 VSCode 示例**，然后在系统终端中执行 `code .` 命令，刷新 VSCode 的 `系统环境变量`
-  :::
-
-  :::info 对于 Linux 系统
-  我们不支持为 Linux 自动安装 `.NET6 运行时`<br/>
-  因此对于 Linux，需要手动下载并安装 [.NET6 X64 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-  :::
-
-  :::caution 运行时版本要求
-  如果您打算手动安装运行时，您必须安装**主版本号**为 **6** 的版本（如：v6.0.5）
-  [点击此处下载运行时](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-  :::
-
 当您完成上述操作后，EIDE 将正常安装在您的计算机上，一切就绪
+
+:::info 如何在Linux平台安装此插件
+你可以使用系统的包管理器安装dotnet到全局环境，如果你无法访问包管理器，你可以按照如下步骤进行安装：<br/>
+1. 下载并执行 [dotnet-install.sh](https://dotnet.microsoft.com/en-us/download/dotnet/scripts) 脚本执行安装<br/>
+2. 执行 `ln -s ~/.dotnet/dotnet ~/.local/bin/dotnet` 创建一个软链接（或者直接修改`~/.profile`也可达到同样效果）<br/>
+3. 登出然后重新登入，重启vscode以刷新环境变量<br/>
+:::
+
+:::caution 未找到运行时
+有时候，运行时**已经安装**，但是插件仍提示**未找到**<br/>
+你可能需要 **关闭所有 VSCode 示例**，然后在系统终端中执行 `code .` 命令，刷新 VSCode 的 `系统环境变量`
+:::
+
+:::caution 运行时版本要求
+如果您打算手动安装运行时，您必须安装**主版本号**为 **6** 的版本（如：v6.0.5）
+[点击此处下载运行时](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+:::
 
 ## 功能区域
 
