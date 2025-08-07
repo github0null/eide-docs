@@ -81,22 +81,52 @@ Now we'll walk you through the functional areas of the plug-in.
 
 EIDE support many toolchains, but these package is so big, so we **not built-in** them in plug-in, you need to install manualy.
 
-- Click `Configure Toolchain` item in `OPERATIONS` view.
+Click `Configure Toolchain` item in `OPERATIONS` view.
 
-  Then a `quickpick box` will be pop-up. You need to choose the compiler you want to use and set its installation path.
+Then a `quickpick box` will be pop-up. You need to choose the compiler you want to use and set its installation path.
 
-  If you configure done, a check mark '✔' will be appeared after the item.
+If you configure done, a check mark '✔' will be appeared after the item.
 
-  ![](/docs_img/toolchains.png)
+![](/docs_img/toolchains.png)
 
-  :::tip What is the "Toolchain Installation Folder Path" ?
-  The `Toolchain Installation Folder` is the **root path** for your compiler.<br/>
-  example:<br/>
-    - If your gcc compiler path is: `d:/software/my_toolchain/arm_gcc_10/bin/arm-none-eabi-gcc.exe`
-    - Now, you need set `d:/software/my_toolchain/arm_gcc_10` as your arm gcc `Toolchain Installation Folder` in EIDE.
-  :::
+:::tip What is the "Toolchain Installation Folder Path" ?
+The `Toolchain Installation Folder` is the **root path** for your compiler.<br/>
+example:<br/>
+  - If your gcc compiler path is: `d:/software/my_toolchain/arm_gcc_10/bin/arm-none-eabi-gcc.exe`
+  - Now, you need set `d:/software/my_toolchain/arm_gcc_10` as your arm gcc `Toolchain Installation Folder` in EIDE.
+:::
 
-  :::tip Install Toolchain by EIDE
-  For Windows platform, EIDE provide some online installation package for `Open Source Toolchains`.<br/>
-  So you can use [Install Utility Tools](../advance/install_tools) function or select an existing installation location.
-  :::
+:::tip Install Toolchain by EIDE
+For Windows platform, EIDE provide some online installation package for `Open Source Toolchains`.<br/>
+So you can use [Install Utility Tools](../advance/install_tools) function or select an existing installation location.
+:::
+
+### Automatically Detect Toolchains
+
+Each toolchain has a corresponding plugin setting. If its value is "empty", the plugin will automatically detect the available toolchains from the environment variables.
+
+|Toolchain Name|Plugin Setting|The Command Used For Detection|
+|----|----|----|
+|IAR Arm Compiler|EIDE.IAR.ARM.Toolchain.InstallDirectory|`iccarm`|
+|GNU Toolchain For Arm|EIDE.ARM.GCC.InstallDirectory|`${EIDE.ARM.GCC.Prefix}gcc`|
+|LLVM For Arm|EIDE.ARM.LLVM.InstallDirectory|`clang`|
+|Arm Compiler V5|EIDE.ARM.ARMCC5.InstallDirectory|`armcc`|
+|Arm Compiler V6|EIDE.ARM.ARMCC6.InstallDirectory|`armclang`|
+|Small Device C Compiler|EIDE.SDCC.InstallDirectory|`sdcc`|
+|GNU Toolchain For RISCV|EIDE.RISCV.InstallDirectory|`${EIDE.RISCV.ToolPrefix}gcc`|
+|GNU Toolchain For MIPS|EIDE.MIPS.InstallDirectory|`${EIDE.MIPS.ToolPrefix}gcc`|
+|Unknown GCC|EIDE.Toolchain.AnyGcc.InstallDirectory|`${EIDE.Toolchain.AnyGcc.ToolPrefix}gcc`|
+
+#### For Linux Platform
+
+Please use the package manager to install the toolchain, such as `apt install arm-none-eabi-gcc`, etc
+
+Alternatively, you can append the path of the compiler's bin directory into the system's `PATH` variable, which can be achieved by modifying `~/.profile`.
+
+#### For Windows Platform
+
+Download the installation package of the corresponding compiler by yourself from the network and execute the installation.
+
+Then open the computer Settings, set the system environment variables, and then append the Path of the compiler's bin directory to the system environment variable: `Path`.
+
+Then just restart VSCode.
