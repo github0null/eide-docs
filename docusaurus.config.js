@@ -81,6 +81,7 @@ const config = {
           },
           {
             href: 'https://templates.em-ide.com/',
+            position: 'left',
             label: 'Project Templates',
           },
           /* {
