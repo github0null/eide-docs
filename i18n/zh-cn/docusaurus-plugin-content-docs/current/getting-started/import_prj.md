@@ -33,6 +33,9 @@ EIDE 将弹出选择列表，现在需要选择一个项目类型
 
 ### 导入
 
+> 再次强调：导入项目的作用是将Keil项目迁移到VSCode，导入后与原先的Keil工程失去关联。因此当你完成导入后再去修改Keil工程的配置，
+> 这些改动并不会被同步到VSCode工程上。
+
 打开 `操作` 栏，点击 `导入项目` 启动一个导入流程。
 
 然后选择你要导入的 `.uvproj` 或者 `.uvprojx` 文件（`.uvproj` 代表 C51 项目，`.uvprojx` 代表 ARM 项目），点击 `Import` 按钮执行导入
@@ -76,6 +79,9 @@ EIDE 将弹出选择列表，现在需要选择一个项目类型
   ![](/docs_img/eide_builer_options.png)
 
   复制 keil 项目的 `Misc-Controls` 到 eide 的 `Other C Compiler Options` 中
+
+  注意：执行该步骤时，要注意有些keil项目中的 `Misc Controls` 中可能包含一些通配符路径的参数，比如这样的：`--depend .\OBJ\*.d`。
+  如果有遇到，则**不要**把该参数复制到eide设置中，因为eide插件不支持这样的通配符，这会导致编译出错。
 
   ![](/docs_img/imp_prj_cpy_keil_opts.png)
 
