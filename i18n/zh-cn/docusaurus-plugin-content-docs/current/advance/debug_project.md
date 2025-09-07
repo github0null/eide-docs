@@ -42,6 +42,29 @@ sidebar_position: 10
 一键调试功能目前支持的烧录软件有：`JLink`, `STLink`, `OpenOCD`, `pyOCD`。其他的烧录软件对应的调试暂时不受支持，请自行编写 launch.json
 :::
 
+### 添加 SVD 文件以查看外设寄存器
+
+如果需要查看外设寄存器的值，请将 svd 文件放置到 `工程根目录` 或者 `.eide` 或者 `tools` 目录下，
+
+插件将在这3个目录中搜索有效的 svd 文件并作为调试配置传递给 Cortex-Debug.
+
+:::caution 注意
+注意如果工程目录中有多个svd文件，仅使用搜索到的第一个文件，因此最好移除掉无用的 svd 文件。
+:::
+
+### 变量值实时刷新（Live Watch）
+
+如果需要要在**不暂停程序**的情况下监视一个变量的值，那么请在 `Live Watch` 窗口中添加变量名表达式。变量值刷新周期是 250ms 一次。
+
+![](/docs_img/debug_livewatch_1.png)
+
+关于 Live Watch 的介绍，详见：
+https://github.com/Marus/cortex-debug/issues/810#issue-1555966443
+
+:::caution 注意
+该功能现在仅支持：OpenOCD、JLink 和 STLink
+:::
+
 ## 故障排查
 
 在使用 Cortex-Debug 进行调试的时候，有时可能由于仿真器，开发板，或者配置的问题而导致无法启动调试。
