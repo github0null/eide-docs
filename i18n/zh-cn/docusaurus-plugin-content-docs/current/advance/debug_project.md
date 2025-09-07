@@ -38,8 +38,8 @@ sidebar_position: 10
 
 :::caution 注意
 再次强调，一键调试功能 的调试配置取决于你使用的烧录配置，因此在调试前必须确保可以正常烧录。<br/>
-关于烧录配置，前往：https://em-ide.com/docs/modules/flasher 出查看文档<br/>
-一键调试功能目前支持的烧录软件有：`JLink`, `STLink`, `OpenOCD`, `pyOCD`。其他的烧录软件对应的调试暂时不受支持
+关于烧录配置，前往：https://em-ide.com/docs/modules/flasher 处查看文档<br/>
+一键调试功能目前支持的烧录软件有：`JLink`, `STLink`, `OpenOCD`, `pyOCD`。其他的烧录软件对应的调试暂时不受支持，请自行编写 launch.json
 :::
 
 ## 故障排查
