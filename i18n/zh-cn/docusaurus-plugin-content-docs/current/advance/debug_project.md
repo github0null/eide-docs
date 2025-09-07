@@ -41,3 +41,34 @@ sidebar_position: 10
 关于烧录配置，前往：https://em-ide.com/docs/modules/flasher 出查看文档<br/>
 一键调试功能目前支持的烧录软件有：`JLink`, `STLink`, `OpenOCD`, `pyOCD`。其他的烧录软件对应的调试暂时不受支持
 :::
+
+## 故障排查
+
+在使用 Cortex-Debug 进行调试的时候，有时可能由于仿真器，开发板，或者配置的问题而导致无法启动调试。
+
+当遇到这种情况时，请按照如下步骤排查：
+
+1. 检查 `DEBUG CONSOLE` 面板的输出日志
+
+![](/docs_img/debug_console_log.png)
+
+2. 检查 `gdb-server` 的输出日志
+
+![](/docs_img/debug_server_log.png)
+
+### 常见故障
+
+1. 弹框提示：`GDB Server Quit Unexpectedly`.
+
+![](/docs_img/debug_issue__gdb_quit.png)
+
+这种情况一般有两个可能原因：
+  1. 可能是你的调试探针（又称仿真器）出现了问题，导致 gdb server 无法连接到可用的调试探针因此直接退出。请检查线路连接或者检查仿真器的固件版本是否过低
+  2. 可能是你的芯片与调试探针之间的连接有问题，因而导致 调试探针 无法检测到目标芯片。
+
+2. 弹框提示：`Timeout`.
+
+![](/docs_img/debug_issue__timeout.png)
+
+这种情况一般是无法暂停你的芯片，因此导致等待超时。有的调试探针（又称仿真器）可能需要连接 NRST 引脚才能正常调试
+
