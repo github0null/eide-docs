@@ -14,6 +14,20 @@ sidebar_position: 10
 
 2. 确保工程可以正常烧录。一键调试功能将从烧录配置中自动生成对应的调试配置，因此在调试前必须确保可以正常烧录。
 
+3. 安装 arm-none-eabi-gcc 工具链。Windows 用户可以通过 **安装实用工具** 功能自动安装。
+
+### 对于 STLink
+
+如果你选择了 `STLink` 烧录器
+
+![](/docs_img/flasher_name.png)
+
+那么你需要通过实用工具功能安装如下软件：
+
+`STM32 Cube Programmer CLI` 和 `STLink GDB Server`
+
+![](/docs_img/stlink_tools.png)
+
 ## 启动调试器
 
 一切就绪后，点击项目栏上的调试按钮 <img width="16px" bor src="/docs_img/icon/Run_16x.svg"/> 直接启动调试
