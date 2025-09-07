@@ -4,36 +4,26 @@ sidebar_position: 10
 
 # 调试项目
 
-调试你的 **Cortex-M**, **STM8** 项目
+本节中将介绍如何在 vscode 中调试你的 **Cortex-M** 项目
+
+在最新的 EIDE v3.25.1 中，已经新增了一键调试功能，使用该功能可以免去编写繁杂的 `launch.json` 配置文件。下文将介绍用法。
 
 ## 准备工作
 
-- **对于 Cortex-M 项目**
+1. 安装 [cortex-debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug) 插件（**无需做任何配置，只需安装该插件即可**）
 
-  你需要安装 [cortex-debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug)
-
-  [cortex-debug docs](https://github.com/Marus/cortex-debug/wiki)
-
-- **对于 STM8 项目**
-
-  你需要安装 [stm8-debugger](https://marketplace.visualstudio.com/items?itemName=CL.stm8-debug)
+2. 确保工程可以正常烧录。一键调试功能将从烧录配置中自动生成对应的调试配置，因此在调试前必须确保可以正常烧录。
 
 ## 启动调试器
 
-> For Cortex-M Project
+一切就绪后，点击项目栏上的调试按钮 <img width="16px" bor src="/docs_img/icon/Run_16x.svg"/> 直接启动调试
 
-1. 打开烧录器配置并设置相关选项 (**EIDE 会根据不同的烧录器配置自动生成相应的调试配置**)
+![](/docs_img/debug_btn.png)
 
-2. 打开 `launch.json`，检查 cortex-debug 调试配置
+注意**不要使用** VSCode 自带的Debug侧边栏启动调试，因为默认状态下 VSCode 需要通过 launch.json 读取配置。而此处的调试配置是自动生成的，不会出现在 launch.json 中。
 
-3. 用调试探针连接单板
-
-4. 在 **VSCode调试视图** 中选择调试配置名称
-
-5. 按下 `F5` 启动调试器
-
-  ![](/docs_img/debug_cortex-m_prj.png)
-
-:::tip 更多用法
-参考 https://github.com/Marus/cortex-debug/wiki
+:::caution 注意
+再次强调，一键调试功能 的调试配置取决于你使用的烧录配置，因此在调试前必须确保可以正常烧录。<br/>
+关于烧录配置，前往：https://em-ide.com/docs/modules/flasher 出查看文档<br/>
+一键调试功能目前支持的烧录软件有：`JLink`, `STLink`, `OpenOCD`, `pyOCD`。其他的烧录软件对应的调试暂时不受支持
 :::
