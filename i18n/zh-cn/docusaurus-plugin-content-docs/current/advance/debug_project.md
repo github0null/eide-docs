@@ -28,6 +28,12 @@ sidebar_position: 10
 
 ![](/docs_img/stlink_tools.png)
 
+### 对于 probe-rs
+
+如果你正在使用 probe-rs 烧录器
+
+那么你需要安装 [probe-rs.probe-rs-debugger 插件](https://marketplace.visualstudio.com/items?itemName=probe-rs.probe-rs-debugger)
+
 ## 启动调试器
 
 一切就绪后，点击项目栏上的调试按钮 <img width="16px" bor src="/docs_img/icon/Run_16x.svg"/> 直接启动调试
@@ -39,7 +45,7 @@ sidebar_position: 10
 :::caution 注意
 再次强调，一键调试功能 的调试配置取决于你使用的烧录配置，因此在调试前必须确保可以正常烧录。<br/>
 关于烧录配置，前往：https://em-ide.com/docs/modules/flasher 处查看文档<br/>
-一键调试功能目前支持的烧录软件有：`JLink`, `STLink`, `OpenOCD`, `pyOCD`。其他的烧录软件对应的调试暂时不受支持，请自行编写 launch.json
+一键调试功能目前支持的烧录软件有：`JLink`, `STLink`, `OpenOCD`, `pyOCD`, `probe-rs`。其他的烧录软件对应的调试暂时不受支持，请自行编写 launch.json
 :::
 
 ### 添加 SVD 文件以查看外设寄存器
