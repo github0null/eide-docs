@@ -307,7 +307,7 @@ After stcgal output a message: `Cycling power done`, you need **reset mcu** to s
 Otherwise, stcgal will be in the waiting state.
 :::
 
-### Use Shell Command
+### Use Custom Command {#custom-flasher}
 
 We support to use any shell command to program your flash.
 

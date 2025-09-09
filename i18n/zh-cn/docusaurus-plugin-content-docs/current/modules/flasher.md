@@ -307,7 +307,7 @@ stcgal -h
 否则 stcgal 将一直处于等待状态
 :::
 
-### 使用 Shell 命令烧录
+### 使用自定义命令烧录 {#custom-flasher}
 
 我们支持使用任何 shell 命令来编程您的 flash
 
@@ -393,4 +393,17 @@ echo ==========================
 
 :::caution Windows平台上的unix命令支持
 Windows上仅支持有限的unix命令，[可用的命令见此处](https://em-ide.com/docs/modules/builder#built-in-linux-shell-for-windows)
+:::
+
+#### 内建的自定义烧录器 {#custom-flasher-builtin}
+
+点击自定义烧录器工具栏右侧的按钮即可检索内建的自定义烧录器，选择完毕后，插件会将其安装到你的项目文件夹的 tools 目录中
+
+![](/docs_img/shell-flasher-ext.png)
+
+这些工具自带预填充的烧录命令，如果你不打算修改它们，那么接下来你可以点击烧录按钮启动烧录
+
+:::tip 仓库
+这些内建的自定义烧录器位于以下仓库中<br/>
+https://github.com/github0null/eide_shell_flasher_index
 :::
