@@ -119,25 +119,57 @@ sidebar_position: 20
 
 > 自行安装 [STM32CubeMX v6.15.0](https://www.st.com.cn/zh/development-tools/stm32cubemx.html) 或更高版本
 
-- **新建空项目：** 使用 eide 新建一个 Cortex-M 空项目，见上面的 [从空项目创建](#empty-project) 小结，创建完成后，不要添加源文件。
+### 新建空项目
 
-- **新建CubeMx项目：** 使用 CubeMX 新建一个 STM32 项目，将生成目录设置到项目根目录下，如图所示
+使用 eide 新建一个 Cortex-M 空项目。
 
-  ![](/docs_img/stm32cubemx/cubemx-1.png)
+- 点击 `新建项目` -> `空项目`, 将弹出一个窗口，您需要选择一个项目类型
 
-- **设置Cubemx项目：**
+  ![](/docs_img/new_prj_typ.png)
 
-  找到 Project 配置项，将 Toolchain 选择为 Makefile
+- 本例中我们选择 `cortex-m`, 然后输入项目名称
+
+  ![](/docs_img/new_prj_name.png)
+
+- 然后我们需要选择项目的保存位置
+  
+  ![](/docs_img/new_prj_loc_sel.png)
+
+- 接下来，一个新的项目将被创建，eide 将会弹出通知
+
+  切换工作空间，将加载新项目
+
+  ![](/docs_img/new_prj_preview.png)
+
+现在，我们已经成功创建了一个空项目
+
+接下来，我们需要配置构建选项，默认编译器是 `gcc` （不要更改）。
+
+![](/docs_img/new_prj_cc_cfg.png)
+
+我们仅需要设置 `CPU Type` 选项，根据你使用的芯片类型进行选择，此处我们选择 `Cortex-M3`
+
+### 新建CubeMx项目
+
+使用 CubeMX 新建一个 STM32 项目，将生成目录设置到项目根目录下，如图所示
+
+![](/docs_img/stm32cubemx/cubemx-1.png)
+
+### 设置Cubemx项目
+
+- 找到 Project 配置项，将 Toolchain 选择为 Makefile
 
   ![](/docs_img/stm32cubemx/cubemx_tool.png)
 
-  找到 Code Generator 配置项，按照如下图所示进行配置
+- 找到 Code Generator 配置项，按照如下图所示进行配置
 
   ![](/docs_img/stm32cubemx/cubemx_cg.png)
 
-  该配置使得 STM32CubeMX 不要生成多余的文件到目录中，避免编译不需要的文件而导致出错
+该配置使得 STM32CubeMX 不要生成多余的文件到目录中，避免编译不需要的文件而导致出错
 
-- **生成代码：** 点击右上角的 **GENERATE CODE** 生成代码
+接下来执行**生成代码：** 点击右上角的 **GENERATE CODE** 生成代码
+
+### 配置eide项目
 
 - **添加源文件夹：** 点击eide工程栏的添加源文件夹，选择普通文件夹，将 `cubemx_source` 选中添加到项目中
 
