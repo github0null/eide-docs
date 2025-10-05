@@ -114,3 +114,64 @@ sidebar_position: 20
 构建任务将启动，日志将输出到 `Output Panel`
 
 ![](/docs_img/new_prj_build.png)
+
+## 创建STM32CubeMX项目 {#empty-stm32cubemx-project}
+
+> 自行安装 [STM32CubeMX v6.15.0](https://www.st.com.cn/zh/development-tools/stm32cubemx.html) 或更高版本
+
+- **新建空项目：** 使用 eide 新建一个 Cortex-M 空项目，见上面的 [从空项目创建](#empty-project) 小结，创建完成后，不要添加源文件。
+
+- **新建CubeMx项目：** 使用 CubeMX 新建一个 STM32 项目，将生成目录设置到项目根目录下，如图所示
+
+  ![](/docs_img/stm32cubemx/cubemx-1.png)
+
+- **设置Cubemx项目：**
+
+  找到 Project 配置项，将 Toolchain 选择为 Makefile
+
+  ![](/docs_img/stm32cubemx/cubemx_tool.png)
+
+  找到 Code Generator 配置项，按照如下图所示进行配置
+
+  ![](/docs_img/stm32cubemx/cubemx_cg.png)
+
+  该配置使得 STM32CubeMX 不要生成多余的文件到目录中，避免编译不需要的文件而导致出错
+
+- **生成代码：** 点击右上角的 **GENERATE CODE** 生成代码
+
+- **添加源文件夹：** 点击eide工程栏的添加源文件夹，选择普通文件夹，将 `cubemx_source` 选中添加到项目中
+
+  ![](/docs_img/stm32cubemx/cubemx-2.png)
+
+- **添加包含目录：**
+
+  打开 `cubemx_source` 目录下的 `Makefile` 文件，将其中的 C_INCLUDE 内容复制到 包含目录中 中
+
+  注意复制时要去除 `-I` 前缀，并加上 `cubemx_source/` 路径前缀，如下图所示：
+
+  ![](/docs_img/stm32cubemx/cubemx-3.png)
+
+  操作完成后按 ctrl+s 保存即可应用到项目
+
+- **添加宏定义：** 
+
+  打开 `cubemx_source` 目录下的 `Makefile` 文件，将其中的 C_DEFS 内容复制到 预处理器定义 中
+
+  注意复制的时候要去除掉 `-D` 前缀
+
+  ![](/docs_img/stm32cubemx/cubemx-4.png)
+
+  操作完成后按 ctrl+s 保存即可应用到项目
+
+- **设置链接脚本路径：**
+
+  将 `cubemx_source` 目录下的 *.ld 文件的相对路径复制一下，然后填写到编译配置中的 **链接脚本路径** 设置项中，如下图所示
+
+  ![](/docs_img/stm32cubemx/lds_cfg.png)
+
+完成上述步骤后，一切就绪，现在可以执行编译了。
+
+:::tip 注意
+某些时候当你更改了CubeMX中的配置后，Makefile中的宏定义或者包含路径可能会发生变化，<br/>
+这个时候你需要将新增的 包含目录、宏定义 添加到项目中。
+:::
